@@ -1,0 +1,8 @@
+[break_LED]
+Class="Function"
+Prototype="int break_LED(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[break_ok]
+Class="Function"
+Prototype="int break_ok(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

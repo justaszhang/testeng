@@ -1,0 +1,140 @@
+[rtx2012_Write]
+Class="Function"
+Prototype="int rtx2012_Write(char *command);"
+
+[rtx2012_Query]
+Class="Function"
+Prototype="int rtx2012_Query(char *command, char *output);"
+
+[rtx2012_Initialize]
+Class="Function"
+Prototype="int rtx2012_Initialize(char *output);"
+
+[rtx2012_ProcConnSet]
+Class="Function"
+Prototype="int rtx2012_ProcConnSet();"
+
+[rtx2012_ConfFpSignMode]
+Class="Function"
+Prototype="int rtx2012_ConfFpSignMode(int mode);"
+
+[rtx2012_ConfFpAnt]
+Class="Function"
+Prototype="int rtx2012_ConfFpAnt(int antennaNumber);"
+
+[rtx2012_ConfFpRfLev]
+Class="Function"
+Prototype="int rtx2012_ConfFpRfLev(double RFLevel_dBm);"
+
+[rtx2012_ConfFpChannels]
+Class="Function"
+Prototype="int rtx2012_ConfFpChannels(int trafficSlotNumber, int trafficCarrierNumber, double carrierOffset);"
+
+[rtx2012_ConfFpRfpi]
+Class="Function"
+Prototype="int rtx2012_ConfFpRfpi(char *RFPI);"
+
+[rtx2012_ConfBerEvalWind]
+Class="Function"
+Prototype="int rtx2012_ConfBerEvalWind(int evaluationWindow);"
+
+[rtx2012_ConfBerRfLev]
+Class="Function"
+Prototype="int rtx2012_ConfBerRfLev(double RFLevel_dBm);"
+
+[rtx2012_ConfModDataType]
+Class="Function"
+Prototype="int rtx2012_ConfModDataType(int dataTypeInBField);"
+
+[rtx2012_Reset]
+Class="Function"
+Prototype="int rtx2012_Reset();"
+
+[rtx2012_ErrorQuery]
+Class="Function"
+Prototype="int rtx2012_ErrorQuery(int *Error_Code, char *errorMessage);"
+
+[rtx2012_SensSignStat]
+Class="Function"
+Prototype="int rtx2012_SensSignStat(int *lockState);"
+
+[rtx2012_SensDetRfpi]
+Class="Function"
+Prototype="int rtx2012_SensDetRfpi(char *RFPIValue);"
+
+[rtx2012_CalcLimPowTranTolMatc]
+Class="Function"
+Prototype="int rtx2012_CalcLimPowTranTolMatc(int *verdictForNTP);"
+
+[rtx2012_CalcLimPowTranMatc]
+Class="Function"
+Prototype="int rtx2012_CalcLimPowTranMatc(int *verdictForPowerRamp);"
+
+[rtx2012_ReadNtp]
+Class="Function"
+Prototype="int rtx2012_ReadNtp(double *NTPValue);"
+
+[rtx2012_ReadBerLter]
+Class="Function"
+Prototype="int rtx2012_ReadBerLter(double *BERValue, double *FERValue);"
+
+[rtx2012_ConfMessEscMT]
+Class="Function"
+Prototype="int rtx2012_ConfMessEscMT(char *MTEscapeSequence);"
+
+[rtx2012_StatDev]
+Class="Function"
+Prototype="int rtx2012_StatDev(int *currentInstrumentState);"
+
+[rtx2012_ConfTimAverBurs]
+Class="Function"
+Prototype="int rtx2012_ConfTimAverBurs(int numberOfBursts);"
+
+[rtx2012_ConfAverBurs]
+Class="Function"
+Prototype="int rtx2012_ConfAverBurs(int numberOfBursts);"
+
+[rtx2012_ConfTest]
+Class="Function"
+Prototype="int rtx2012_ConfTest(int DUTType);"
+
+[rtx2012_ProcSelTest]
+Class="Function"
+Prototype="int rtx2012_ProcSelTest(int mode);"
+
+[rtx2012_CalcLimPowTranTempCle]
+Class="Function"
+Prototype="int rtx2012_CalcLimPowTranTempCle();"
+
+[rtx2012_CalcLimPowTranTempTol]
+Class="Function"
+Prototype="int rtx2012_CalcLimPowTranTempTol(double lowerNTP_dBm, double upperNTP_dBm);"
+
+[rtx2012_ProcConnRel]
+Class="Function"
+Prototype="int rtx2012_ProcConnRel();"
+
+[rtx2012_Read_FrequencyOffset]
+Class="Function"
+Prototype="int rtx2012_Read_FrequencyOffset(char *freqoffset);"
+
+[rtx2012_Read_Deviation]
+Class="Function"
+Prototype="int rtx2012_Read_Deviation(char *BField);"
+
+[rtx2012_Read_FrequencyDriftSlot]
+Class="Function"
+Prototype="int rtx2012_Read_FrequencyDriftSlot(char *freqDrift);"
+
+[rtx2012_Read_TemplateMatch]
+Class="Function"
+Prototype="int rtx2012_Read_TemplateMatch(char *matching);"
+
+[rtx2012_Loopback_Mode_EU_Setting]
+Class="Function"
+Prototype="int rtx2012_Loopback_Mode_EU_Setting();"
+
+[rtx2012_Nonsignal_Connect]
+Class="Function"
+Prototype="int rtx2012_Nonsignal_Connect();"
+

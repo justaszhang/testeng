@@ -1,0 +1,12 @@
+[get_okay]
+Class="Function"
+Prototype="int get_okay(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[InputBarCode]
+Class="Function"
+Prototype="int InputBarCode(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[InputSerial]
+Class="Function"
+Prototype="int InputSerial(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

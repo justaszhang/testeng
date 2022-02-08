@@ -1,0 +1,32 @@
+//////////////////////////////  FUNCTION   RFPGen4  //////////////////////////////////////////////////
+//Adapter ID: FUNCTION_RFP4x
+[5000697x]
+//Function RFP Gen4
+DEBUG-MINISYS = 0
+DEBUG-WLAN_EMBEDDED = 0
+ERP_PartNo = 11111010 
+sequence = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\FKT_RFP4G.SQU
+//DECTSwVersion
+sw-release = 0.2.16
+// ManuSwVersion
+SoftwareVersion = SIP-DECT 6.0SP2-BA12
+flex_uir = G:\Protest\ProdTest_FLEX\COMMON\flex.uir
+Conect_counter = 1
+//TFTP Daemon
+tftp_daemon = C:\dhcp\dhcpsrv\start_dhcpsrv.exe dhcpsrv_rfp35.ini
+[end group]
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//Adapter ID: FINAL_RFP35_43
+[68637-FINAL]
+DEBUG-MINISYS = 1
+DEBUG-WLAN_EMBEDDED = 1
+sequence = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\Final\FINAL_FP_pro68_RFP44_01.SQU
+sw-release = 0.2.16
+SoftwareVersion = SIP-DECT 6.0SP2-BA12
+//TFTP Daemon
+tftp_daemon = C:\dhcp\dhcpsrv\start_dhcpsrv.exe dhcpsrv_rfp35.ini
+[end group]
+
+

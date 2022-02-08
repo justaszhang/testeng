@@ -1,0 +1,212 @@
+[Project Header]
+Version = 600
+Pathname = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/Rte.prj"
+CVI Dir = "/c/program files (x86)/national instruments/measurementstudio/cvi"
+VXIplug&play Framework Dir = "/C/VXIpnp/winnt"
+Number of Files = 12
+Target Type = "Executable"
+Flags = 2064
+
+[File 0001]
+File Type = "CSource"
+Res Id = 2
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "ADAPTER_PARA.C"
+Path = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/ADAPTER_PARA.C"
+Exclude = True
+Compile Into Object File = False
+Project Flags = 0
+
+[File 0002]
+File Type = "CSource"
+Res Id = 3
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "callback.c"
+Path = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/callback.c"
+Exclude = True
+Compile Into Object File = False
+Project Flags = 0
+
+[File 0003]
+File Type = "CSource"
+Res Id = 4
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "mencallb.c"
+Path = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/mencallb.c"
+Exclude = True
+Compile Into Object File = False
+Project Flags = 0
+
+[File 0004]
+File Type = "CSource"
+Res Id = 1
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "rte.c"
+Path = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/rte.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+
+[File 0005]
+File Type = "Include"
+Res Id = 5
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "rte.h"
+Path = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/rte.h"
+Exclude = False
+Project Flags = 0
+
+[File 0006]
+File Type = "Include"
+Res Id = 6
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "rte_uir.h"
+Path = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/rte_uir.h"
+Exclude = False
+Project Flags = 0
+
+[File 0007]
+File Type = "User Interface Resource"
+Res Id = 7
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "rte_uir.uir"
+Path = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/rte_uir.uir"
+Exclude = False
+Project Flags = 0
+
+[File 0008]
+File Type = "CSource"
+Res Id = 8
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "rtepubl.c"
+Path = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/rtepubl.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+
+[File 0009]
+File Type = "Library"
+Res Id = 9
+Path Is Rel = False
+Path = "/g/ProTest/ProdTest_FLEX/libssh/libssh-0.7.2/lib/ssh.lib"
+Exclude = False
+Project Flags = 0
+
+[File 0010]
+File Type = "CSource"
+Res Id = 10
+Path Is Rel = False
+Path = "/g/ProTest/ProdTest_FLEX/libssh/uselibssh.c"
+Exclude = False
+Compile Into Object File = False
+Project Flags = 0
+
+[File 0011]
+File Type = "Include"
+Res Id = 11
+Path Is Rel = False
+Path = "/g/ProTest/ProdTest_FLEX/libssh/uselibssh.h"
+Exclude = False
+Project Flags = 0
+
+[File 0012]
+File Type = "Include"
+Res Id = 12
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "rtepubl.h"
+Path = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/rtepubl.h"
+Exclude = False
+Project Flags = 0
+
+[Compiler Options]
+Default Calling Convention = "cdecl"
+Require Prototypes = True
+Require Return Values = True
+Enable Pointer Mismatch Warning = False
+Enable Unreachable Code Warning = True
+Enable Unreferenced Identifiers Warning = False
+Enable Assignment In Conditional Warning = False
+O Option Compatible With 5.0 = False
+Uninitialized Locals Compile Warning = "Conservative"
+
+[Run Options]
+Stack Size = 500000
+Image Base Address = 4194304
+
+[Compiler Defines]
+Compiler Defines = "/DWIN32_LEAN_AND_MEAN"
+
+[Include Paths]
+Include Path 1 Is Rel = False
+Include Path 1 = "/g/ProTest/ProdTest_FLEX/libssh/libssh-0.7.2/include"
+Include Path 2 Is Rel = False
+Include Path 2 = "/g/ProTest/ProdTest_FLEX/INSTR/MiniSystem"
+
+[Create Executable]
+Executable File_Debug Is Rel = True
+Executable File_Debug Rel To = "Project"
+Executable File_Debug Rel Path = "rte.exe"
+Executable File_Debug = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/rte.exe"
+Executable File_Release Is Rel = True
+Executable File_Release Rel To = "Project"
+Executable File_Release Rel Path = "rte.exe"
+Executable File_Release = "/g/ProTest/ProdTest_FLEX/Rte5_3_en/rte.exe"
+Icon File Is Rel = False
+Icon File = ""
+Application Title = ""
+Numeric File Version = "1,0,0,0"
+Numeric Prod Version = "1,1,0,0"
+Comments = ""
+Company Name = "protech"
+File Version = "1.0"
+Legal Copyright = "Copyright © protech, 1999"
+Legal Trademarks = ""
+Private Build = ""
+Product Version = "1.1"
+Special Build = ""
+DLL Exports = "Include File Symbols"
+Export File1 = "rte.h"
+Export File2 = "rte_uir.h"
+DLL Import Library Choice = "Gen Lib For Current Mode"
+Use VXIPNP Subdirectories for Import Libraries = False
+Use Dflt Import Lib Base Name = True
+Where to Copy DLL = "Do not copy"
+Add Type Lib To DLL = False
+Include Type Lib Help Links = False
+Type Lib FP File Is Rel = False
+Type Lib FP File = ""
+Type Lib Guid = ""
+Runtime Support = "Full Runtime Support"
+Instrument Driver Support Only = False
+
+[External Compiler Support]
+UIR Callbacks File Option = 0
+Using LoadExternalModule = False
+Create Project Symbols File = True
+UIR Callbacks Obj File Is Rel = False
+UIR Callbacks Obj File = ""
+Project Symbols H File Is Rel = False
+Project Symbols H File = ""
+Project Symbols Obj File Is Rel = False
+Project Symbols Obj File = ""
+
+[ActiveX Server Options]
+Specification File Is Rel = False
+Specification File = ""
+Source File Is Rel = False
+Source File = ""
+Include File Is Rel = False
+Include File = ""
+IDL File Is Rel = False
+IDL File = ""
+Register ActiveX Server = False
+

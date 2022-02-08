@@ -1,0 +1,93 @@
+modified function in: "g:\ProTest\ProdTest_FLEX\Projekte\RFP_IP_4x\FINAL\FP_END.C"
+
+
+
+TESTFUNCTION Check_MAC_Serial(struct struct_test *act_structptr)
+{
+int value=0, rfp47Exception;
+char *p, *searchStr;
+char localWriteBuffer[0x40];
+char serialNrRFP47Exception[0x20];
+
+int i;
+// get MAC and serial 	
+	if ( ipRfp_libssh_WriteAndRead( "fmanu conf\r", gResponseLocal, sizeof(gResponseLocal), "# ", 1.0 ) != 0 ) return(-2);  
+//get MAC:
+	searchStr= "mac     :  ";
+	
+	if ( (p = strstr(gResponseLocal,searchStr)) != NULL )
+	{
+		for ( p=p+strlen(searchStr) ; *p == ' ' ; p++ );			// anfang suchen
+		for ( i=0; *p != '\n' && *p != '\r' && *p != '\0'; p++ )	// kopieren bis ende zeile
+		{	
+	    	gMAC_DUT[i]=toupper(*p);					// reading only LowChar  
+			i++;									// change to Up
+	    	gMAC_DUT[i]='\0';							//  
+		}	
+	}	
+	
+//get Serial:
+	searchStr= "sn      :  ";
+	
+	if ( (p = strstr(gResponseLocal,searchStr)) != NULL )
+	{
+		for ( p=p+strlen(searchStr) ; *p == ' ' ; p++ );			// anfang suchen
+		for ( i=0; *p != '\n' && *p != '\r' && *p != '\0'; p++ )	// kopieren bis ende zeile
+		{	
+	    	gSerialNr_DUT[i]= *p;	
+	    	i++;									// 
+	    	gSerialNr_DUT[i]='\0';							// 
+		}	
+	}	
+ 	
+	set_char_serial_number(gSerialNr_DUT);
+	sprintf(cInfo,"MAC:%s",gMAC_DUT);	
+	print_resultdisplay(cInfo);
+// scanned numbers coming from:
+//	GetBarCode(gMAC_Scanned, gSerialNr_Scanned);
+	if(strcmp(gMAC_DUT, gMAC_Scanned)) // MAC have to be the same
+	{	
+		act_structptr->resultstatus = check_value(10);
+		return(0);   
+	}
+
+//#### new, 20181121: for Type RFP47 DRC we allow, that the boardlevel label/programmed number have 3BZ  
+	if(strcmp(gSerialNr_DUT, gSerialNr_Scanned)) // serial number can be new, but the first 3 char (HW-Type) must the same
+	{  // there is a difference	
+		rfp47Exception = 0;
+		if(strncmp(gSerialNr_DUT, gSerialNr_Scanned,3))
+		{// there is a difference, only allowed for RFP47 DRC
+			if(!strncmp(gSerialNr_Scanned,"3C1",3)) 
+			{   // we have type RFP47 DRC
+				if(!strncmp(gSerialNr_DUT,"3BZ",3)) 
+				{   // board level is type RFP47 indoor, make a copy and replace the product code from scanned label (for logging the original scanned label later)
+					rfp47Exception = 1;
+					strcpy(serialNrRFP47Exception,gSerialNr_Scanned); 
+				 	serialNrRFP47Exception[1] = 'B';
+				 	serialNrRFP47Exception[2] = 'Z';
+				}
+				else // boardlevel != 3BZ
+				{
+					act_structptr->resultstatus = check_value(30);
+					return(0);   
+				}
+			}
+			else
+			{
+				act_structptr->resultstatus = check_value(20);
+				return(0);   
+			}
+		}
+		
+		if ( ipRfp_libssh_WriteAndRead( "touch /tmp/setsn\r", gResponseLocal, sizeof(gResponseLocal), "# ", 1.0 ) != 0 ) return(-3);  
+		if(rfp47Exception)
+			sprintf(localWriteBuffer, "fmanu conf -sn %s\r", serialNrRFP47Exception);
+		else
+			sprintf(localWriteBuffer, "fmanu conf -sn %s\r", gSerialNr_Scanned);
+		if ( ipRfp_libssh_WriteAndRead(localWriteBuffer, gResponseLocal, sizeof(gResponseLocal), "# ", 1.0 ) != 0 ) return(-3);  
+		
+	}
+	act_structptr->resultstatus = check_value(value);
+	return(0);   
+
+}

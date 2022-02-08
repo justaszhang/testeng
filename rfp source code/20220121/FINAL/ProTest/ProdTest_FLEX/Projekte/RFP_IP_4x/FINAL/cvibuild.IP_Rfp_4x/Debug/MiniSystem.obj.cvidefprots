@@ -1,0 +1,52 @@
+[MiniSys_open]
+Class="Function"
+Prototype="int MiniSys_open(int comPort);"
+
+[MiniSys_write]
+Class="Function"
+Prototype="int MiniSys_write(char *write_char);"
+
+[MiniSys_read]
+Class="Function"
+Prototype="int MiniSys_read(char *read);"
+
+[MiniSys_getLightSensor]
+Class="Function"
+Prototype="int MiniSys_getLightSensor();"
+
+[MiniSys_get_SID]
+Class="Function"
+Prototype="int MiniSys_get_SID(char *systemID);"
+
+[MiniSys_get_AdapterID]
+Class="Function"
+Prototype="int MiniSys_get_AdapterID(char *adapterID);"
+
+[MiniSys_get_IN]
+Class="Function"
+Prototype="int MiniSys_get_IN();"
+
+[MiniSys_set_OC]
+Class="Function"
+Prototype="int MiniSys_set_OC(int number, int on);"
+
+[MiniSys_ADC_RaSe]
+Class="Function"
+Prototype="int MiniSys_ADC_RaSe(int DcAc, int range);"
+
+[MiniSys_ADC_InpS]
+Class="Function"
+Prototype="int MiniSys_ADC_InpS(int gnd, int channel);"
+
+[MiniSys_ADC_getVdc]
+Class="Function"
+Prototype="int MiniSys_ADC_getVdc(double *result);"
+
+[MiniSys_ADC_getVac]
+Class="Function"
+Prototype="int MiniSys_ADC_getVac(double *result);"
+
+[MiniSys_close]
+Class="Function"
+Prototype="void MiniSys_close();"
+

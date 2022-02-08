@@ -1,0 +1,20 @@
+[WLanEmbedded_open]
+Class="Function"
+Prototype="int WLanEmbedded_open(int comPort1, int comPort2, int comPort3);"
+
+[WLanEmbedded_ListAP]
+Class="Function"
+Prototype="int WLanEmbedded_ListAP(int *ant1, int *ant2, int *ant3);"
+
+[WLanEmbedded_write]
+Class="Function"
+Prototype="int WLanEmbedded_write(int comPort, char *write_char);"
+
+[WLanEmbedded_read]
+Class="Function"
+Prototype="int WLanEmbedded_read(int comPort, char *read);"
+
+[WLanEmbedded_close]
+Class="Function"
+Prototype="void WLanEmbedded_close();"
+

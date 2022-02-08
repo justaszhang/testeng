@@ -1,0 +1,64 @@
+CCFLAGS = -g ;
+HDRS = 	"g:\\ProTest\\ProdTest_FLEX\\libssh\\libssh-0.7.2\\include"
+	"g:\\ProTest\\ProdTest_FLEX\\INSTR\\MiniSystem"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2017\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2017\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2017\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\VXIpnp\\winnt\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2017\\bin"
+	"c:\\ProgramData\\National Instruments\\CVI2017\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "ADAPTER_PARA.C" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en" ;
+LOCATE on "callback.c" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en" ;
+LOCATE on "mencallb.c" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en" ;
+LOCATE on "rte.c" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en" ;
+LOCATE on "rte.h" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en" ;
+LOCATE on "rte_uir.h" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en" ;
+LOCATE on "rtepubl.c" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en" ;
+LOCATE on "rtepubl.h" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en" ;
+LOCATE on "uselibssh.c" = "g:\\ProTest\\ProdTest_FLEX\\libssh" ;
+LOCATE on "uselibssh.h" = "g:\\ProTest\\ProdTest_FLEX\\libssh" ;
+Object "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.obj" : "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\rte.c" ;
+FILENUM on "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.obj" = 1 ;
+DEFPROTS on "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.obj" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.obj.cvidefprots" ;
+OUTFILE on "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.obj" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.obj.out" ;
+PrjObjects += "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.obj" ;
+Object "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rtepubl.obj" : "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\rtepubl.c" ;
+FILENUM on "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rtepubl.obj" = 2 ;
+DEFPROTS on "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rtepubl.obj" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rtepubl.obj.cvidefprots" ;
+OUTFILE on "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rtepubl.obj" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rtepubl.obj.out" ;
+PrjObjects += "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rtepubl.obj" ;
+Object "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\uselibssh.obj" : "g:\\ProTest\\ProdTest_FLEX\\libssh\\uselibssh.c" ;
+FILENUM on "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\uselibssh.obj" = 3 ;
+DEFPROTS on "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\uselibssh.obj" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\uselibssh.obj.cvidefprots" ;
+OUTFILE on "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\uselibssh.obj" = "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\uselibssh.obj.out" ;
+PrjObjects += "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\uselibssh.obj" ;
+Object "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\resources.res" : "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\resources.in.rc" ;
+Depends "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\resources.res" : "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\manifest.xml" ;
+MainFromObjects "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.exe" : "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\link_options.txt" ;
+Depends "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.exe" : "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\resources.res" ;
+Depends all : "g:\\ProTest\\ProdTest_FLEX\\Rte5_3_en\\cvibuild.Rte\\Debug\\rte.exe" ;

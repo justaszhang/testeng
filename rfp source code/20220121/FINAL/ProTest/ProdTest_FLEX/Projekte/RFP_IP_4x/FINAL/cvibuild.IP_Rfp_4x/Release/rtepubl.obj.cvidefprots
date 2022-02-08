@@ -1,0 +1,20 @@
+[add_days_to_dateStr]
+Class="Function"
+Prototype="void add_days_to_dateStr(char *dateStr, int days);"
+
+[days_between_now_and_dateStr]
+Class="Function"
+Prototype="int days_between_now_and_dateStr(char *dateStr);"
+
+[adapter_counter_clear]
+Class="Function"
+Prototype="int adapter_counter_clear(struct rte_globals *globals, int intervalnr);"
+
+[adapter_counter_update]
+Class="Function"
+Prototype="int adapter_counter_update(struct rte_globals *globals, int count);"
+
+[adapter_counter_read]
+Class="Function"
+Prototype="int adapter_counter_read(struct rte_globals *globals, int intervalnr, int *serviceCount, int *devCount, int *serviceDays, char *lastServiceDate, char *nextServiceDate, char *serviceText);"
+

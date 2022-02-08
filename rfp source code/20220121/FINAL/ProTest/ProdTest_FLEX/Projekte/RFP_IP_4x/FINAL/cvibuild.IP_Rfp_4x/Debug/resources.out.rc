@@ -1,0 +1,598 @@
+#include "C:\Program Files (x86)\National Instruments\Shared\MSDTRedistributables\SDKHeaderFiles\8.1\winver.h"
+
+
+2 24 "g:\\ProTest\\ProdTest_FLEX\\Projekte\\RFP_IP_4x\\FINAL\\cvibuild.IP_Rfp_4x\\Debug\\manifest.xml"
+
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  65535  ""
+END
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,5,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS 0x1L
+ FILEOS VOS__WINDOWS32
+ FILETYPE VFT_DLL
+ FILESUBTYPE VFT_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "protech rosenberg, 1999\0"
+            VALUE "FileDescription", "IP_Rfp_4x (Debug x86)\0"
+            VALUE "FileVersion", "1.0.5\0"
+            VALUE "InternalName", "IP_Rfp_4x\0"
+            VALUE "LegalCopyright", "Copyright © protech 1999\0"
+            VALUE "OriginalFilename", "IP_Rfp_4x.dll\0"
+            VALUE "ProductName", " IP_Rfp_4x\0"
+            VALUE "ProductVersion", "1.0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 0x4b0
+    END
+END
+
+CVIDLLexports CVIDLLprototypes
+{
+   "int CMD60_addon_ClearError(int InstrSession);"
+   "\n",
+   "int CMD60_addon_Connect(int InstrSession, int type, char *cErrorInfo);"
+   "\n",
+   "int CMD60_addon_GetFirmwareVersion(int InstrSession, char *firmwareVersion);"
+   "\n",
+   "int CMD60_addon_GetOption(int InstrSession, char *sysOption);"
+   "\n",
+   "int CMD60_addon_ReadAfmCoun(int InstrSession, double *freq);"
+   "\n",
+   "int CMD60_addon_ReadFpRfpi(int InstrSession, char *RfpiValue);"
+   "\n",
+   "int CMD60_addon_ReadNormalTransmitPower(int InstrSession, double *transPower);"
+   "\n",
+   "int CMD60_addon_Register(int InstrSession, char *buf);"
+   "\n",
+   "int CMD60_addon_SendCommand(int InstrSession, unsigned char *cCmd);"
+   "\n",
+   "int CMD60_addon_SetPacketTypePP32Z(int InstrSession);"
+   "\n",
+   "int CMD60_addon_activate_SW_Demod(int InstrSession);"
+   "\n",
+   "int CMD60_addon_deactivate_SW_Demod(int InstrSession);"
+   "\n",
+   "int CheckBootFlashImage(struct struct_test *act_structptr);"
+   "\n",
+   "int CheckDECTSwVersion(struct struct_test *act_structptr);"
+   "\n",
+   "int CheckLED_blue(struct struct_test *act_structptr);"
+   "\n",
+   "int CheckLED_green(struct struct_test *act_structptr);"
+   "\n",
+   "int CheckLED_red(struct struct_test *act_structptr);"
+   "\n",
+   "int CheckSoftwareVersion(struct struct_test *act_structptr);"
+   "\n",
+   "int Check_MAC_Serial(struct struct_test *act_structptr);"
+   "\n",
+   "int Check_button(struct struct_test *act_structptr);"
+   "\n",
+   "int DateSelect(int iSelect, char *cReturn);"
+   "\n",
+   "int DisableTestfunktionIfValid(struct struct_test *act_structptr);"
+   "\n",
+   "int Disconnect_V2(struct struct_test *act_structptr);"
+   "\n",
+   "int FactoryDeliveryState(struct struct_test *act_structptr);"
+   "\n",
+   "int GetBarCode(char *strMAC, char *strSerial);"
+   "\n",
+   "int GetCalWeek(int iDay, int iMonth, int iYear, int *iKwYear);"
+   "\n",
+   "int IP_PortConnect(struct struct_test *act_structptr);"
+   "\n",
+   "int InputBarCode(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+   "\n",
+   "int InputSerial(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+   "\n",
+   "int LogDUTSerialNumber(struct struct_test *act_structptr);"
+   "\n",
+   "int LogMAC(struct struct_test *act_structptr);"
+   "\n",
+   "int LogScannedSerialNumber(struct struct_test *act_structptr);"
+   "\n",
+   "void LogShortResult(int mode);"
+   "\n",
+   "int MiniSysClose();"
+   "\n",
+   "int MiniSysOpen();"
+   "\n",
+   "int MiniSysReSetOC5();"
+   "\n",
+   "int MiniSysReSetOC6();"
+   "\n",
+   "int MiniSysReSetOC8();"
+   "\n",
+   "int MiniSysSetOC5();"
+   "\n",
+   "int MiniSysSetOC6();"
+   "\n",
+   "int MiniSysSetOC8();"
+   "\n",
+   "int MiniSys_ADC_InpS(int gnd, int channel);"
+   "\n",
+   "int MiniSys_ADC_RaSe(int DcAc, int range);"
+   "\n",
+   "int MiniSys_ADC_getVac(double *result);"
+   "\n",
+   "int MiniSys_ADC_getVdc(double *result);"
+   "\n",
+   "void MiniSys_close();"
+   "\n",
+   "int MiniSys_getLightSensor();"
+   "\n",
+   "int MiniSys_get_AdapterID(char *adapterID);"
+   "\n",
+   "int MiniSys_get_IN();"
+   "\n",
+   "int MiniSys_get_SID(char *systemID);"
+   "\n",
+   "int MiniSys_open(int comPort);"
+   "\n",
+   "int MiniSys_read(char *read);"
+   "\n",
+   "int MiniSys_set_OC(int number, int on);"
+   "\n",
+   "int MiniSys_write(char *write_char);"
+   "\n",
+   "int PowerOn(struct struct_test *act_structptr);"
+   "\n",
+   "int PowerRF_J32(struct struct_test *act_structptr);"
+   "\n",
+   "int PowerRF_J32New(struct struct_test *act_structptr);"
+   "\n",
+   "int PowerRF_J33(struct struct_test *act_structptr);"
+   "\n",
+   "int PowerRF_J33New(struct struct_test *act_structptr);"
+   "\n",
+   "int RFP_CMD60_connect(struct struct_test *act_structptr);"
+   "\n",
+   "int SSH_PortConnect(struct struct_test *act_structptr);"
+   "\n",
+   "int SetCheckCountryTag(struct struct_test *act_structptr);"
+   "\n",
+   "int SupplyCurrentPSU(struct struct_test *act_structptr);"
+   "\n",
+   "int SystemCall(char *cCmd, int hide);"
+   "\n",
+   "int WLanEmbedded_ListAP(int *ant1, int *ant2, int *ant3);"
+   "\n",
+   "void WLanEmbedded_close();"
+   "\n",
+   "int WLanEmbedded_open(int comPort1, int comPort2, int comPort3);"
+   "\n",
+   "int WLanEmbedded_read(int comPort, char *read);"
+   "\n",
+   "int WLanEmbedded_write(int comPort, char *write_char);"
+   "\n",
+   "int WLanTxPower_Ant1(struct struct_test *act_structptr);"
+   "\n",
+   "int WLanTxPower_Ant2(struct struct_test *act_structptr);"
+   "\n",
+   "int WLanTxPower_Ant3(struct struct_test *act_structptr);"
+   "\n",
+   "int WriteQPDS(int iPrufstatus);"
+   "\n",
+   "int adapter_counter_clear(struct rte_globals *globals, int intervalnr);"
+   "\n",
+   "int adapter_counter_read(struct rte_globals *globals, int intervalnr, int *serviceCount, int *devCount, int *serviceDays, char *lastServiceDate, char *nextServiceDate, char *serviceText);"
+   "\n",
+   "int adapter_counter_update(struct rte_globals *globals, int count);"
+   "\n",
+   "void add_days_to_dateStr(char *dateStr, int days);"
+   "\n",
+   "int authenticate_kbdint(struct ssh_session_struct *session, char *user, char *password);"
+   "\n",
+   "int backup_logdata_files(struct rte_globals *globals);"
+   "\n",
+   "int break_LED(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+   "\n",
+   "int break_ok(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+   "\n",
+   "int checkFtpDeamon(char *server, int timeOut);"
+   "\n",
+   "int check_double_connect(unsigned char *pruefstatus, int mode);"
+   "\n",
+   "int check_other_value(char *name, double lowerlimit, double resultvalue, double upperlimit, int prec, char *unit, char *err_messg);"
+   "\n",
+   "void check_reference();"
+   "\n",
+   "int check_value(double resultvalue);"
+   "\n",
+   "int check_value_TXT_cmp(char *resultvalue, char *strExpected);"
+   "\n",
+   "int check_value_str(char *resultvalue);"
+   "\n",
+   "int check_value_str_cmp(char *resultvalue, char *strExpected);"
+   "\n",
+   "int clean_up(int mode);"
+   "\n",
+   "int closeSSH();"
+   "\n",
+   "void cmd60_settings_for_connect();"
+   "\n",
+   "int days_between_now_and_dateStr(char *dateStr);"
+   "\n",
+   "void disconnect(int mode);"
+   "\n",
+   "int double_to_hex_str(double wert, int length, unsigned char *hexstr);"
+   "\n",
+   "int dut_error(struct test_flow *test_flow);"
+   "\n",
+   "int dut_set_diversity1();"
+   "\n",
+   "int dut_set_diversity2();"
+   "\n",
+   "int emc_counter(char *rfpi_ipei_dut, char *emc_list);"
+   "\n",
+   "char file_get_group(struct struct_file *file_group, FILE *fa_r, char *group);"
+   "\n",
+   "char file_get_group_LongLines(struct struct_file_LongLines *file_group, FILE *fa_r, char *group);"
+   "\n",
+   "char file_getpara(struct struct_file *file_group, char *tag, void *parameter, int type);"
+   "\n",
+   "char file_getpara_LongLines(struct struct_file_LongLines *file_group, char *tag, void *parameter, int type);"
+   "\n",
+   "int flow_control(struct test_flow *test_flow);"
+   "\n",
+   "void generate_xxxi(struct part_ident_parameter *ident_struct);"
+   "\n",
+   "int getDeliveryUnitNumbersFromDataBase(char *deliveryUnitNumbers, int len);"
+   "\n",
+   "int getLongDeTeWeSerialNumberFromDataBase(char *serialNumber);"
+   "\n",
+   "int getMacAddrFromDataBase(char *strMacAddress);"
+   "\n",
+   "int getParkNumberFromDataBase(char *strParkNumber);"
+   "\n",
+   "int getParkNumberInfoFromDataBase(char *strParkNumber);"
+   "\n",
+   "int getPartInfoFromDataBase(char *serialNumber, char *partNumber, char *macAddr);"
+   "\n",
+   "int getPartNumberFromDataBase(char *partNumber);"
+   "\n",
+   "int getShortDeTeWeSerialNumberFromDataBase(char *serialNumber);"
+   "\n",
+   "int get_BandgapData(unsigned char *ucData);"
+   "\n",
+   "int get_BarcodeData(unsigned char *ucData);"
+   "\n",
+   "int get_ClockData(unsigned char *ucData);"
+   "\n",
+   "int get_DeviatData(unsigned char *ucData);"
+   "\n",
+   "void get_EepromDataPath(char *cPath);"
+   "\n",
+   "int get_ProdData(unsigned char *ucData);"
+   "\n",
+   "int get_RssiData(unsigned char *ucData);"
+   "\n",
+   "int get_okay(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+   "\n",
+   "int get_part_identity_db(struct part_ident_parameter *ident_struct);"
+   "\n",
+   "int get_printermode_db();"
+   "\n",
+   "int get_testresult(int select);"
+   "\n",
+   "void goto_test(char *test_username);"
+   "\n",
+   "double hex_str_to_double(unsigned char *buffer, int length);"
+   "\n",
+   "int interactive_shell_session(struct ssh_channel_struct *channel);"
+   "\n",
+   "int io_error(struct test_flow *test_flow);"
+   "\n",
+   "int ipRfp_SystemPing(char *ipAddr, int timeOut);"
+   "\n",
+   "int ipRfp_cleanupWinsock();"
+   "\n",
+   "int ipRfp_clearTempFiles();"
+   "\n",
+   "int ipRfp_getAdapterIpAddr(char *adapterName, char *adapterIpAddr);"
+   "\n",
+   "int ipRfp_libssh_Close();"
+   "\n",
+   "int ipRfp_libssh_FactoryCleanup();"
+   "\n",
+   "int ipRfp_libssh_FactoryReset();"
+   "\n",
+   "int ipRfp_libssh_FtpGet(char *hostIpAddr, char *srcPath, char *srcFileName);"
+   "\n",
+   "int ipRfp_libssh_Open(char *ipaddr);"
+   "\n",
+   "int ipRfp_libssh_Reopen();"
+   "\n",
+   "int ipRfp_libssh_WriteAndRead(char *wBuffer, char *rBuffer, int maxread, char *wildString, double timeoutSec);"
+   "\n",
+   "int ipRfp_libssh_changeToRootUser();"
+   "\n",
+   "int ipRfp_libssh_checkBootDevice(char *bootDevice);"
+   "\n",
+   "int ipRfp_libssh_deleteFilesFromDut();"
+   "\n",
+   "int ipRfp_libssh_enableBMCTestmode();"
+   "\n",
+   "int ipRfp_libssh_enableBMCTestmode_func();"
+   "\n",
+   "int ipRfp_libssh_enableRSX();"
+   "\n",
+   "int ipRfp_libssh_getBMCStatus(char *bmcStatus, char *bmcTestmode, char *bmcCalibStatus);"
+   "\n",
+   "int ipRfp_libssh_getBMCStatus_func(char *bmcStatus, char *bmcTestmode, char *bmcCalibStatus);"
+   "\n",
+   "int ipRfp_libssh_getIpAddress(char *respBuffer);"
+   "\n",
+   "int ipRfp_libssh_getLinkStatus(char *ethDev, char *linkStatus);"
+   "\n",
+   "int ipRfp_libssh_getLinkStatus_func(char *ethDev, char *linkStatus);"
+   "\n",
+   "int ipRfp_libssh_getMacAddress(char *respBuffer);"
+   "\n",
+   "int ipRfp_libssh_getManuVersion(char *pManuVersionFW, char *pManuVersionSW);"
+   "\n",
+   "int ipRfp_libssh_getRTCStatus(char *rtcStatus, char *ntpStatus, char *dateString);"
+   "\n",
+   "int ipRfp_libssh_getTemperature(double *temperature);"
+   "\n",
+   "int ipRfp_libssh_getTemperature_func(double *temperature);"
+   "\n",
+   "int ipRfp_libssh_getUsbDev(char *usbdevStr);"
+   "\n",
+   "int ipRfp_libssh_getWLanStatus(char *respBuffer);"
+   "\n",
+   "int ipRfp_libssh_readConfig(char *mac, char *hwType, char *branding, char *sernr, char *exid);"
+   "\n",
+   "int ipRfp_libssh_readPARK(char *strParkHexNumber);"
+   "\n",
+   "int ipRfp_libssh_readPARKxml(char *strParkHexNumber, char *strParkOctNumber, char *strDECTrDomain, char *strWLANrDomain);"
+   "\n",
+   "int ipRfp_libssh_sendShellCmd(char *strCmd);"
+   "\n",
+   "int ipRfp_libssh_setHeating(char *sCmd);"
+   "\n",
+   "int ipRfp_libssh_setHeating_func(char *sCmd);"
+   "\n",
+   "int ipRfp_libssh_setLED(char *ledCmd);"
+   "\n",
+   "int ipRfp_libssh_setLED_func(char *ledCmd);"
+   "\n",
+   "int ipRfp_libssh_setWLAN(char *wlanMode);"
+   "\n",
+   "int ipRfp_libssh_writeConfig(char *mac, char *hwType, char *branding, char *sernr, char *exid);"
+   "\n",
+   "int ipRfp_libssh_writePARK(char *strParkHexNumber, char *strDECTrDomain, char *strWLANrDomain);"
+   "\n",
+   "int ipRfp_rs232_CheckOTParea();"
+   "\n",
+   "int ipRfp_rs232_CheckUBIerror(char *errBuffer);"
+   "\n",
+   "void ipRfp_rs232_Close();"
+   "\n",
+   "int ipRfp_rs232_Open(int ComPort, int BaudRate, int TimeOut);"
+   "\n",
+   "int ipRfp_rs232_WaitForBootUp(int timeOut, char *bootstringA, char *bootstringB, char *bootstringC, char *bootstringD, char *bootstringE);"
+   "\n",
+   "int ipRfp_rs232_activate();"
+   "\n",
+   "int ipRfp_rs232_checkBootImage(char *errBuffer);"
+   "\n",
+   "int ipRfp_rs232_enableRSX();"
+   "\n",
+   "int ipRfp_rs232_enableSSH();"
+   "\n",
+   "int ipRfp_rs232_flashErase();"
+   "\n",
+   "int ipRfp_rs232_getBMCStatus(char *bmcStatus, char *bmcTestmode, char *bmcCalibStatus);"
+   "\n",
+   "int ipRfp_rs232_getFinalizeState(char *respBuffer);"
+   "\n",
+   "int ipRfp_rs232_getIpAddress(char *ipStr);"
+   "\n",
+   "int ipRfp_rs232_getLinkStatus(char *ethDev, char *linkStatus);"
+   "\n",
+   "int ipRfp_rs232_getUsbDev(char *usbdevStr);"
+   "\n",
+   "int ipRfp_rs232_mail_out(char *cmdBuffer, char *bufferAnswerA, char *bufferAnswerB);"
+   "\n",
+   "int ipRfp_rs232_mail_out_timeout(char *cmdBuffer, char *bufferAnswerA, char *bufferAnswerB, int timeOutSec);"
+   "\n",
+   "int ipRfp_rs232_readConfig(char *mac, char *hwType, char *branding, char *sernr, char *exid);"
+   "\n",
+   "int ipRfp_rs232_readPARK(char *strParkHexNumber);"
+   "\n",
+   "int ipRfp_rs232_readPARKxml(char *strParkHexNumber, char *strParkOctNumber, char *strDECTrDomain, char *strWLANrDomain);"
+   "\n",
+   "int ipRfp_rs232_sendHalt();"
+   "\n",
+   "int ipRfp_rs232_sendMACandSerial(char *mac, char *serial);"
+   "\n",
+   "int ipRfp_rs232_sendShellCmd(char *strCmd);"
+   "\n",
+   "int ipRfp_rs232_setFinalizeState();"
+   "\n",
+   "int ipRfp_rs232_setIpAddress(char *ipStr);"
+   "\n",
+   "int ipRfp_rs232_set_timeout(int TimeOut);"
+   "\n",
+   "int ipRfp_rs232_sync();"
+   "\n",
+   "int ipRfp_rs232_writeConfig(char *mac, char *hwType, char *branding, char *sernr, char *exid);"
+   "\n",
+   "int ipRfp_rs232_writePARK(char *strParkHexNumber, char *strDECTrDomain, char *strWLANrDomain);"
+   "\n",
+   "int ipRfp_rsx_Close();"
+   "\n",
+   "int ipRfp_rsx_EnterTestmode();"
+   "\n",
+   "int ipRfp_rsx_ExitTestmode();"
+   "\n",
+   "int ipRfp_rsx_FinalizeEeprom();"
+   "\n",
+   "int ipRfp_rsx_GetRSSI(unsigned char *value);"
+   "\n",
+   "char *ipRfp_rsx_GetSoftwareVersion(char *buffer);"
+   "\n",
+   "char *ipRfp_rsx_GetSoftwareVersion_Retry(char *buffer, int retry);"
+   "\n",
+   "int ipRfp_rsx_Open(char *ipAddr, int port);"
+   "\n",
+   "char *ipRfp_rsx_ReadEeprom(int address, char *buffer, int count);"
+   "\n",
+   "int ipRfp_rsx_ReadEepromBandgap(unsigned char *value);"
+   "\n",
+   "int ipRfp_rsx_ReadEepromClockFrequency(unsigned char *value);"
+   "\n",
+   "int ipRfp_rsx_ReadEepromDeviation(unsigned char *value, unsigned char *radio);"
+   "\n",
+   "int ipRfp_rsx_ReceiveDataFromIpRfp(int iMaxLength, unsigned char *pBuffer);"
+   "\n",
+   "int ipRfp_rsx_SendDataToRfp(int iLength, unsigned char *pBuffer);"
+   "\n",
+   "int ipRfp_rsx_SetB_fieldContent(unsigned char value1, unsigned char value2);"
+   "\n",
+   "int ipRfp_rsx_SetBandgap(unsigned char value);"
+   "\n",
+   "int ipRfp_rsx_SetClock(unsigned char value);"
+   "\n",
+   "int ipRfp_rsx_SetDeviation(unsigned char value);"
+   "\n",
+   "int ipRfp_rsx_SetDiversity(unsigned char value);"
+   "\n",
+   "int ipRfp_rsx_SetFrequencyBand(unsigned char value);"
+   "\n",
+   "int ipRfp_rsx_SetTransmitPower(unsigned char value);"
+   "\n",
+   "int ipRfp_rsx_SetupDummyBearer(unsigned char dummychannel, unsigned char dummyslot);"
+   "\n",
+   "int ipRfp_rsx_WriteEeprom(int address, char *buffer_ori, int count, int convert);"
+   "\n",
+   "int ipRfp_rsx_WriteEepromBandgap(unsigned char value);"
+   "\n",
+   "int ipRfp_rsx_WriteEepromClockFrequency(unsigned char value);"
+   "\n",
+   "int ipRfp_rsx_WriteEepromDeviation(unsigned char value, int radio);"
+   "\n",
+   "int ipRfp_rsx_getEepromValues(unsigned char *eeprom_value);"
+   "\n",
+   "char *ipRfp_rsx_hexstr2bytestr(char *buffer);"
+   "\n",
+   "int ipRfp_rsx_mail_out(int write_count, unsigned char *buffer, int read_count);"
+   "\n",
+   "int ipRfp_rsx_showEepromValues(unsigned char *eeprom_value_adjust, unsigned char *eeprom_value_reboot);"
+   "\n",
+   "int ipRfp_runOpenOCD(char *openocdScripts, char *respBuffer, int respSize);"
+   "\n",
+   "int ipRfp_startWinsock();"
+   "\n",
+   "int isFileExists(char *filename);"
+   "\n",
+   "int isFtpDeamonRunning(char *server);"
+   "\n",
+   "int isInDebugMode();"
+   "\n",
+   "int isInProductionMode();"
+   "\n",
+   "int isInReferenceMode();"
+   "\n",
+   "int isInRepairMode();"
+   "\n",
+   "unsigned long local_strIp_to_ulongIp(char *strIp);"
+   "\n",
+   "void local_ulongIp_to_strIp(unsigned long ulIp, char *strIp);"
+   "\n",
+   "void logging_io_error(int error_code);"
+   "\n",
+   "double myRound(double value, int points);"
+   "\n",
+   "int openSSH(char *host, char *user, char *password, char *errResp);"
+   "\n",
+   "int or_wildcmp(const char *wild, const char *string);"
+   "\n",
+   "int parse_line(char *line_ptr);"
+   "\n",
+   "int printLabelOnDataBase();"
+   "\n",
+   "int print_baco();"
+   "\n",
+   "int print_out(char *print_str);"
+   "\n",
+   "void print_resultdisplay(char *buffer);"
+   "\n",
+   "int printer_strobe(int port_address);"
+   "\n",
+   "int readSSH(char *readBuffer, int maxread, int *nread, char *wildString, double timeoutSec, char *errResp);"
+   "\n",
+   "int read_eeprom_file(char *pfad, char *buffer);"
+   "\n",
+   "int read_eeprom_special(char *pfad, struct eeprom_special *buffer);"
+   "\n",
+   "int serve_logdata_handling(struct rte_globals *globals);"
+   "\n",
+   "int setPassAndLog(char *logStr);"
+   "\n",
+   "int set_BandgapData(unsigned char *ucData);"
+   "\n",
+   "int set_BarcodeData(unsigned char *ucData);"
+   "\n",
+   "int set_ClockData(unsigned char *ucData);"
+   "\n",
+   "int set_DeviatData(unsigned char *ucData);"
+   "\n",
+   "void set_EepromDataPath(char *cPath);"
+   "\n",
+   "int set_ProdData(unsigned char *ucData);"
+   "\n",
+   "int set_RssiData(unsigned char *ucData);"
+   "\n",
+   "void set_char_serial_number(char *number);"
+   "\n",
+   "void set_hintwindow(char *buffer, long background, int select);"
+   "\n",
+   "void set_menu_printmode(int on_off);"
+   "\n",
+   "void set_printermode_db(char *cLabelName);"
+   "\n",
+   "void set_sequence(int select);"
+   "\n",
+   "void set_serial_number(int number);"
+   "\n",
+   "void set_statuswindow(char *buffer, long background, int select);"
+   "\n",
+   "void set_testheader(int mode);"
+   "\n",
+   "int startFtpDeamon(char *ipAddr, char *rootPath);"
+   "\n",
+   "int start_up(struct rte_globals *global_sets);"
+   "\n",
+   "int stopFtpDeamon();"
+   "\n",
+   "void stringToLow(char *p);"
+   "\n",
+   "void stringToUp(char *p);"
+   "\n",
+   "int verify_knownhost(struct ssh_session_struct *session, char *errResp);"
+   "\n",
+   "int wildcmp(const char *wild, const char *string);"
+   "\n",
+   "int writeSSH(char *writeBuffer, int nwrite, char *errResp);"
+   "\n",
+   "void write_reference_date();"
+   "\n",
+   "int write_sequ2logfile(struct rte_globals *rte_globals);"
+   "\n",
+   "\0"
+}

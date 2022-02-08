@@ -1,0 +1,428 @@
+[stringToUp]
+Class="Function"
+Prototype="void stringToUp(char *p);"
+
+[stringToLow]
+Class="Function"
+Prototype="void stringToLow(char *p);"
+
+[ipRfp_clearTempFiles]
+Class="Function"
+Prototype="int ipRfp_clearTempFiles();"
+
+[ipRfp_runOpenOCD]
+Class="Function"
+Prototype="int ipRfp_runOpenOCD(char *openocdScripts, char *respBuffer, int respSize);"
+
+[ipRfp_SystemPing]
+Class="Function"
+Prototype="int ipRfp_SystemPing(char *ipAddr, int timeOut);"
+
+[ipRfp_getAdapterIpAddr]
+Class="Function"
+Prototype="int ipRfp_getAdapterIpAddr(char *adapterName, char *adapterIpAddr);"
+
+[ipRfp_rs232_mail_out]
+Class="Function"
+Prototype="int ipRfp_rs232_mail_out(char *cmdBuffer, char *bufferAnswerA, char *bufferAnswerB);"
+
+[ipRfp_rs232_mail_out_V2]
+Class="Function"
+Prototype="int ipRfp_rs232_mail_out_V2(char *cmdBuffer, char *bufferAnswerA, char *bufferAnswerB, char *bufferResponse);"
+
+[ipRfp_rs232_mail_out_timeout]
+Class="Function"
+Prototype="int ipRfp_rs232_mail_out_timeout(char *cmdBuffer, char *bufferAnswerA, char *bufferAnswerB, int timeOutSec);"
+
+[ipRfp_rs232_mail_out_timeout_V2]
+Class="Function"
+Prototype="int ipRfp_rs232_mail_out_timeout_V2(char *cmdBuffer, char *bufferAnswerA, char *bufferAnswerB, char *bufferResponse, int timeOutSec);"
+
+[ipRfp_rs232_activate]
+Class="Function"
+Prototype="int ipRfp_rs232_activate();"
+
+[ipRfp_rs232_sendShellCmd]
+Class="Function"
+Prototype="int ipRfp_rs232_sendShellCmd(char *strCmd);"
+
+[ipRfp_rs232_sync]
+Class="Function"
+Prototype="int ipRfp_rs232_sync();"
+
+[ipRfp_rs232_getTemperature]
+Class="Function"
+Prototype="int ipRfp_rs232_getTemperature(int *internal, int *external);"
+
+[ipRfp_rs232_flashErase]
+Class="Function"
+Prototype="int ipRfp_rs232_flashErase();"
+
+[ipRfp_rs232_CheckOTParea]
+Class="Function"
+Prototype="int ipRfp_rs232_CheckOTParea();"
+
+[ipRfp_rs232_checkBootImage]
+Class="Function"
+Prototype="int ipRfp_rs232_checkBootImage(char *errBuffer);"
+
+[ipRfp_rs232_CheckUBIerror]
+Class="Function"
+Prototype="int ipRfp_rs232_CheckUBIerror(char *errBuffer);"
+
+[ipRfp_rs232_setIpAddress]
+Class="Function"
+Prototype="int ipRfp_rs232_setIpAddress(char *ipStr);"
+
+[ipRfp_rs232_getIpAddress]
+Class="Function"
+Prototype="int ipRfp_rs232_getIpAddress(char *ipStr);"
+
+[ipRfp_rs232_getLinkStatus]
+Class="Function"
+Prototype="int ipRfp_rs232_getLinkStatus(char *ethDev, char *linkStatus);"
+
+[ipRfp_rs232_getUsbDev]
+Class="Function"
+Prototype="int ipRfp_rs232_getUsbDev(char *usbdevStr);"
+
+[ipRfp_rs232_getBMCStatus]
+Class="Function"
+Prototype="int ipRfp_rs232_getBMCStatus(char *bmcStatus, char *bmcTestmode, char *bmcCalibStatus);"
+
+[ipRfp_rs232_writePARK]
+Class="Function"
+Prototype="int ipRfp_rs232_writePARK(char *strParkHexNumber, char *strDECTrDomain, char *strWLANrDomain);"
+
+[ipRfp_rs232_readPARK]
+Class="Function"
+Prototype="int ipRfp_rs232_readPARK(char *strParkHexNumber);"
+
+[ipRfp_rs232_readPARKxml]
+Class="Function"
+Prototype="int ipRfp_rs232_readPARKxml(char *strParkHexNumber, char *strParkOctNumber, char *strDECTrDomain, char *strWLANrDomain);"
+
+[ipRfp_rs232_writeConfig]
+Class="Function"
+Prototype="int ipRfp_rs232_writeConfig(char *mac, char *hwType, char *branding, char *sernr, char *exid);"
+
+[ipRfp_rs232_readConfig]
+Class="Function"
+Prototype="int ipRfp_rs232_readConfig(char *mac, char *hwType, char *branding, char *sernr, char *exid);"
+
+[ipRfp_rs232_enableRSX]
+Class="Function"
+Prototype="int ipRfp_rs232_enableRSX();"
+
+[ipRfp_rs232_enableSSH]
+Class="Function"
+Prototype="int ipRfp_rs232_enableSSH();"
+
+[ipRfp_rs232_sendMACandSerial]
+Class="Function"
+Prototype="int ipRfp_rs232_sendMACandSerial(char *mac, char *serial);"
+
+[ipRfp_rs232_sendBootFlashImage]
+Class="Function"
+Prototype="int ipRfp_rs232_sendBootFlashImage();"
+
+[ipRfp_rs232_sendHalt]
+Class="Function"
+Prototype="int ipRfp_rs232_sendHalt();"
+
+[ipRfp_rs232_getFinalizeState]
+Class="Function"
+Prototype="int ipRfp_rs232_getFinalizeState(char *respBuffer);"
+
+[ipRfp_rs232_setFinalizeState]
+Class="Function"
+Prototype="int ipRfp_rs232_setFinalizeState();"
+
+[ipRfp_rs232_Open]
+Class="Function"
+Prototype="int ipRfp_rs232_Open(int ComPort, int BaudRate, int TimeOut);"
+
+[ipRfp_rs232_WaitForBootUp]
+Class="Function"
+Prototype="int ipRfp_rs232_WaitForBootUp(int timeOut, char *bootstringA, char *bootstringB, char *bootstringC, char *bootstringD, char *bootstringE);"
+
+[ipRfp_rs232_set_timeout]
+Class="Function"
+Prototype="int ipRfp_rs232_set_timeout(int TimeOut);"
+
+[ipRfp_rs232_Close]
+Class="Function"
+Prototype="void ipRfp_rs232_Close();"
+
+[ipRfp_rsx_mail_out]
+Class="Function"
+Prototype="int ipRfp_rsx_mail_out(int write_count, unsigned char *buffer, int read_count);"
+
+[ipRfp_rsx_EnterTestmode]
+Class="Function"
+Prototype="int ipRfp_rsx_EnterTestmode();"
+
+[ipRfp_rsx_ExitTestmode]
+Class="Function"
+Prototype="int ipRfp_rsx_ExitTestmode();"
+
+[ipRfp_rsx_GetSoftwareVersion_Retry]
+Class="Function"
+Prototype="char *ipRfp_rsx_GetSoftwareVersion_Retry(char *buffer, int retry);"
+
+[ipRfp_rsx_GetSoftwareVersion]
+Class="Function"
+Prototype="char *ipRfp_rsx_GetSoftwareVersion(char *buffer);"
+
+[ipRfp_rsx_ReadEeprom]
+Class="Function"
+Prototype="char *ipRfp_rsx_ReadEeprom(int address, char *buffer, int count);"
+
+[ipRfp_rsx_hexstr2bytestr]
+Class="Function"
+Prototype="char *ipRfp_rsx_hexstr2bytestr(char *buffer);"
+
+[ipRfp_rsx_WriteEeprom]
+Class="Function"
+Prototype="int ipRfp_rsx_WriteEeprom(int address, char *buffer_ori, int count, int convert);"
+
+[ipRfp_rsx_GetRSSI]
+Class="Function"
+Prototype="int ipRfp_rsx_GetRSSI(unsigned char *value);"
+
+[ipRfp_rsx_SetupDummyBearer]
+Class="Function"
+Prototype="int ipRfp_rsx_SetupDummyBearer(unsigned char dummychannel, unsigned char dummyslot);"
+
+[ipRfp_rsx_SetDiversity]
+Class="Function"
+Prototype="int ipRfp_rsx_SetDiversity(unsigned char value);"
+
+[ipRfp_rsx_SetDeviation]
+Class="Function"
+Prototype="int ipRfp_rsx_SetDeviation(unsigned char value);"
+
+[ipRfp_rsx_SetFrequencyBand]
+Class="Function"
+Prototype="int ipRfp_rsx_SetFrequencyBand(unsigned char value);"
+
+[ipRfp_rsx_SetTransmitPower]
+Class="Function"
+Prototype="int ipRfp_rsx_SetTransmitPower(unsigned char value);"
+
+[ipRfp_rsx_ReadEepromDeviation]
+Class="Function"
+Prototype="int ipRfp_rsx_ReadEepromDeviation(unsigned char *value, unsigned char *radio);"
+
+[ipRfp_rsx_WriteEepromDeviation]
+Class="Function"
+Prototype="int ipRfp_rsx_WriteEepromDeviation(unsigned char value, int radio);"
+
+[ipRfp_rsx_SetB_fieldContent]
+Class="Function"
+Prototype="int ipRfp_rsx_SetB_fieldContent(unsigned char value1, unsigned char value2);"
+
+[ipRfp_rsx_SetClock]
+Class="Function"
+Prototype="int ipRfp_rsx_SetClock(unsigned char value);"
+
+[ipRfp_rsx_ReadEepromClockFrequency]
+Class="Function"
+Prototype="int ipRfp_rsx_ReadEepromClockFrequency(unsigned char *value);"
+
+[ipRfp_rsx_WriteEepromClockFrequency]
+Class="Function"
+Prototype="int ipRfp_rsx_WriteEepromClockFrequency(unsigned char value);"
+
+[ipRfp_rsx_SetBandgap]
+Class="Function"
+Prototype="int ipRfp_rsx_SetBandgap(unsigned char value);"
+
+[ipRfp_rsx_ReadEepromBandgap]
+Class="Function"
+Prototype="int ipRfp_rsx_ReadEepromBandgap(unsigned char *value);"
+
+[ipRfp_rsx_WriteEepromBandgap]
+Class="Function"
+Prototype="int ipRfp_rsx_WriteEepromBandgap(unsigned char value);"
+
+[ipRfp_rsx_FinalizeEeprom]
+Class="Function"
+Prototype="int ipRfp_rsx_FinalizeEeprom();"
+
+[ipRfp_rsx_showEepromValues]
+Class="Function"
+Prototype="int ipRfp_rsx_showEepromValues(unsigned char *eeprom_value_adjust, unsigned char *eeprom_value_reboot);"
+
+[ipRfp_rsx_getEepromValues]
+Class="Function"
+Prototype="int ipRfp_rsx_getEepromValues(unsigned char *eeprom_value);"
+
+[ipRfp_rsx_Open]
+Class="Function"
+Prototype="int ipRfp_rsx_Open(char *ipAddr, int port);"
+
+[ipRfp_rsx_Close]
+Class="Function"
+Prototype="int ipRfp_rsx_Close();"
+
+[ipRfp_rsx_SendDataToRfp]
+Class="Function"
+Prototype="int ipRfp_rsx_SendDataToRfp(int iLength, unsigned char *pBuffer);"
+
+[ipRfp_rsx_ReceiveDataFromIpRfp]
+Class="Function"
+Prototype="int ipRfp_rsx_ReceiveDataFromIpRfp(int iMaxLength, unsigned char *pBuffer);"
+
+[ipRfp_startWinsock]
+Class="Function"
+Prototype="int ipRfp_startWinsock();"
+
+[ipRfp_cleanupWinsock]
+Class="Function"
+Prototype="int ipRfp_cleanupWinsock();"
+
+[ipRfp_libssh_WriteAndRead]
+Class="Function"
+Prototype="int ipRfp_libssh_WriteAndRead(char *wBuffer, char *rBuffer, int maxread, char *wildString, double timeoutSec);"
+
+[ipRfp_libssh_Close]
+Class="Function"
+Prototype="int ipRfp_libssh_Close();"
+
+[ipRfp_libssh_Reopen]
+Class="Function"
+Prototype="int ipRfp_libssh_Reopen();"
+
+[ipRfp_libssh_Open]
+Class="Function"
+Prototype="int ipRfp_libssh_Open(char *ipaddr);"
+
+[ipRfp_libssh_changeToRootUser]
+Class="Function"
+Prototype="int ipRfp_libssh_changeToRootUser();"
+
+[ipRfp_libssh_getIpAddress]
+Class="Function"
+Prototype="int ipRfp_libssh_getIpAddress(char *respBuffer);"
+
+[ipRfp_libssh_sendShellCmd]
+Class="Function"
+Prototype="int ipRfp_libssh_sendShellCmd(char *strCmd);"
+
+[ipRfp_libssh_getMacAddress]
+Class="Function"
+Prototype="int ipRfp_libssh_getMacAddress(char *respBuffer);"
+
+[ipRfp_libssh_writePARK]
+Class="Function"
+Prototype="int ipRfp_libssh_writePARK(char *strParkHexNumber, char *strDECTrDomain, char *strWLANrDomain);"
+
+[ipRfp_libssh_readPARK]
+Class="Function"
+Prototype="int ipRfp_libssh_readPARK(char *strParkHexNumber);"
+
+[ipRfp_libssh_readPARKxml]
+Class="Function"
+Prototype="int ipRfp_libssh_readPARKxml(char *strParkHexNumber, char *strParkOctNumber, char *strDECTrDomain, char *strWLANrDomain);"
+
+[ipRfp_libssh_writeConfig]
+Class="Function"
+Prototype="int ipRfp_libssh_writeConfig(char *mac, char *hwType, char *branding, char *sernr, char *exid);"
+
+[ipRfp_libssh_readConfig]
+Class="Function"
+Prototype="int ipRfp_libssh_readConfig(char *mac, char *hwType, char *branding, char *sernr, char *exid);"
+
+[ipRfp_libssh_getManuVersion]
+Class="Function"
+Prototype="int ipRfp_libssh_getManuVersion(char *pManuVersionFW, char *pManuVersionSW);"
+
+[ipRfp_libssh_getUsbDev]
+Class="Function"
+Prototype="int ipRfp_libssh_getUsbDev(char *usbdevStr);"
+
+[ipRfp_libssh_getTemperature_func]
+Class="Function"
+Prototype="int ipRfp_libssh_getTemperature_func(double *temperature);"
+
+[ipRfp_libssh_getTemperature]
+Class="Function"
+Prototype="int ipRfp_libssh_getTemperature(double *temperature);"
+
+[ipRfp_libssh_enableBMCTestmode_func]
+Class="Function"
+Prototype="int ipRfp_libssh_enableBMCTestmode_func();"
+
+[ipRfp_libssh_enableBMCTestmode]
+Class="Function"
+Prototype="int ipRfp_libssh_enableBMCTestmode();"
+
+[ipRfp_libssh_getBMCStatus_func]
+Class="Function"
+Prototype="int ipRfp_libssh_getBMCStatus_func(char *bmcStatus, char *bmcTestmode, char *bmcCalibStatus);"
+
+[ipRfp_libssh_getBMCStatus]
+Class="Function"
+Prototype="int ipRfp_libssh_getBMCStatus(char *bmcStatus, char *bmcTestmode, char *bmcCalibStatus);"
+
+[ipRfp_libssh_getRTCStatus]
+Class="Function"
+Prototype="int ipRfp_libssh_getRTCStatus(char *rtcStatus, char *ntpStatus, char *dateString);"
+
+[ipRfp_libssh_checkBootDevice]
+Class="Function"
+Prototype="int ipRfp_libssh_checkBootDevice(char *bootDevice);"
+
+[ipRfp_libssh_getWLanStatus]
+Class="Function"
+Prototype="int ipRfp_libssh_getWLanStatus(char *respBuffer);"
+
+[ipRfp_libssh_FactoryReset]
+Class="Function"
+Prototype="int ipRfp_libssh_FactoryReset();"
+
+[ipRfp_libssh_FactoryCleanup]
+Class="Function"
+Prototype="int ipRfp_libssh_FactoryCleanup();"
+
+[ipRfp_libssh_getLinkStatus_func]
+Class="Function"
+Prototype="int ipRfp_libssh_getLinkStatus_func(char *ethDev, char *linkStatus);"
+
+[ipRfp_libssh_getLinkStatus]
+Class="Function"
+Prototype="int ipRfp_libssh_getLinkStatus(char *ethDev, char *linkStatus);"
+
+[ipRfp_libssh_setLED_func]
+Class="Function"
+Prototype="int ipRfp_libssh_setLED_func(char *ledCmd);"
+
+[ipRfp_libssh_setLED]
+Class="Function"
+Prototype="int ipRfp_libssh_setLED(char *ledCmd);"
+
+[ipRfp_libssh_setHeating_func]
+Class="Function"
+Prototype="int ipRfp_libssh_setHeating_func(char *sCmd);"
+
+[ipRfp_libssh_setHeating]
+Class="Function"
+Prototype="int ipRfp_libssh_setHeating(char *sCmd);"
+
+[ipRfp_libssh_setWLAN]
+Class="Function"
+Prototype="int ipRfp_libssh_setWLAN(char *wlanMode);"
+
+[ipRfp_libssh_enableRSX]
+Class="Function"
+Prototype="int ipRfp_libssh_enableRSX();"
+
+[ipRfp_libssh_FtpGet]
+Class="Function"
+Prototype="int ipRfp_libssh_FtpGet(char *hostIpAddr, char *srcPath, char *srcFileName);"
+
+[ipRfp_libssh_deleteFilesFromDut]
+Class="Function"
+Prototype="int ipRfp_libssh_deleteFilesFromDut();"
+

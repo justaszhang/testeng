@@ -1,0 +1,72 @@
+[get_line]
+Class="Function"
+Prototype="char *get_line(FILE *fa_r, char *line);"
+
+[parse]
+Class="Function"
+Prototype="int parse(char *line_ptr);"
+
+[get_file_group]
+Class="Function"
+Prototype="char get_file_group(struct struct_sequ_group *sequ_group, FILE *fa_r, char *group);"
+
+[get_buffer_group]
+Class="Function"
+Prototype="char get_buffer_group(struct struct_sequ_group *sequ_group, char *fileBuffer, char *group);"
+
+[Sequ_Getpara]
+Class="Function"
+Prototype="char Sequ_Getpara(struct struct_sequ_group *sequ_group, char *tag, void *parameter, int type);"
+
+[MiniSysRte_write]
+Class="Function"
+Prototype="int MiniSysRte_write(char *write_char);"
+
+[MiniSysRte_read]
+Class="Function"
+Prototype="int MiniSysRte_read(char *read);"
+
+[MiniSysRte_get_SID]
+Class="Function"
+Prototype="int MiniSysRte_get_SID(char *systemID);"
+
+[MiniSysRte_get_AdapterID]
+Class="Function"
+Prototype="int MiniSysRte_get_AdapterID(char *adapterID);"
+
+[run_adaptercode]
+Class="Function"
+Prototype="void run_adaptercode(short porta, short portb);"
+
+[main]
+Class="Function"
+Prototype="int main(int argc, char **argv);"
+
+[get_sequence]
+Class="Function"
+Prototype="int get_sequence(char *pfad, char window_pos, int do_startup);"
+
+[fill_sequdisplay]
+Class="Function"
+Prototype="void fill_sequdisplay(int mode);"
+
+[testexecutive]
+Class="Function"
+Prototype="int testexecutive(int mode);"
+
+[edit_sequence]
+Class="Function"
+Prototype="void edit_sequence(int mode);"
+
+[fill_proto]
+Class="Function"
+Prototype="void fill_proto(char *pfad);"
+
+[fill_sequ]
+Class="Function"
+Prototype="void fill_sequ(int index, int mode);"
+
+[get_fctaddress]
+Class="Function"
+Prototype="void *get_fctaddress(char *pfad, char *module, char *fktname);"
+

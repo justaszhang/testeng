@@ -1,0 +1,80 @@
+[Workspace Header]
+Version = 600
+Pathname = "/g/ProTest/ProdTest_FLEX/INSTR/MiniSystem/MiniSystem.cws"
+CVI Dir = "/c/program files (x86)/national instruments/measurementstudio/cvi"
+VXIplug&play Framework Dir = "/C/VXIpnp/winnt"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "MiniSystem.prj"
+Drag Bar Left = 135
+Window Top = 456
+Window Left = 96
+Window Bottom = 758
+Window Right = 636
+Max Number Of Errors = 10
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win For Warnings = True
+Show Build Dialog = False
+Save Changes Before Running = "Always"
+Hide Windows = False
+Global Hot Key = False
+Break At First Statement = False
+
+[Project Header 0001]
+Version = 600
+Platform Code = 4
+Sort Type = "No Sort"
+Build Configuration = "Debug"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = False
+
+[File 0001]
+Path = "/g/ProTest/ProdTest_FLEX/INSTR/MiniSystem/MiniSystem.c"
+File Type = "CSource"
+Disk Date = 3600432027
+In Projects = "1,"
+Project Window Indexes = "1,"
+Window Top = 669
+Window Left = 114
+Source Window State = "1,3,4,3,0,0,0,0,0,100,0,0,0,0,0,25,0,0,3,0,"
+
+[File 0002]
+Path = "/g/ProTest/ProdTest_FLEX/INSTR/MiniSystem/MiniSystem.h"
+File Type = "Include"
+Disk Date = 3600431995
+In Projects = "1,"
+Project Window Indexes = "2,"
+Window Top = 327
+Window Left = 407
+Source Window State = "1,0,0,0,0,0,0,0,0,100,0,0,0,0,0,25,0,0,1,18,"
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Do Not Include PRJ File in Actions = False
+Suppress CVI Error Messages = False
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[Command Line Args 0001]
+Command Line Args = ""
+

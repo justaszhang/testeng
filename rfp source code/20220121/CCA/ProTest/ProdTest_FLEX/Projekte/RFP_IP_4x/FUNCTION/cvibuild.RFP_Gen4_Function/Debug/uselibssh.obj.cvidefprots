@@ -1,0 +1,36 @@
+[openSSH]
+Class="Function"
+Prototype="int openSSH(char *host, char *user, char *password, char *errResp);"
+
+[closeSSH]
+Class="Function"
+Prototype="int closeSSH();"
+
+[writeSSH]
+Class="Function"
+Prototype="int writeSSH(char *writeBuffer, int nwrite, char *errResp);"
+
+[readSSH]
+Class="Function"
+Prototype="int readSSH(char *readBuffer, int maxread, int *nread, char *wildString, double timeoutSec, char *errResp);"
+
+[or_wildcmp]
+Class="Function"
+Prototype="int or_wildcmp(const char *wild, const char *string);"
+
+[wildcmp]
+Class="Function"
+Prototype="int wildcmp(const char *wild, const char *string);"
+
+[interactive_shell_session]
+Class="Function"
+Prototype="int interactive_shell_session(struct ssh_channel_struct *channel);"
+
+[verify_knownhost]
+Class="Function"
+Prototype="int verify_knownhost(struct ssh_session_struct *session, char *errResp);"
+
+[authenticate_kbdint]
+Class="Function"
+Prototype="int authenticate_kbdint(struct ssh_session_struct *session, char *user, char *password);"
+

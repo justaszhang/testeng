@@ -1,0 +1,12 @@
+[Init_Counter]
+Class="Function"
+Prototype="int Init_Counter();"
+
+[TRIGGER_HP53131A_TO_MEASURE]
+Class="Function"
+Prototype="int TRIGGER_HP53131A_TO_MEASURE(double *freq);"
+
+[TRIGGER_HP53131A_TO_MEASURE_addon]
+Class="Function"
+Prototype="int TRIGGER_HP53131A_TO_MEASURE_addon(double *freq);"
+

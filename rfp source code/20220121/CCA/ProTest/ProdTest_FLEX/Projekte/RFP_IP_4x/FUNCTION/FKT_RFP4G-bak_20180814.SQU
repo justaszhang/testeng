@@ -1,0 +1,657 @@
+
+[global]
+workdirectory = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\
+dll_library = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\Rfp_IP35_Function.lib
+startupmodul = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+startupfunction = start_up
+cleanupmodul = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+cleanupfunction = clean_up
+flowmodul = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+flowfunction = flow_control
+duterrmodul = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+duterrfunction = dut_error
+ioerrmodul = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+ioerrfunction = io_error
+printport = LPT1
+logfile_path = c:\test_log
+maxerror = 1	//stop after first error
+
+menue_module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+menue_fktname = dut_CloseCOM1
+menue_module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+menue_fktname = dut_OpenCOM1
+menue_module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+menue_fktname = dut_set_diversity1
+menue_module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+menue_fktname = dut_set_diversity2
+menue_module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+menue_fktname = dut_PowerOn
+menue_module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+menue_fktname = dut_PowerOff
+menue_module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\system
+menue_fktname = dut_OpenLibssh
+run_endles = 1
+[end group]
+
+
+//[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = PowerOn
+username = PowerOn
+loopcount = 0
+precond = 0
+runmode = 0
+unit = BOOL
+points = 0
+lowerlimit = 0
+upperlimit = 0
+int1 = 0    //poweron per PSU or PoLAN    0=PSU 1=PoLAN
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = PowerOnCheckTFTP
+username = PowerOnCheckTFTP
+loopcount = 0
+precond = 0
+runmode = 0
+unit = BOOL
+points = 0
+lowerlimit = 0
+upperlimit = 0
+int1 = 0    //poweron per PSU or PoLAN    0=PSU 1=PoLAN
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = SupplyCurrentPSU
+username = SupplyCurrent
+loopcount = 0
+precond = 0
+runmode = 0
+unit = mA
+points = 1
+lowerlimit = 50
+upperlimit = 160
+resultoffset = 0
+double1 = 50  //offset supply current switch
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = LogSerialNumber
+username = LogSerialNumber
+loopcount = 0
+precond = 0     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0     // 0=normal 1=skip 2=pass 3=fail
+unit = TXT
+points = 0
+lowerlimit = 0
+upperlimit = 0
+//Barcode Min,Max
+string1 = 9500000000
+string2 = 9509999999
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = LogMAC
+username = LogMAC
+loopcount = 0
+precond = 0     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0     // 0=normal 1=skip 2=pass 3=fail
+unit = TXT
+points = 0
+lowerlimit = 0
+upperlimit = 0
+//Barcode Min,Max
+string1 = 9500000000
+string2 = 9509999999
+[end group]
+
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = Clock_25MHz
+username = Clock_25MHz
+loopcount = 0
+precond = 0
+runmode = 0     // 0=normal 1=skip 2=pass 3=fail
+unit = ppm
+points = 2
+lowerlimit = -50         // 25MHz  50ppm
+upperlimit = +50
+resultoffset = 0
+[end group]
+
+//[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = CheckPartNumber
+username = CheckPartNumber
+// Achtung: Test ist wichtig, hier wird getMac getstartet
+loopcount = 0
+precond = 0
+runmode = 1		// 0=normal 1=skip 2=pass 3=fail
+unit = TXT
+points = 0
+lowerlimit = 0
+upperlimit = 0	
+[end group]
+
+//[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = CheckSerialNumber
+username = CheckSerialNumber
+loopcount = 0
+precond = 0
+runmode = 1		// 0=normal 1=skip 2=pass 3=fail
+unit = TXT
+points = 0
+lowerlimit = 1
+upperlimit = 9999999999	
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RS232_CheckLinkStatus
+username = RS232_CheckLinkStatusExtern
+loopcount = 0
+precond = 0
+runmode = 0
+unit = TXT
+points = 0
+lowerlimit = 0
+upperlimit = 0
+string1 = eth0
+string2 = link up, 100Mb's, full duplex
+string3 = link up, 1000Mb's, full duplex
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RS232_getIpAddr
+username = RS232_getIpAddr
+loopcount = 0
+precond = 0
+runmode = 0
+unit = TXT
+points = 0
+lowerlimit = 0
+upperlimit = 0
+// ipAddr range
+string1 = 192.168.99.240
+string2 = 192.168.99.254
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RS232_EnableRSX
+username = RS232_EnableRSX
+loopcount = 0
+precond = 0
+runmode = 0
+unit = BOOL
+points = 0
+lowerlimit = 5
+upperlimit = 5
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = AdjustVcc1V8
+username = AdjustVcc1V8
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = V
+points = 3
+lowerlimit = 1.78
+upperlimit = 1.82
+int1 = 3    //lowerlimit DecValue
+int2 = 15   //upperlimit DecValue
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = CheckVcc1V8Value
+username = CheckVcc1V8Value
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dec
+points = 0
+lowerlimit = 3          //0x03
+upperlimit = 15         //0x0f
+resultoffset = 0
+[end group]
+
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = AdjustBmcClock
+username = AdjustBmcClock
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = Hz
+points = 0
+//ValueTyp = 10368000 +/- 0.2ppm
+lowerlimit = 10367998
+upperlimit = 10368002
+resultoffset = 0
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = CheckBmcClockValue
+username = CheckBmcClockValue
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dec
+points = 0
+lowerlimit = 72         //0x48
+upperlimit = 175        //0x
+resultoffset = 0
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = LogBmcTemperature
+username = LogkBmcTemperature
+loopcount = 0
+precond = 0
+runmode = 0
+unit = dec
+points = 0
+lowerlimit = 15         
+upperlimit = 45        
+resultoffset = 0
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = CheckTemperatureInternal
+username = CheckTemperatureInternal
+loopcount = 0
+precond = 0
+runmode = 0
+unit = dec
+points = 0
+lowerlimit = 15         
+upperlimit = 45        
+resultoffset = 0
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = CheckTemperatureExternal
+username = CheckTemperatureExternal
+loopcount = 0
+precond = 0
+runmode = 0
+unit = dec
+points = 0
+lowerlimit = 15         
+upperlimit = 45        
+resultoffset = 0
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RFP_ip_TestEnterTestmode
+username = RFP_ip_TestEnterTestmode
+loopcount = 0
+precond = 0
+runmode = 0
+unit = bool
+points = 0
+lowerlimit = 0
+upperlimit = 0
+resultoffset = 0
+[end group]
+
+
+///////////////////////////////////////////////////////////////////////////////
+//Test RF part
+///////////////////////////////////////////////////////////////////////////////
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RFP_CMD60_connect
+username = RFP_CMD60_connect_TC0
+loopcount = 0
+precond = 0     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dBm
+points = 0
+lowerlimit = 0          
+upperlimit = 0          
+resultoffset = 0
+//RF-Power cable Offset 
+double1 = 3.0
+//RF-Power cable Offset 
+double2 = 3.0
+int1 = 0    //Traffic Carrier
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = PowerRF_J33
+username = PowerRF_J33_TC0
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dBm
+points = 2
+lowerlimit = 21.0
+upperlimit = 25.0
+resultoffset = 0
+int1 = 0    //Traffic Carrier
+[end group]
+
+
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RF_BER_J33
+username = RF_BER_J33
+loopcount  0
+precond = 0     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = ppm
+points = 2
+lowerlimit = 0
+upperlimit = 100
+resultoffset = 0
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = PowerRF_J32
+username = PowerRF_J32_TC0
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dBm
+points = 2
+lowerlimit = 21.0
+upperlimit = 25.0
+resultoffset = 0
+int1 = 0    //Traffic Carrier[end group]
+[end group]
+
+
+
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RF_BER_J32
+username = RF_BER_J32
+loopcount = 0
+precond = 0     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = ppm
+points = 2
+lowerlimit = 0
+upperlimit = 100
+resultoffset = 0
+[end group]
+
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RssiHighRF
+username = RssiHighRF
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dec
+points = 0
+lowerlimit = 39         //
+upperlimit = 59
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RssiLowRF
+username = RssiLowRF
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dec
+points = 0
+lowerlimit = 22         //
+upperlimit = 42
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RssiKdecRF
+username = RssiKdecRF
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dec
+points = 0
+lowerlimit = 0
+upperlimit = 255
+int1 = 2    //RF-Part1 oder RF-Part2
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RssiOffsetRF
+username = RssiOffsetRF
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dec
+points = 0
+lowerlimit = 0
+upperlimit = 255
+int1 = 2    //RF-Part1 oder RF-Part2
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RFP_CMD60_connect
+username = RFP_CMD60_connect_TC5
+loopcount = 0
+precond = 0     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dBm
+points = 0
+lowerlimit = 0          
+upperlimit = 0          
+resultoffset = 0
+//RF-Power cable Offset 
+double1 = 3.0
+//RF-Power cable Offset 
+double2 = 3.0
+int1 = 5    //Traffic Carrier
+[end group]
+
+
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = PowerRF_J32
+username = PowerRF_J32_TC5
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dBm
+points = 2
+lowerlimit = 21.0
+upperlimit = 25.0
+resultoffset = 0
+int1 = 5    //Traffic Carrier[end group]
+[end group]
+
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = PowerRF_J33
+username = PowerRF_J33_TC5
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dBm
+points = 2
+lowerlimit = 21.0
+upperlimit = 25.0
+resultoffset = 0
+int1 = 5    //Traffic Carrier
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = RFP_CMD60_connect
+username = RFP_CMD60_connect_TC9
+loopcount = 0
+precond = 0     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dBm
+points = 0
+lowerlimit = 0          
+upperlimit = 0          
+resultoffset = 0
+//RF-Power cable Offset 
+double1 = 3.0
+//RF-Power cable Offset 
+double2 = 3.0
+int1 = 9    //Traffic Carrier
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = PowerRF_J33
+username = PowerRF_J33_TC9
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dBm
+points = 2
+lowerlimit = 21.0
+upperlimit = 25.0
+resultoffset = 0
+int1 = 9    //Traffic Carrier
+[end group]
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = PowerRF_J32
+username = PowerRF_J32_TC9
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0
+unit = dBm
+points = 2
+lowerlimit = 21.0
+upperlimit = 25.0
+resultoffset = 0
+int1 = 9    //Traffic Carrier[end group]
+[end group]
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Finalize, MAC
+///////////////////////////////////////////////////////////////////////////////
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = Write_SerialandMAC
+username = Write_SerialandMAC
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0     // 0=normal 1=skip 2=pass 3=fail
+unit = bool
+points = 0
+lowerlimit = 0
+upperlimit = 0
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = CheckBootImage
+username = CheckBootImage
+loopcount = 0
+precond = 0
+runmode = 0
+unit = 0
+points = 0
+lowerlimit = 1
+upperlimit = 1
+string1 = BOOTIMAGE 0                              UPTODATE
+[end group]
+
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = FinalizeEeprom
+username = FinalizeEeprom
+loopcount = 0
+precond = 4     // 0=normal 1=onlyIfLastTestPassed 2=onlyIfLastTestFail 3=onlyIfRepairmode 4=onlyIfNoneRepairmode
+runmode = 0     // 0=normal 1=skip 2=pass 3=fail
+unit = bool
+points = 0
+lowerlimit = 0
+upperlimit = 0
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = ShutDownDUT
+username = ShutDownDUT
+loopcount = 0
+precond = 0
+runmode = 0
+unit = BOOL
+points = 0
+lowerlimit = 0
+upperlimit = 0
+[end group]
+
+
+[TEST]
+module = G:\Protest\ProdTest_FLEX\Projekte\RFP_IP_4x\FUNCTION\test
+fktname = Disconnect
+username = Disconnect
+loopcount = 0
+precond = 0
+runmode = 0
+unit = BOOL
+points = 0
+lowerlimit = 0
+upperlimit = 0
+[end group]
+
+
+
+
+//ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE ENDE
+
+

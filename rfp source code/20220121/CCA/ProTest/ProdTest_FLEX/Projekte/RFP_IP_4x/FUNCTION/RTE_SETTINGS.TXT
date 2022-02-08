@@ -1,0 +1,27 @@
+[global]
+//------------
+module_portA = 1		// Com-Port for DUT RS232
+module_portB = 2		// Com-Port for Adapter-Tag, base-module: 0x10, I2C-Memory-Device: 0xa4 !!
+gpib_mode = normal	// for future
+login_mode = 0		// 0 = disable, 1 = display login
+sequence_selectmode = 1 // mouse-double click: 1 = enable, 0 = disable
+check_Fixture_Service = 1	// 0 - no check, 1 - check
+check_System_Service = 1	// 0 - no check, 1 - check
+fixtureServicePath = G:\ProTest\ProdTest_FLEX\AdapterCode\Adapter
+panelsize = 0
+xpanelposition = 15
+ypanelposition = 30
+datalogmode = 1			//0= no Logging and no QPDS  1= Logging and QPDS
+printmode = 0			//0- no print, 1-print
+resultdisplaymode = 1
+clearresultdisplay = 1
+systemeventmode = 1
+errorrateshow = 1
+label_command_line = C:\Programme\BarTender\bartend.exe
+label_printer_name = 10.219.24.88
+adaptercodeFile = G:\ProTest\ProdTest_FLEX\AdapterCode\Adapter_FLEX.TXT
+logdata_exe = G:\ProTest\ProdTest_FLEX\Rte5_3_en\log_backup.exe
+logdata_trigger = 50	// do logdata.exe every x devices, if 0, nothing to do !
+logdata_destination = G:\ProTest\Log_DatBackup\
+[end group]
+

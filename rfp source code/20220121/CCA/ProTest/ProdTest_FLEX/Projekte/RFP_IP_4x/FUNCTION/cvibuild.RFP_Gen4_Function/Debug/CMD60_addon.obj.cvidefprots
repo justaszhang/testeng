@@ -1,0 +1,48 @@
+[CMD60_addon_Register]
+Class="Function"
+Prototype="int CMD60_addon_Register(int InstrSession, char *buf);"
+
+[CMD60_addon_ClearError]
+Class="Function"
+Prototype="int CMD60_addon_ClearError(int InstrSession);"
+
+[CMD60_addon_SetPacketTypePP32Z]
+Class="Function"
+Prototype="int CMD60_addon_SetPacketTypePP32Z(int InstrSession);"
+
+[CMD60_addon_SendCommand]
+Class="Function"
+Prototype="int CMD60_addon_SendCommand(int InstrSession, unsigned char *cCmd);"
+
+[CMD60_addon_GetFirmwareVersion]
+Class="Function"
+Prototype="int CMD60_addon_GetFirmwareVersion(int InstrSession, char *firmwareVersion);"
+
+[CMD60_addon_GetOption]
+Class="Function"
+Prototype="int CMD60_addon_GetOption(int InstrSession, char *sysOption);"
+
+[CMD60_addon_ReadNormalTransmitPower]
+Class="Function"
+Prototype="int CMD60_addon_ReadNormalTransmitPower(int InstrSession, double *transPower);"
+
+[CMD60_addon_ReadAfmCoun]
+Class="Function"
+Prototype="int CMD60_addon_ReadAfmCoun(int InstrSession, double *freq);"
+
+[CMD60_addon_ReadFpRfpi]
+Class="Function"
+Prototype="int CMD60_addon_ReadFpRfpi(int InstrSession, char *RfpiValue);"
+
+[CMD60_addon_activate_SW_Demod]
+Class="Function"
+Prototype="int CMD60_addon_activate_SW_Demod(int InstrSession);"
+
+[CMD60_addon_deactivate_SW_Demod]
+Class="Function"
+Prototype="int CMD60_addon_deactivate_SW_Demod(int InstrSession);"
+
+[CMD60_addon_Connect]
+Class="Function"
+Prototype="int CMD60_addon_Connect(int InstrSession, int type, char *cErrorInfo);"
+

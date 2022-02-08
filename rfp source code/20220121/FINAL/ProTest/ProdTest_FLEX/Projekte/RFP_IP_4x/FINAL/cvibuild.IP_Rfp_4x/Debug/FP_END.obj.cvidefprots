@@ -1,0 +1,112 @@
+[local_ulongIp_to_strIp]
+Class="Function"
+Prototype="void local_ulongIp_to_strIp(unsigned long ulIp, char *strIp);"
+
+[local_strIp_to_ulongIp]
+Class="Function"
+Prototype="unsigned long local_strIp_to_ulongIp(char *strIp);"
+
+[PowerOn]
+Class="Function"
+Prototype="int PowerOn(struct struct_test *act_structptr);"
+
+[SupplyCurrentPSU]
+Class="Function"
+Prototype="int SupplyCurrentPSU(struct struct_test *act_structptr);"
+
+[SSH_PortConnect]
+Class="Function"
+Prototype="int SSH_PortConnect(struct struct_test *act_structptr);"
+
+[Check_MAC_Serial]
+Class="Function"
+Prototype="int Check_MAC_Serial(struct struct_test *act_structptr);"
+
+[LogDUTSerialNumber]
+Class="Function"
+Prototype="int LogDUTSerialNumber(struct struct_test *act_structptr);"
+
+[LogScannedSerialNumber]
+Class="Function"
+Prototype="int LogScannedSerialNumber(struct struct_test *act_structptr);"
+
+[LogMAC]
+Class="Function"
+Prototype="int LogMAC(struct struct_test *act_structptr);"
+
+[CheckLED_red]
+Class="Function"
+Prototype="int CheckLED_red(struct struct_test *act_structptr);"
+
+[CheckLED_green]
+Class="Function"
+Prototype="int CheckLED_green(struct struct_test *act_structptr);"
+
+[CheckLED_blue]
+Class="Function"
+Prototype="int CheckLED_blue(struct struct_test *act_structptr);"
+
+[Check_button]
+Class="Function"
+Prototype="int Check_button(struct struct_test *act_structptr);"
+
+[IP_PortConnect]
+Class="Function"
+Prototype="int IP_PortConnect(struct struct_test *act_structptr);"
+
+[CheckDECTSwVersion]
+Class="Function"
+Prototype="int CheckDECTSwVersion(struct struct_test *act_structptr);"
+
+[RFP_CMD60_connect]
+Class="Function"
+Prototype="int RFP_CMD60_connect(struct struct_test *act_structptr);"
+
+[PowerRF_J33]
+Class="Function"
+Prototype="int PowerRF_J33(struct struct_test *act_structptr);"
+
+[PowerRF_J32]
+Class="Function"
+Prototype="int PowerRF_J32(struct struct_test *act_structptr);"
+
+[PowerRF_J33New]
+Class="Function"
+Prototype="int PowerRF_J33New(struct struct_test *act_structptr);"
+
+[PowerRF_J32New]
+Class="Function"
+Prototype="int PowerRF_J32New(struct struct_test *act_structptr);"
+
+[WLanTxPower_Ant1]
+Class="Function"
+Prototype="int WLanTxPower_Ant1(struct struct_test *act_structptr);"
+
+[WLanTxPower_Ant3]
+Class="Function"
+Prototype="int WLanTxPower_Ant3(struct struct_test *act_structptr);"
+
+[WLanTxPower_Ant2]
+Class="Function"
+Prototype="int WLanTxPower_Ant2(struct struct_test *act_structptr);"
+
+[FactoryDeliveryState]
+Class="Function"
+Prototype="int FactoryDeliveryState(struct struct_test *act_structptr);"
+
+[CheckSoftwareVersion]
+Class="Function"
+Prototype="int CheckSoftwareVersion(struct struct_test *act_structptr);"
+
+[CheckBootFlashImage]
+Class="Function"
+Prototype="int CheckBootFlashImage(struct struct_test *act_structptr);"
+
+[SetCheckCountryTag]
+Class="Function"
+Prototype="int SetCheckCountryTag(struct struct_test *act_structptr);"
+
+[Disconnect_V2]
+Class="Function"
+Prototype="int Disconnect_V2(struct struct_test *act_structptr);"
+

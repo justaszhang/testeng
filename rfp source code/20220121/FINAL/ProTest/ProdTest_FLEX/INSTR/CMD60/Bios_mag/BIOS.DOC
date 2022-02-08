@@ -1,0 +1,2435 @@
+
+                   Twinny Magic BIOS [$Revision::   3.0  $]
+________________________________________________________________________________
+
+  How To Use This Document:
+
+  This document is intended to be used as a programming reference manual.
+  It describes each function in the
+
+                   Twinny Magic BIOS [$Revision::   3.0  $]
+
+  library. The functions are listed in alphabetical order with a description
+  of the function, C syntax of the function, a description of each parameter,
+  and possible error codes.
+
+________________________________________________________________________________
+
+Function Tree Layout:
+
+   Twinny Magic BIOS [$Revision::   3.0  $]unction Name:
+
+      Configure
+         Get IIC-Board address                    BIOS_GetBoardAdr
+         Set IIC-Board address                    BIOS_SetBoardAdr
+         Get DUT type                             BIOS_GetDUT
+         Set DUT type                             BIOS_SetDUT
+         Get Program ID                           BIOS_GetPID
+         Set Program ID                           BIOS_SetPID
+         Initialize IIC Board                     BIOS_InitIICBoard
+      Additional information
+         <Create Class or Function Panel Window>
+      General Functions
+         Open BIOS                                BIOS_Open
+         Close BIOS                               BIOS_Close
+         Send a mail to DUT                       BIOS_SendMail
+         Receive a mail from DUT                  BIOS_ReceiveMail
+         Enter Testmode                           BIOS_EnterTestmode
+         Exit Testmode                            BIOS_ExitTestmode
+         Return SW information                    BIOS_GetUnitVersion
+         Adjust the clock                         BIOS_SetClock
+      RAM Functions
+         Write array to RAM                       BIOS_WriteRAM
+         Write byte to RAM                        BIOS_WriteRAMByte
+         Read array from RAM                      BIOS_ReadRAM
+         Read byte from RAM                       BIOS_ReadRAMByte
+         Modify byte in RAM                       BIOS_ModifyRAMByte
+      EEPROM Functions
+         EEPROM protected ?                       BIOS_EEPROMProtected
+         Protect EEPROM                           BIOS_ProtectEEPROM
+         Unprotect EEPROM                         BIOS_UnprotectEEPROM
+         Set EEPROM 'serviced' flag               BIOS_SetEEPROMServiceBit
+         Write array to EEPROM                    BIOS_WriteEEPROM
+         Write byte to EEPROM                     BIOS_WriteEEPROMByte
+         Read array from EEPROM                   BIOS_ReadEEPROM
+         Read byte from EEPROM                    BIOS_ReadEEPROMByte
+      Battery Measurements
+         Measure Voltage                          BIOS_BattMeasVolt
+         Measure Temperature                      BIOS_BattMeasTemp
+      Audio & Buzzer Functions
+         Start Tone                               BIOS_StartTone
+         Stop Tone                                BIOS_StopTone
+         Start Test RingTone                      BIOS_StartTestRingTone
+         Stop Test RingTone                       BIOS_StopTestRingTone
+         Start Buzzer Tone                        BIOS_StartBuzzerTone
+         Stop Buzzer Tone                         BIOS_StopBuzzerTone
+         Mute Microphone                          BIOS_MuteMic
+         Unmute Microphone                        BIOS_UnmuteMic
+         Open Audio                               BIOS_OpenAudio
+         Close Audio                              BIOS_CloseAudio
+         Open Audio Loopback                      BIOS_OpenAudioLoopback
+         Close Audio Loopback                     BIOS_CloseAudioLoopback
+      DSP Functions
+         Set the IOM mode                         BIOS_SetDSPIOMMode
+         Set the TAM switch                       BIOS_SetTAMSwitch
+         Return the Audiostate                    BIOS_GetAudioState
+         Reading DSP Memory
+            Read DSP RAM                          BIOS_ReadDSPRAM
+            Reading Lower DSP RAM                 BIOS_ReadLowerDSPRAM
+            Reading Upper DSP RAM                 BIOS_ReadUpperDSPRAM
+            Reading Y DSP RAM                     BIOS_ReadYDSPRAM
+         Writing DSP Memory
+            Write DSP RAM                         BIOS_WriteDSPRAM
+            Write Lower DSP RAM                   BIOS_WriteLowerDSPRAM
+            Write Upper DSP RAM                   BIOS_WriteUpperDSPRAM
+            Write Y DSP RAM                       BIOS_WriteYDSPRAM
+      Display Functions
+         Write a char in the display              BIOS_WriteChar
+         Erase characters in the display          BIOS_ClearDisplay
+         Stop Characters blinking                 BIOS_StopBlink
+         Stop Symbols blinking                    BIOS_StopSymbolBlink
+         Disable Display updates                  BIOS_DisableDisplay
+      Keyboard Functions
+         Press a key on the Keyboard              BIOS_ActivateKey
+         Get a key pressed on the Keyb.           BIOS_GetKeyPressed
+      Fixed Part Line Functions
+         Enable Line AGC                          BIOS_LineAGCEnable
+         Disable Line AGC                         BIOS_LineAGCDisable
+         Enable Line Short                        BIOS_EnableLineShort
+         Disable Line Short                       BIOS_DisableLineShort
+         Connect the E point to Ground            BIOS_ConnectEToGND
+         Disconnect the E point from Gro          BIOS_DisconnectEToGND
+         Enable Line Break                        BIOS_EnableLineBreak
+         Disable Line Break                       BIOS_DisableLineBreak
+         Hook on                                  BIOS_HookOn
+         Hook off                                 BIOS_HookOff
+         Read the Ring detector                   BIOS_ReadRingDetector
+      BMC & RF Functions
+         Enter lowlevel testmode for BMC          BIOS_EnterLowlevelTestmode
+         Exit lowlevel testmode for BMC           BIOS_ExitLowlevelTestmode
+         A/B-field functions
+            Set A-field Contents                  BIOS_BMCSetAfieldContent
+            Set B-field Contents                  BIOS_BMCSetBFieldContent
+            Select PseudoRandom B field           BIOS_BMCSetPseudoRandomBField
+            Select a constant B field             BIOS_BMCSetConstantBField
+         Adjustment and Lowlevel
+            Set Internal Vref                     BIOS_BMCSetInternalVREF
+            Set RGMSK level                       BIOS_BMC_SetRGMSK
+            Set Polarity bytes of the BMC         BIOS_BMCSetPolarity
+            Initialise for DC Quadoffset          BIOS_BMCInitQuad
+            Set DC offset for Quadrature          BIOS_BMCSetQuadDCOffset
+            Set AC offset for Quadrature          BIOS_BMCSetQuadrature
+            Get Polarity bytes of BMC             BIOS_BMCGetPolarity
+            Initialise for RSSI measurement       BIOS_InitRSSI
+            Return the RSSI results               BIOS_GetRSSI
+            Enable the BMC Chip pin               BIOS_BMCChipEnable
+            Enable the REFCLK                     BIOS_EnableREFCLK
+            Disable the REFCLK                    BIOS_DisableREFCLK
+            Enable the charger pin                BIOS_EnableCharger
+            Disable the charger pin               BIOS_DisableCharger
+         Channel +Conversation functions
+            Establish a dummybearer               BIOS_SetupDummyBearer
+            Set the diversity mode                BIOS_BMCSetDiversity
+            Return the ServiceState               BIOS_GetServiceState
+            Select TX channel Continouos          BIOS_TxChannel
+            Select RX channel Continouos          BIOS_RxChannel
+            Select TX channel Bursted             BIOS_BMCSetTXChannel
+            Change TX channel Bursted             BIOS_BMCChangeTXChannel
+            Select RX channel Bursted             BIOS_BMCSetRXChannel
+            Change RX channel Bursted             BIOS_BMCChangeRXChannel
+            Switch antenna bursted                BIOS_BMCSwitchAntenna
+      Production Compound Seq. Func.
+         Default RF setup                         BIOS_DefaultRF
+         Default RX setup                         BIOS_DefaultRX
+      Development Compound Seq. Func.
+         NOT DOCUMENTED
+            <Create Class or Function Panel Window>
+________________________________________________________________________________
+
+              The following functions are in alphabetical order.
+
+________________________________________________________________________________
+
+  BIOS_ActivateKey
+
+      INT32 BIOS_ActivateKey (BYTE8 bKeycode);
+
+  Purpose
+
+      The function simulates a key pressed on the Portable Part keyboard.
+
+  Parameter List
+
+      bKeycode
+
+          Variable Type       BYTE8
+
+          The keycode for the key in question.Only the values 3 and 4 are used
+          
+          This is defined in bios.h
+            #define HOOK_ON_KEY  3
+            #define HOOK_OFF_KEY 4
+          
+          
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BattMeasTemp
+
+      INT32 BIOS_BattMeasTemp (BYTE8 *batteryTemperature);
+
+  Purpose
+
+      The function measures the temperature of the battery using the
+      internal meter of the DUT.
+
+  Parameter List
+
+      batteryTemperature
+
+          Variable Type       BYTE8 *
+
+          The value we measured (0-255)
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BattMeasVolt
+
+      INT32 BIOS_BattMeasVolt (BYTE8 *batteryVoltage);
+
+  Purpose
+
+      Measures the battery voltage using the internal meter of the DUT.
+
+  Parameter List
+
+      batteryVoltage
+
+          Variable Type       BYTE8 *
+
+          The value we measured (0-255)
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCChangeRXChannel
+
+      INT32 BIOS_BMCChangeRXChannel (BYTE8 bChannel);
+
+  Purpose
+
+      The function changes from one bursted R channel to another bursted Rx
+      channel.
+      This function does NOT work on continouos settings like BIOS_RxChannel().
+
+  Parameter List
+
+      bChannel
+
+          Variable Type       BYTE8
+
+          The new channel selected  [0 - 9]
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCChangeTXChannel
+
+      INT32 BIOS_BMCChangeTXChannel (BYTE8 bChannel);
+
+  Purpose
+
+      The function changes from one channel in burstmode to another channel in
+      burstmode.
+      This function does NOT work on continuous settings such as
+      BIOS_TxChannel.
+
+  Parameter List
+
+      bChannel
+
+          Variable Type       BYTE8
+
+          The new channel selected  [0 - 9]
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCChipEnable
+
+      INT32 BIOS_BMCChipEnable (void);
+
+  Purpose
+
+      The function enbales the ChipEnable pin of the BMC.
+      This is used in development only.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCGetPolarity
+
+      INT32 BIOS_BMCGetPolarity (BYTE8 *bControl1, BYTE8 *bControl2);
+
+  Purpose
+
+      The Function returns the polarity bytes of the BMC.
+      
+      WARNING :
+        DO NEVER USE THIS FUNCTION UNLESS YOU HAVE A RF-DEVELOPER
+        RIGHT NEXT TO YOU.
+      
+      Due to the way the BMC is designed, the only we can control it in a
+      continuous mode is to stop the BML and then change polarity of the
+      individual port of the BMC.
+      These bytes determine if a signal is active HIGH or active LOW.
+      
+      Setting these bytes in wrong manner will make the BMC go "out of bounds"
+      since it cannot detect the correct signals at the correct time. Based on
+      this :
+      
+       DO NOT USE THIS FUNCTION DIRECTLY IN PRODUCTION.
+      
+      The function is used internally by many of the BMC functions.
+
+  Parameter List
+
+      bControl1
+
+          Variable Type       BYTE8 (passed by reference)
+
+          The first control byte of the BMC
+
+      bControl2
+
+          Variable Type       BYTE8 (passed by reference)
+
+          The second control byte of the BMC
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCInitQuad
+
+      INT32 BIOS_BMCInitQuad (void);
+
+  Purpose
+
+      This function is very similar to BIOS_BMCSetQuadDCOffset, but here we set
+      the LMX-chip to operate in x1 mode.
+      Do NOT use this function unless you are sure, that you need a x1 mode.
+      
+      This is ONLY used under very special circumstances during quadrature
+      adjustment in the production.
+      
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetAfieldContent
+
+      INT32 BIOS_BMCSetAfieldContent (BYTE8 bContent);
+
+  Purpose
+
+      The function fills the A-field of the packets with the selected value.
+      The function is also select a constant B-field.
+
+  Parameter List
+
+      bContent
+
+          Variable Type       BYTE8
+
+          The value that is copied into all the bytes of the A-field.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetBFieldContent
+
+      INT32 BIOS_BMCSetBFieldContent (BYTE8 bContent);
+
+  Purpose
+
+      The function fills the B-field of the packet with the selected value.
+      The function does expect the B-field to be constant.
+      
+
+  Parameter List
+
+      bContent
+
+          Variable Type       BYTE8
+
+          The value that is copied into all the bytes of the B-field.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetConstantBField
+
+      INT32 BIOS_BMCSetConstantBField (void);
+
+  Purpose
+
+      The function switches to a constant B-field content.
+      Use BIOS_BMCSetBFieldContent to set the contents of the constant B-field.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetDiversity
+
+      INT32 BIOS_BMCSetDiversity (WORD16 wAdr, BYTE8 bAntenna);
+
+  Purpose
+
+      This function select a diversity mode by modifying the current RAM value,
+      NOT the EEPROM.
+      
+      That means, that you can change the diversity mode temporarily with this
+      function during a test without changing the permanent value from EEPROM.
+      
+      If You due a EnterTestmode /ExitTestmode the original value from the
+      EEPROM is reloaded.
+
+  Parameter List
+
+      wAdr
+
+          Variable Type       WORD16
+
+          The adress of the diversity parameter in the EEPROM
+          Use adr 0x20 unless otherwise specified.
+
+      bAntenna
+
+          Variable Type       BYTE8
+
+          The diversitymode
+              0: Diversity mode
+              1: Antenna 0 mode
+              2: Antenna 1 mode
+          
+          
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetInternalVREF
+
+      INT32 BIOS_BMCSetInternalVREF (BYTE8 bVref);
+
+  Purpose
+
+      The function modifies VREF by modifying the RAM value adr 0xA in External
+      memory.
+      
+      The function is used during adjustment of VREF.
+
+  Parameter List
+
+      bVref
+
+          Variable Type       BYTE8
+
+          The RAM value used to hold the VREF
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetPolarity
+
+      INT32 BIOS_BMCSetPolarity (BYTE8 bControl1, BYTE8 bControl2);
+
+  Purpose
+
+      The Function setup the polarity bytes of the BMC.
+      
+      WARNING : DO NEVER USE THIS FUNCTION UNLESS YOU HAVE A RF-DEVELOPER RIGHT
+      NEXT TO YOU.
+      
+      Due to the way the BMC is designed, the only we can control it in a
+      continuous mode is to stop the BML and then change polarity of the
+      individual port of the BMC.
+      These bytes determine if a signal is active HIGH or active LOW.
+      
+      Setting these bytes in wrong manner will make the BMC go "out of bounds"
+      since it cannot detect the correct signals at the correct time. Based on
+      this :
+        DO NOT USE THIS FUNCTION DIRECTLY IN PRODUCTION.
+      
+      The function is used internally by many of the BMC functions.
+
+  Parameter List
+
+      bControl1
+
+          Variable Type       BYTE8
+
+          The first control byte of the BMC
+
+      bControl2
+
+          Variable Type       BYTE8
+
+          The second control byte of the BMC
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetPseudoRandomBField
+
+      INT32 BIOS_BMCSetPseudoRandomBField (void);
+
+  Purpose
+
+      The functions enables a "pseudorandom b-field"
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetQuadDCOffset
+
+      INT32 BIOS_BMCSetQuadDCOffset (BYTE8 bDCOffset, BYTE8 bPositive);
+
+  Purpose
+
+      The function sets the DCOffset of Quadrature
+      
+      Your input for this function is : Your Offset in Volts / 0,125
+      
+      Example  A measured offset of 1,250 Volt => (1,250/ 0,125) =  6
+               You call BMCSetQuadOffset(6,1),
+      
+               where 1 stands for Positive offset
+      
+
+  Parameter List
+
+      bDCOffset
+
+          Variable Type       BYTE8
+
+          The offset in steps of 0.125 volts
+          
+          This value equals (Your Offset in Volts) / 0,125
+          
+          A measured DCoffset of 1,250 Volt => (1,250/ 0,125) =  6
+          
+          
+
+      bPositive
+
+          Variable Type       BYTE8
+
+          The sign of offset
+          
+             Set this value to "1" for positive offset
+             Set this value to "0" for negative offset
+          
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetQuadrature
+
+      INT32 BIOS_BMCSetQuadrature (BYTE8 bQuad);
+
+  Purpose
+
+      The function is used to adjust the AC offset for the Quadrature.
+      This is done by modifying the adr 0x08 in EXTERNAL-RAM
+
+  Parameter List
+
+      bQuad
+
+          Variable Type       BYTE8
+
+          The AC offset value located in RAM
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetRXChannel
+
+      INT32 BIOS_BMCSetRXChannel (BYTE8 bChannel);
+
+  Purpose
+
+      The function setup the dut on the selected Rx channel in burstedmode.
+
+  Parameter List
+
+      bChannel
+
+          Variable Type       BYTE8
+
+          The channel selected  [0 - 9]
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSetTXChannel
+
+      INT32 BIOS_BMCSetTXChannel (BYTE8 bChannel);
+
+  Purpose
+
+      The function setup the DUT to send Bursted on the selected channel.
+
+  Parameter List
+
+      bChannel
+
+          Variable Type       BYTE8
+
+          The channel selected  [0 - 9]
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMCSwitchAntenna
+
+      INT32 BIOS_BMCSwitchAntenna (BYTE8 bAntenna);
+
+  Purpose
+
+      The function switches active antenna during a bursted setup on a Fixed
+      Part.
+      This function does NOT support continouos operation setting.
+      (It only works in combination with BIOS_BMCSetTXChannel()..)
+
+  Parameter List
+
+      bAntenna
+
+          Variable Type       BYTE8
+
+          The antenna to use from now on.
+          The possible antennaes are [0,1]
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_BMC_SetRGMSK
+
+      INT32 BIOS_BMC_SetRGMSK (BYTE8 bRGMSK);
+
+  Purpose
+
+      The function is used to adjust the RGMSK value by modifying a RAM value
+      at adr 0xE8 in External memory.
+
+  Parameter List
+
+      bRGMSK
+
+          Variable Type       BYTE8
+
+          The value for the RGMSK (RAM)
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ClearDisplay
+
+      INT32 BIOS_ClearDisplay (void);
+
+  Purpose
+
+      The function erases the display for characters. Symbols are NOT cleared.
+      This is for development test only.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_Close
+
+      INT32 BIOS_Close (void);
+
+  Purpose
+
+      The function closes the driver.
+      
+      At this time the function does not do anything, since there
+      are no allocated memory from the driver to deallocate before
+      terminating a program.
+________________________________________________________________________________
+
+  BIOS_CloseAudio
+
+      INT32 BIOS_CloseAudio (void);
+
+  Purpose
+
+      The function closes the audio circuit.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_CloseAudioLoopback
+
+      INT32 BIOS_CloseAudioLoopback (void);
+
+  Purpose
+
+      The function closes a previously opened Audioloopback.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ConnectEToGND
+
+      INT32 BIOS_ConnectEToGND (void);
+
+  Purpose
+
+      The function connect the point E to ground.
+      For further explanation of "E" please see the DUT diagram.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_DefaultRF
+
+      INT32 BIOS_DefaultRF (void);
+
+  Purpose
+
+      The function places the DUT in a common setup for RF measurements.
+      The function consist of a number of functions from this driver.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_DefaultRX
+
+      INT32 BIOS_DefaultRX (BYTE8 bChannel);
+
+  Purpose
+
+      The function places the DUT in a default RX-mode setup on the selected RX
+      channel. [0 - 9].
+      
+
+  Parameter List
+
+      bChannel
+
+          Variable Type       BYTE8
+
+          The RX-channel to use.   [0 - 9]
+          
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_DisableCharger
+
+      INT32 BIOS_DisableCharger (void);
+
+  Purpose
+
+      The function disables the charger pin by toggling a bit in SFR-RAM adr.
+      0x90.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_DisableDisplay
+
+      INT32 BIOS_DisableDisplay (void);
+
+  Purpose
+
+      The function prevents the display from being updated from the DUT
+      processor.
+      This function is not used in production, since the functionality is
+      included in the target, when entering testmode.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_DisableLineBreak
+
+      INT32 BIOS_DisableLineBreak (void);
+
+  Purpose
+
+      The function disables the Line Break circuit.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_DisableLineShort
+
+      INT32 BIOS_DisableLineShort (void);
+
+  Purpose
+
+      The function disables Line Short.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_DisableREFCLK
+
+      INT32 BIOS_DisableREFCLK (void);
+
+  Purpose
+
+      The function disables the REFCLK signal by toggling a bit in SFR-RAM adr
+      0xB1.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_DisconnectEToGND
+
+      INT32 BIOS_DisconnectEToGND (void);
+
+  Purpose
+
+      The function disconnects the point E from ground.
+      For further explanation of "E" please see the DUT diagram.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_EEPROMProtected
+
+      INT32 BIOS_EEPROMProtected (void);
+
+  Purpose
+
+      Return the status of the internal variable
+        flEEPROMProtected
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_EnableCharger
+
+      INT32 BIOS_EnableCharger (void);
+
+  Purpose
+
+      The function enables the charger pin by toggling a bit in SFR-RAM adr.
+      0x90.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_EnableLineBreak
+
+      INT32 BIOS_EnableLineBreak (void);
+
+  Purpose
+
+      The function enables the Line Break circuit.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_EnableLineShort
+
+      INT32 BIOS_EnableLineShort (void);
+
+  Purpose
+
+      The function enables Line Short.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_EnableREFCLK
+
+      INT32 BIOS_EnableREFCLK (void);
+
+  Purpose
+
+      The function enables the REFCLK signal by toggling a bit in SFR-RAM adr
+      0xB1.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_EnterLowlevelTestmode
+
+      INT32 BIOS_EnterLowlevelTestmode (void);
+
+  Purpose
+
+      The function disables all active slots on the BMC.
+      The function prevents the BMC from fx.transmitting.
+      
+      The function enables other BIOS-calls to control the BMC's RF logic in
+      continuous mode.
+      
+      When entering Lowleveltestmode then Burst Mode Logic continues to run
+      inside the BMC, but we don't allow it to control RF HW.
+      
+      WARNING:
+      Through this "special" mode the BMC can be brought into situations, where
+      it is operating in situations, that has little or no relation to the way
+      the BMC is used in the real world, so be very careful to select functions
+      from this driver and do NOT experiment with Read/WriteRAM functions to
+      specific Memory locations unless you have the BMC chip manual beside you.
+      Remember, that there can be parts of the circuit, that are NOT designed
+      for continuous operation.(only bursted)
+      
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_EnterTestmode
+
+      INT32 BIOS_EnterTestmode (void);
+
+  Purpose
+
+      The function places the DUT in a special testmode.
+      This is needed in order to perform the test.
+      For the Portable Part the display is disabled in order to reduce
+      the number of collisions on the IIC-bus.
+
+  Return Value
+
+          Return the status of operation
+________________________________________________________________________________
+
+  BIOS_ExitLowlevelTestmode
+
+      INT32 BIOS_ExitLowlevelTestmode (void);
+
+  Purpose
+
+      This function has been removed.
+      use BIOS_ExitTestmode to restart.
+
+  Return Value
+
+          Return the status of operation.
+          This will always return "-2" to indicate that this function is no
+          longer supported in the DUT.
+          The function interface is kept due to compatability with SW tools
+          used during development.
+________________________________________________________________________________
+
+  BIOS_ExitTestmode
+
+      INT32 BIOS_ExitTestmode (void);
+
+  Purpose
+
+      The ExitTestmode command places the DUT in normal operating mode.
+
+  Return Value
+
+          Return the status of operation
+________________________________________________________________________________
+
+  BIOS_GetAudioState
+
+      INT32 BIOS_GetAudioState (BYTE8 *bAudioState);
+
+  Purpose
+
+      Returns a value indicating whether the DSP is in Audio mode or not.
+      This is used to check that there is indeed a connection with audio
+      signals established in Finaltest.
+
+  Parameter List
+
+      bAudioState
+
+          Variable Type       BYTE8 *
+
+          The audiostate
+                  0  = Not in Audio
+                  1  = In Audio.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_GetBoardAdr
+
+      WORD16 BIOS_GetBoardAdr (void);
+
+  Purpose
+
+      Returns IIC-Board Address
+
+  Return Value
+
+          IIC-Board address.
+________________________________________________________________________________
+
+  BIOS_GetDUT
+
+      BYTE8 BIOS_GetDUT (void);
+
+  Purpose
+
+      Returns the DUT type.
+      
+      Available values :
+      
+      Mnemonics           Value
+      --------------------------
+      FP                  0
+      PP                  1
+
+  Return Value
+
+          The DUT type.
+          Return either PP or FP
+________________________________________________________________________________
+
+  BIOS_GetKeyPressed
+
+      INT32 BIOS_GetKeyPressed (BYTE8 *bKeyPressed);
+
+  Purpose
+
+      The function returns a value indicating the key being pressed on the
+      keyboard of the Portable Part
+
+  Parameter List
+
+      bKeyPressed
+
+          Variable Type       BYTE8 (passed by reference)
+
+          The value of the key pressed.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_GetPID
+
+      BYTE8 BIOS_GetPID (void);
+
+  Purpose
+
+      Returns the Program ID.
+      
+      The function is not used in productiontest.
+
+  Return Value
+
+          The program ID.
+________________________________________________________________________________
+
+  BIOS_GetRSSI
+
+      INT32 BIOS_GetRSSI (BYTE8 *bRSSi);
+
+  Purpose
+
+      The functions reads the current RSSI value of slot 0 on the channel
+      selected in the BIOS_InitRSSI call, that were issued to this function.
+      
+      You call BIOS_GetRSSI again and again after just one call to
+      BIOS_InitRSSI.
+
+  Parameter List
+
+      bRSSi
+
+          Variable Type       BYTE8 (passed by reference)
+
+          The value holds the current RSSI value for slot 0.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_GetServiceState
+
+      INT32 BIOS_GetServiceState (BYTE8 bServiceState);
+
+  Purpose
+
+      The function returns a value indicating whether the PP and FP can "see"
+      each other.
+      
+      This function is send to the PP. If the ServiceState = 1 then we might be
+      able to hook off and make a call.
+
+  Parameter List
+
+      bServiceState
+
+          Variable Type       BYTE8
+
+          The value indicates whether the PP is in service on a FP.
+            0 = NOT in Service (Perhaps it is not enrolled)
+            1 = In Service ( PP and FP can see each other RF-wise)
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_GetUnitVersion
+
+      INT32 BIOS_GetUnitVersion (BYTE8 *bData);
+
+
+  Parameter List
+
+      bData
+
+          Variable Type       BYTE8 (passed by reference)
+
+          The bData consist of 3 bytes containing the SW version information.
+
+  Return Value
+
+          Return the status of operation
+________________________________________________________________________________
+
+  BIOS_HookOff
+
+      INT32 BIOS_HookOff (void);
+
+  Purpose
+
+      This function has two methods of operation:
+      For the Fixed Part:
+            The function is equal to a BIOS_DisableLineBreak
+      
+      For the Portable Part:
+            The function is equal to a BIOS_ActivateKey(HOOK_OFF_KEY)
+      
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_HookOn
+
+      INT32 BIOS_HookOn (void);
+
+  Purpose
+
+      This function has two methods of operation:
+      For the Fixed Part:
+            The function is equal to a BIOS_EnableLineBreak
+      
+      For the Portable Part:
+            The function is equal to a BIOS_ActivateKey(HOOK_ON_KEY)
+      
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_InitIICBoard
+
+      void BIOS_InitIICBoard (BYTE8 IICAddress, BYTE8 IICClockFrequency);
+
+  Purpose
+
+      Used to initialize the IIC Board.
+      
+      Sets both the board IIC-addres and the IIC Clock frequency.
+      
+      Default IIC-board address   : 0x80
+      Default IIC Clock frequency : 90   kHz
+
+  Parameter List
+
+      IICAddress
+
+          Variable Type       BYTE8
+
+          The iic address for the testpc.
+          
+          Default IIC-board address   : 0x80
+
+      IICClockFrequency
+
+          Variable Type       BYTE8
+
+          The clock frequency for the iic-board
+________________________________________________________________________________
+
+  BIOS_InitRSSI
+
+      INT32 BIOS_InitRSSI (BYTE8 bChannel);
+
+  Purpose
+
+      The function setup the DUT to measure the RSSI on the selected channel.
+      The BMC measures this continouosly on this channel and on all the slots.
+      After this function has been called you can call BIOS_GetRSSI again and
+      again to have the current RSSI value of slot 0 returned.
+      
+      
+
+  Parameter List
+
+      bChannel
+
+          Variable Type       BYTE8
+
+          The Channel used for the RSSI measurement [0 - 9]
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_LineAGCDisable
+
+      INT32 BIOS_LineAGCDisable (void);
+
+  Purpose
+
+      The function disables the AGC circuit
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_LineAGCEnable
+
+      INT32 BIOS_LineAGCEnable (void);
+
+  Purpose
+
+      The function enables the AGC circuit
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ModifyRAMByte
+
+      INT32 BIOS_ModifyRAMByte (BYTE8 ramType, WORD16 wRAMAdr, BYTE8 modifier,
+                                BYTE8 bModifyValue);
+
+  Purpose
+
+      The function modifies the contents of the RAM address by either
+      OR'ing or AND'ing with bModifyValue.
+      
+      example:
+         Errorcode = BIOS_ModifyRAMByte(1,0x100,1,0x80)
+      
+      means
+        "modify the contents of address 0x100 in External RAM
+         by OR'ing it with 0x80"
+
+  Parameter List
+
+      ramType
+
+          Variable Type       BYTE8
+
+          The type of RAM to modify.
+          
+          The RAM areas are divided into 4. The areas have theese values:
+             INTERNAL RAM   0
+             EXTERNAL RAM   1
+                      ROM   2
+                  SFR RAM   3
+          
+          External RAM and Special Functions Register RAM are the most accessed
+          areas.
+
+      wRAMAdr
+
+          Variable Type       WORD16
+
+          The address
+
+      modifier
+
+          Variable Type       BYTE8
+
+          Modify by OR of AND
+
+      bModifyValue
+
+          Variable Type       BYTE8
+
+          The value, we modify with.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_MuteMic
+
+      INT32 BIOS_MuteMic (void);
+
+  Purpose
+
+      The function mutes the microphone.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_Open
+
+      INT32 BIOS_Open (BYTE8 DUTType);
+
+  Purpose
+
+      The function initialises the iic-board at adress 0x80
+      and sets the DUT to the selected DUT type
+
+  Parameter List
+
+      DUTType
+
+          Variable Type       BYTE8
+
+          You can choose between
+            FP  :  Fixed Part      (Base)
+            PP  :  Portable Part   (Handset)
+________________________________________________________________________________
+
+  BIOS_OpenAudio
+
+      INT32 BIOS_OpenAudio (void);
+
+  Purpose
+
+      The function opens the audio circuit.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_OpenAudioLoopback
+
+      INT32 BIOS_OpenAudioLoopback (void);
+
+  Purpose
+
+      The function opens an ADPCM loopback.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ProtectEEPROM
+
+      void BIOS_ProtectEEPROM (void);
+
+  Purpose
+
+      The functions prevents the physical writing to the EEPROM.
+      Writing to the EEPROM after this call has been performed
+      will not change the contents.
+      
+      The function is used when handling a Golden Reference in production and
+      during the debug phase.
+________________________________________________________________________________
+
+  BIOS_ReadDSPRAM
+
+      INT32 BIOS_ReadDSPRAM (BYTE8 bRAMType, BYTE8 bRAMAdr, WORD16 *wRAMValue);
+
+  Purpose
+
+      The function reads from the specific DSP memory area.
+      
+
+  Parameter List
+
+      bRAMType
+
+          Variable Type       BYTE8
+
+          The type of DSP RAM to access
+                    DSP Lower Bank = 0
+                    DSP Y Bank     = 2
+                    DSP Upper Bank = 4
+
+      bRAMAdr
+
+          Variable Type       BYTE8
+
+          The address of DSP memory to read.
+
+      wRAMValue
+
+          Variable Type       WORD16 (passed by reference)
+
+          The value read
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ReadEEPROM
+
+      INT32 BIOS_ReadEEPROM (WORD16 EEPROMAddress, BYTE8 *EEPROMData,
+                             WORD16 numberofEEPROMData);
+
+  Purpose
+
+      Reads an array of data from EEPROM
+
+  Parameter List
+
+      EEPROMAddress
+
+          Variable Type       WORD16
+
+          Address in EEPROM where data values starts.
+
+      EEPROMData
+
+          Variable Type       BYTE8 *
+
+          The data read
+
+      numberofEEPROMData
+
+          Variable Type       WORD16
+
+          The number of data to read.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ReadEEPROMByte
+
+      INT32 BIOS_ReadEEPROMByte (WORD16 EEPROMAddress, BYTE8 *EEPROMValue);
+
+  Purpose
+
+      Reads a byte from EEPROM.
+
+  Parameter List
+
+      EEPROMAddress
+
+          Variable Type       WORD16
+
+          Address in EEPROM to read from
+
+      EEPROMValue
+
+          Variable Type       BYTE8 *
+
+          The value read
+
+  Return Value
+
+          Return status of operation.
+________________________________________________________________________________
+
+  BIOS_ReadLowerDSPRAM
+
+      INT32 BIOS_ReadLowerDSPRAM (BYTE8 bRAMAdr, WORD16 *wRAMValue);
+
+  Purpose
+
+      Reads from lower DSP memory.
+      Calls the functions BIOS_ReadDSPRAM
+
+  Parameter List
+
+      bRAMAdr
+
+          Variable Type       BYTE8
+
+          The address of DSP memory to read.
+
+      wRAMValue
+
+          Variable Type       WORD16 (passed by reference)
+
+          The value read
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ReadRAM
+
+      INT32 BIOS_ReadRAM (BYTE8 ramType, WORD16 RAMaddress, BYTE8 *RAMDataArray,
+                          BYTE8 numberofRAMData);
+
+  Purpose
+
+      Read a number of bytes from RAM
+
+  Parameter List
+
+      ramType
+
+          Variable Type       BYTE8
+
+          The type of RAM to write to.
+          
+          The RAM areas are divided into 4. The areas have theese values:
+             INTERNAL RAM   0
+             EXTERNAL RAM   1
+                      ROM   2
+                  SFR RAM   3
+          
+          External RAM and Special Functions Register RAM are the most accessed
+          areas.
+
+      RAMaddress
+
+          Variable Type       WORD16
+
+          The starting adress
+
+      RAMDataArray
+
+          Variable Type       BYTE8 *
+
+          Contains the data read from RAM
+
+      numberofRAMData
+
+          Variable Type       BYTE8
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ReadRAMByte
+
+      INT32 BIOS_ReadRAMByte (BYTE8 ramType, WORD16 RAMaddress, BYTE8 *RAMValue);
+
+  Purpose
+
+      Read a byte from RAM
+
+  Parameter List
+
+      ramType
+
+          Variable Type       BYTE8
+
+          The type of RAM to write to.
+          
+          The RAM areas are divided into 4. The areas have theese values:
+             INTERNAL RAM   0
+             EXTERNAL RAM   1
+                      ROM   2
+                  SFR RAM   3
+          
+          External RAM and Special Functions Register RAM are the most accessed
+          areas.
+
+      RAMaddress
+
+          Variable Type       WORD16
+
+          The address to read from
+
+      RAMValue
+
+          Variable Type       BYTE8 *
+
+          The value read
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ReadRingDetector
+
+      INT32 BIOS_ReadRingDetector (BYTE8 bDetected);
+
+  Purpose
+
+      The function returns whether the ring detector has detected an incomming
+      call/a "ring"
+      
+
+  Parameter List
+
+      bDetected
+
+          Variable Type       BYTE8
+
+          
+            bDetected =  0  means "nothing detected"
+            bDetected != 0  measn "ringtone detected"
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ReadUpperDSPRAM
+
+      INT32 BIOS_ReadUpperDSPRAM (BYTE8 bRAMAdr, WORD16 *wRAMValue);
+
+  Purpose
+
+      Reads from upper DSP memory.
+      Calls the functions BIOS_ReadDSPRAM
+
+  Parameter List
+
+      bRAMAdr
+
+          Variable Type       BYTE8
+
+          The address of DSP memory to read.
+
+      wRAMValue
+
+          Variable Type       WORD16 (passed by reference)
+
+          The value read
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ReadYDSPRAM
+
+      INT32 BIOS_ReadYDSPRAM (BYTE8 bRAMAdr, WORD16 *wRAMValue);
+
+  Purpose
+
+      Reads from the Y bank DSP memory.
+      Calls the functions BIOS_ReadDSPRAM
+
+  Parameter List
+
+      bRAMAdr
+
+          Variable Type       BYTE8
+
+          The address of DSP memory to read.
+
+      wRAMValue
+
+          Variable Type       WORD16 (passed by reference)
+
+          The value read
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_ReceiveMail
+
+      INT32 BIOS_ReceiveMail (WORD16 primitiv, BYTE8 *maildataarray,
+                              BYTE8 *numberofMaildata);
+
+
+  Parameter List
+
+      primitiv
+
+          Variable Type       WORD16
+
+          The primitiv of the mail we expect the DUT to return in the mail.
+
+      maildataarray
+
+          Variable Type       BYTE8 *
+
+          The data transferred in the mail
+
+      numberofMaildata
+
+          Variable Type       BYTE8 *
+
+          The number of data in the mail.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_RxChannel
+
+      INT32 BIOS_RxChannel (BYTE8 bChannel);
+
+  Purpose
+
+      The function setup the DUT to receive Continouosly (Not Bursted) on the
+      selected channel.
+
+  Parameter List
+
+      bChannel
+
+          Variable Type       BYTE8
+
+          The channel selected  [0 - 9]
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_SendMail
+
+      INT32 BIOS_SendMail (BYTE8 taskID, WORD16 primitiv, BYTE8 *maildataarray,
+                           BYTE8 numberofMaildata);
+
+  Purpose
+
+      Sends a mail to the DUT.
+
+  Parameter List
+
+      taskID
+
+          Variable Type       BYTE8
+
+          The TaskID of the DUT's operating system
+
+      primitiv
+
+          Variable Type       WORD16
+
+          The primitive of the operating system of the DUT
+
+      maildataarray
+
+          Variable Type       BYTE8 *
+
+      numberofMaildata
+
+          Variable Type       BYTE8
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_SetBoardAdr
+
+      void BIOS_SetBoardAdr (WORD16 newIICBoardaddress);
+
+  Purpose
+
+      Used to set a new IIC-Board address.
+
+  Parameter List
+
+      newIICBoardaddress
+
+          Variable Type       WORD16
+
+          The new IIC-Board address.
+________________________________________________________________________________
+
+  BIOS_SetClock
+
+      INT32 BIOS_SetClock (BYTE8 clockValue);
+
+  Purpose
+
+      The function is used to modify the clock value for the DUT.
+      This function operates in memory and does not affect the current
+      value stored in the EEPROM.
+
+  Parameter List
+
+      clockValue
+
+          Variable Type       BYTE8
+
+          The value to program to the clock resgister
+
+  Return Value
+
+          Return the status of operation
+________________________________________________________________________________
+
+  BIOS_SetDSPIOMMode
+
+      INT32 BIOS_SetDSPIOMMode (void);
+
+  Purpose
+
+      The functions switches the DSP into IOM-mode, which is prior to
+      activating the TAM-switch.
+
+  Return Value
+
+          Return the status of operation
+________________________________________________________________________________
+
+  BIOS_SetDUT
+
+      void BIOS_SetDUT (BYTE8 DUTType);
+
+  Purpose
+
+      Used to select the DUT type.
+      
+      When the DUT type has been set, all the commands are send to the
+      DUT of this type.
+
+  Parameter List
+
+      DUTType
+
+          Variable Type       BYTE8
+
+          You can choose between
+            FP  :  Fixed Part      (Base)
+            PP  :  Portable Part   (Handset)
+________________________________________________________________________________
+
+  BIOS_SetEEPROMServiceBit
+
+      INT32 BIOS_SetEEPROMServiceBit (void);
+
+  Purpose
+
+      The function marks the EEPROM as serviced /"manipulated".
+      
+      By setting this flag you can indicate, that the EEPROM values have been
+      changed outside of a production test program.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_SetPID
+
+      void BIOS_SetPID (BYTE8 programID);
+
+  Purpose
+
+      Used to change the program ID.
+      
+      The function is not used in production test.
+
+  Parameter List
+
+      programID
+
+          Variable Type       BYTE8
+
+          The new Program ID.
+________________________________________________________________________________
+
+  BIOS_SetTAMSwitch
+
+      INT32 BIOS_SetTAMSwitch (BYTE8 bTAMMode);
+
+  Purpose
+
+      The functions sets the TAMSwitch to either mode 3 or 5.
+      This is used during line and Audio measurements.
+
+  Parameter List
+
+      bTAMMode
+
+          Variable Type       BYTE8
+
+          The only valid modes are "3" and "5".
+
+  Return Value
+
+          Return the status of operation.
+          
+          An illegal TAM mode will return an errorcode of 104 = E_PARAM
+________________________________________________________________________________
+
+  BIOS_SetupDummyBearer
+
+      INT32 BIOS_SetupDummyBearer (BYTE8 bChannel, BYTE8 bSlot);
+
+  Purpose
+
+      The function makes the FP setup a dummybearer on the selected channel and
+      slot.
+      Remember that the FP must be in EnterTestmode before this call. Otherwise
+      the FP will NOT establish the dummybearer.
+
+  Parameter List
+
+      bChannel
+
+          Variable Type       BYTE8
+
+          The channel to use for a dummybearer.
+
+      bSlot
+
+          Variable Type       BYTE8
+
+          The slot to use for a dummybearer.
+          Use even slot numbers (0.2.4...) for this.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_StartBuzzerTone
+
+      INT32 BIOS_StartBuzzerTone (void);
+
+  Purpose
+
+      The function starts a continuous tone in the Buzzer.
+      The frequency is approxm. 2700 Hz
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_StartTestRingTone
+
+      INT32 BIOS_StartTestRingTone (void);
+
+  Purpose
+
+      This function is NOT used on this project.
+      Use BIOS_StartBuzzerTone instead.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_StartTone
+
+      INT32 BIOS_StartTone (BYTE8 tone);
+
+  Purpose
+
+      The function informs the audiobuzzer task to generate a tone.
+
+  Parameter List
+
+      tone
+
+          Variable Type       BYTE8
+
+          The selected tone
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_StopBlink
+
+      INT32 BIOS_StopBlink (void);
+
+  Purpose
+
+      The functions prevents the display from flashing / blinking characters in
+      the display.
+      This is a development function only.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_StopBuzzerTone
+
+      INT32 BIOS_StopBuzzerTone (void);
+
+  Purpose
+
+      The functions stops the previously started tone in
+      BIOS_StartBuzzerTone().
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_StopSymbolBlink
+
+      INT32 BIOS_StopSymbolBlink (void);
+
+  Purpose
+
+      The functions prevents the display from flashing / blinking symbols in
+      the display.
+      This is a development function only.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_StopTestRingTone
+
+      INT32 BIOS_StopTestRingTone (void);
+
+  Purpose
+
+      This function is NOT used on this project any longer.
+      
+      Use BIOS_StopBuzzerTone instead.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_StopTone
+
+      INT32 BIOS_StopTone (void);
+
+  Purpose
+
+      The functions stops the tone initiated by BIOS_StartTone().
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_TxChannel
+
+      INT32 BIOS_TxChannel (BYTE8 bChannel);
+
+  Purpose
+
+      The function setup the DUT to send Continouosly (Not Bursted) on the
+      selected channel.
+
+  Parameter List
+
+      bChannel
+
+          Variable Type       BYTE8
+
+          The channel selected  [0 - 9]
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_UnmuteMic
+
+      INT32 BIOS_UnmuteMic (void);
+
+  Purpose
+
+      The function unmutes the microphone.
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_UnprotectEEPROM
+
+      void BIOS_UnprotectEEPROM (void);
+
+  Purpose
+
+      The function enables physical writing to the EEPROM after a previous call
+      to BIOS_ProtectEEPROM()
+      
+      The function is used when handling a Golden Reference in production and
+      during the debug phase.
+________________________________________________________________________________
+
+  BIOS_WriteChar
+
+      INT32 BIOS_WriteChar (BYTE8 bScancode);
+
+  Purpose
+
+      The function writes a char to the display.
+      This is for development test only.
+
+  Parameter List
+
+      bScancode
+
+          Variable Type       BYTE8
+
+          The scancode of the character
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_WriteDSPRAM
+
+      INT32 BIOS_WriteDSPRAM (BYTE8 bRAMType, BYTE8 bRAMAdr, WORD16 *wRAMValue);
+
+  Purpose
+
+      The function writes a value to a specific DSP memory location.
+
+  Parameter List
+
+      bRAMType
+
+          Variable Type       BYTE8
+
+          The type of DSP RAM to access
+                    DSP Lower Bank = 1
+                    DSP Y Bank     = 3
+                    DSP Upper Bank = 5
+
+      bRAMAdr
+
+          Variable Type       BYTE8
+
+          The address of DSP memory to write.
+
+      wRAMValue
+
+          Variable Type       WORD16 (passed by reference)
+
+          The value to write
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_WriteEEPROM
+
+      INT32 BIOS_WriteEEPROM (WORD16 EEPROMAddress, BYTE8 *EEPROMData,
+                              BYTE8 numberofEEPROMData);
+
+  Purpose
+
+      Writes an array of data to EEPROM.
+
+  Parameter List
+
+      EEPROMAddress
+
+          Variable Type       WORD16
+
+          Address in EEPROM where data values starts.
+
+      EEPROMData
+
+          Variable Type       BYTE8 *
+
+          The data to write
+
+      numberofEEPROMData
+
+          Variable Type       BYTE8
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_WriteEEPROMByte
+
+      INT32 BIOS_WriteEEPROMByte (WORD16 EEPROMAddress, BYTE8 EEPROMValue);
+
+  Purpose
+
+      Writes a byte to EEPROM
+
+  Parameter List
+
+      EEPROMAddress
+
+          Variable Type       WORD16
+
+          Address in EEPROM where data values starts.
+
+      EEPROMValue
+
+          Variable Type       BYTE8
+
+          The value to write
+
+  Return Value
+
+          Return the status of operation
+________________________________________________________________________________
+
+  BIOS_WriteLowerDSPRAM
+
+      INT32 BIOS_WriteLowerDSPRAM (BYTE8 bRAMAdr, WORD16 *wRAMValue);
+
+  Purpose
+
+      The function writes to Lower bank DSP memory.
+      Calls the function BIOS_WriteDSPRAM.
+
+  Parameter List
+
+      bRAMAdr
+
+          Variable Type       BYTE8
+
+          The address of DSP memory to write.
+
+      wRAMValue
+
+          Variable Type       WORD16 (passed by reference)
+
+          The value to write
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_WriteRAM
+
+      INT32 BIOS_WriteRAM (BYTE8 ramType, WORD16 RAMaddress, BYTE8 *RAMDataArray,
+                           BYTE8 numberofRAMData);
+
+
+  Parameter List
+
+      ramType
+
+          Variable Type       BYTE8
+
+          The type of RAM to write to.
+          
+          The RAM areas are divided into 4. The areas have theese values:
+             INTERNAL RAM   0
+             EXTERNAL RAM   1
+                      ROM   2
+                  SFR RAM   3
+          
+          External RAM and Special Functions Register RAM are the most accessed
+          areas.
+
+      RAMaddress
+
+          Variable Type       WORD16
+
+          The starting adress
+
+      RAMDataArray
+
+          Variable Type       BYTE8 *
+
+          The data to write to RAM
+
+      numberofRAMData
+
+          Variable Type       BYTE8
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_WriteRAMByte
+
+      INT32 BIOS_WriteRAMByte (BYTE8 ramType, WORD16 RAMaddress, BYTE8 RAMValue);
+
+  Purpose
+
+      Write a single byte to a RAM location.
+
+  Parameter List
+
+      ramType
+
+          Variable Type       BYTE8
+
+          The type of RAM to write to.
+          
+          The RAM areas are divided into 4. The areas have theese values:
+             INTERNAL RAM   0
+             EXTERNAL RAM   1
+                      ROM   2
+                  SFR RAM   3
+          
+          External RAM and Special Functions Register RAM are the most accessed
+          areas.
+
+      RAMaddress
+
+          Variable Type       WORD16
+
+          The address to write to
+
+      RAMValue
+
+          Variable Type       BYTE8
+
+          The value to write
+
+  Return Value
+
+          Return the status of operation
+________________________________________________________________________________
+
+  BIOS_WriteUpperDSPRAM
+
+      INT32 BIOS_WriteUpperDSPRAM (BYTE8 bRAMAdr, WORD16 *wRAMValue);
+
+  Purpose
+
+      Write to Upper DSP memory.
+      Calls the functions BIOS_WriteDSPRAM
+
+  Parameter List
+
+      bRAMAdr
+
+          Variable Type       BYTE8
+
+          The address of DSP memory to write.
+
+      wRAMValue
+
+          Variable Type       WORD16 (passed by reference)
+
+          The value to write
+
+  Return Value
+
+          Return the status of operation.
+________________________________________________________________________________
+
+  BIOS_WriteYDSPRAM
+
+      INT32 BIOS_WriteYDSPRAM (BYTE8 bRAMAdr, WORD16 *wRAMValue);
+
+  Purpose
+
+      Write to Y DSP memory.
+      Calls the functions BIOS_WriteDSPRAM
+
+  Parameter List
+
+      bRAMAdr
+
+          Variable Type       BYTE8
+
+          The address of DSP memory to write.
+
+      wRAMValue
+
+          Variable Type       WORD16 (passed by reference)
+
+          The value to write
+
+  Return Value
+
+          Return the status of operation.

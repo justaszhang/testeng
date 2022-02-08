@@ -1,0 +1,172 @@
+[changeToPPM]
+Class="Function"
+Prototype="void changeToPPM(double *dBer, double *dFer);"
+
+[DEBUG_COPY_LOGFILE]
+Class="Function"
+Prototype="int DEBUG_COPY_LOGFILE(struct struct_test *act_structptr, char *cInfo);"
+
+[PowerOn]
+Class="Function"
+Prototype="int PowerOn(struct struct_test *act_structptr);"
+
+[CheckIprfp4gDnld]
+Class="Function"
+Prototype="int CheckIprfp4gDnld(struct struct_test *act_structptr);"
+
+[PowerOnCheckTFTP]
+Class="Function"
+Prototype="int PowerOnCheckTFTP(struct struct_test *act_structptr);"
+
+[SupplyCurrentPSU]
+Class="Function"
+Prototype="int SupplyCurrentPSU(struct struct_test *act_structptr);"
+
+[LogSerialNumber]
+Class="Function"
+Prototype="int LogSerialNumber(struct struct_test *act_structptr);"
+
+[LogMAC]
+Class="Function"
+Prototype="int LogMAC(struct struct_test *act_structptr);"
+
+[Clock_25MHz]
+Class="Function"
+Prototype="int Clock_25MHz(struct struct_test *act_structptr);"
+
+[RS232_CheckLinkStatus]
+Class="Function"
+Prototype="int RS232_CheckLinkStatus(struct struct_test *act_structptr);"
+
+[RS232_getIpAddr]
+Class="Function"
+Prototype="int RS232_getIpAddr(struct struct_test *act_structptr);"
+
+[SSH_PortConnect]
+Class="Function"
+Prototype="int SSH_PortConnect(struct struct_test *act_structptr);"
+
+[CheckLinkStatus]
+Class="Function"
+Prototype="int CheckLinkStatus(struct struct_test *act_structptr);"
+
+[CheckBMCStatus]
+Class="Function"
+Prototype="int CheckBMCStatus(struct struct_test *act_structptr);"
+
+[RS232_EnableRSX]
+Class="Function"
+Prototype="int RS232_EnableRSX(struct struct_test *act_structptr);"
+
+[IP_PortConnect]
+Class="Function"
+Prototype="int IP_PortConnect(struct struct_test *act_structptr);"
+
+[IP_EnterTestMode]
+Class="Function"
+Prototype="int IP_EnterTestMode(struct struct_test *act_structptr);"
+
+[CheckDECTSwVersion]
+Class="Function"
+Prototype="int CheckDECTSwVersion(struct struct_test *act_structptr);"
+
+[AdjustVcc1V8]
+Class="Function"
+Prototype="int AdjustVcc1V8(struct struct_test *act_structptr);"
+
+[CheckVcc1V8Value]
+Class="Function"
+Prototype="int CheckVcc1V8Value(struct struct_test *act_structptr);"
+
+[AdjustBmcClock]
+Class="Function"
+Prototype="int AdjustBmcClock(struct struct_test *act_structptr);"
+
+[CheckBmcClockValue]
+Class="Function"
+Prototype="int CheckBmcClockValue(struct struct_test *act_structptr);"
+
+[LogBmcTemperature]
+Class="Function"
+Prototype="int LogBmcTemperature(struct struct_test *act_structptr);"
+
+[CheckTemperatureInternal]
+Class="Function"
+Prototype="int CheckTemperatureInternal(struct struct_test *act_structptr);"
+
+[CheckTemperatureExternal]
+Class="Function"
+Prototype="int CheckTemperatureExternal(struct struct_test *act_structptr);"
+
+[RFP_ip_TestEnterTestmode]
+Class="Function"
+Prototype="int RFP_ip_TestEnterTestmode(struct struct_test *act_structptr);"
+
+[RFP_CMD60_connect]
+Class="Function"
+Prototype="int RFP_CMD60_connect(struct struct_test *act_structptr);"
+
+[PowerRF_J33]
+Class="Function"
+Prototype="int PowerRF_J33(struct struct_test *act_structptr);"
+
+[RF_BER_J33]
+Class="Function"
+Prototype="int RF_BER_J33(struct struct_test *act_structptr);"
+
+[PowerRF_J32]
+Class="Function"
+Prototype="int PowerRF_J32(struct struct_test *act_structptr);"
+
+[RF_BER_J32]
+Class="Function"
+Prototype="int RF_BER_J32(struct struct_test *act_structptr);"
+
+[RssiHighRF]
+Class="Function"
+Prototype="int RssiHighRF(struct struct_test *act_structptr);"
+
+[RssiLowRF]
+Class="Function"
+Prototype="int RssiLowRF(struct struct_test *act_structptr);"
+
+[RssiKdecRF]
+Class="Function"
+Prototype="int RssiKdecRF(struct struct_test *act_structptr);"
+
+[RssiOffsetRF]
+Class="Function"
+Prototype="int RssiOffsetRF(struct struct_test *act_structptr);"
+
+[PowerRampRF]
+Class="Function"
+Prototype="int PowerRampRF(struct struct_test *act_structptr);"
+
+[Write_SerialandMAC]
+Class="Function"
+Prototype="int Write_SerialandMAC(struct struct_test *act_structptr);"
+
+[Check_TestSoftwareVersion]
+Class="Function"
+Prototype="int Check_TestSoftwareVersion(struct struct_test *act_structptr);"
+
+[CheckBootFlashImage]
+Class="Function"
+Prototype="int CheckBootFlashImage(struct struct_test *act_structptr);"
+
+[CheckBootImage]
+Class="Function"
+Prototype="int CheckBootImage(struct struct_test *act_structptr);"
+
+[FinalizeEeprom]
+Class="Function"
+Prototype="int FinalizeEeprom(struct struct_test *act_structptr);"
+
+[ShutDownDUT]
+Class="Function"
+Prototype="int ShutDownDUT(struct struct_test *act_structptr);"
+
+[Disconnect_V2]
+Class="Function"
+Prototype="int Disconnect_V2(struct struct_test *act_structptr);"
+

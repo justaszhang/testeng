@@ -1,0 +1,20 @@
+[isFileExists]
+Class="Function"
+Prototype="int isFileExists(char *filename);"
+
+[startFtpDeamon]
+Class="Function"
+Prototype="int startFtpDeamon(char *ipAddr, char *rootPath);"
+
+[stopFtpDeamon]
+Class="Function"
+Prototype="int stopFtpDeamon();"
+
+[isFtpDeamonRunning]
+Class="Function"
+Prototype="int isFtpDeamonRunning(char *server);"
+
+[checkFtpDeamon]
+Class="Function"
+Prototype="int checkFtpDeamon(char *server, int timeOut);"
+

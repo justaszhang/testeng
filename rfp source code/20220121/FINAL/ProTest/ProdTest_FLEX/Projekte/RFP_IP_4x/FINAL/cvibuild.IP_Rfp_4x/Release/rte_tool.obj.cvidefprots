@@ -1,0 +1,108 @@
+[printer_strobe]
+Class="Function"
+Prototype="int printer_strobe(int port_address);"
+
+[print_out]
+Class="Function"
+Prototype="int print_out(char *print_str);"
+
+[logging_io_error]
+Class="Function"
+Prototype="void logging_io_error(int error_code);"
+
+[myRound]
+Class="Function"
+Prototype="double myRound(double value, int points);"
+
+[setPassAndLog]
+Class="Function"
+Prototype="int setPassAndLog(char *logStr);"
+
+[check_value]
+Class="Function"
+Prototype="int check_value(double resultvalue);"
+
+[check_value_str]
+Class="Function"
+Prototype="int check_value_str(char *resultvalue);"
+
+[check_value_TXT_cmp]
+Class="Function"
+Prototype="int check_value_TXT_cmp(char *resultvalue, char *strExpected);"
+
+[check_value_str_cmp]
+Class="Function"
+Prototype="int check_value_str_cmp(char *resultvalue, char *strExpected);"
+
+[check_other_value]
+Class="Function"
+Prototype="int check_other_value(char *name, double lowerlimit, double resultvalue, double upperlimit, int prec, char *unit, char *err_messg);"
+
+[set_serial_number]
+Class="Function"
+Prototype="void set_serial_number(int number);"
+
+[set_char_serial_number]
+Class="Function"
+Prototype="void set_char_serial_number(char *number);"
+
+[backup_logdata_files]
+Class="Function"
+Prototype="int backup_logdata_files(struct rte_globals *globals);"
+
+[serve_logdata_handling]
+Class="Function"
+Prototype="int serve_logdata_handling(struct rte_globals *globals);"
+
+[set_testheader]
+Class="Function"
+Prototype="void set_testheader(int mode);"
+
+[print_resultdisplay]
+Class="Function"
+Prototype="void print_resultdisplay(char *buffer);"
+
+[set_statuswindow]
+Class="Function"
+Prototype="void set_statuswindow(char *buffer, long background, int select);"
+
+[set_hintwindow]
+Class="Function"
+Prototype="void set_hintwindow(char *buffer, long background, int select);"
+
+[goto_test]
+Class="Function"
+Prototype="void goto_test(char *test_username);"
+
+[set_menu_printmode]
+Class="Function"
+Prototype="void set_menu_printmode(int on_off);"
+
+[set_sequence]
+Class="Function"
+Prototype="void set_sequence(int select);"
+
+[get_testresult]
+Class="Function"
+Prototype="int get_testresult(int select);"
+
+[isInProductionMode]
+Class="Function"
+Prototype="int isInProductionMode();"
+
+[isInReferenceMode]
+Class="Function"
+Prototype="int isInReferenceMode();"
+
+[isInDebugMode]
+Class="Function"
+Prototype="int isInDebugMode();"
+
+[isInRepairMode]
+Class="Function"
+Prototype="int isInRepairMode();"
+
+[print_baco]
+Class="Function"
+Prototype="int print_baco();"
+

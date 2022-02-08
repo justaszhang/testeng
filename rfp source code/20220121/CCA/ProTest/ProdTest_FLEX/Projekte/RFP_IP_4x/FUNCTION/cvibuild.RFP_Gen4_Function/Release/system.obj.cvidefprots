@@ -1,0 +1,60 @@
+[dut_set_diversity1]
+Class="Function"
+Prototype="int dut_set_diversity1();"
+
+[dut_set_diversity2]
+Class="Function"
+Prototype="int dut_set_diversity2();"
+
+[dut_OpenLibssh]
+Class="Function"
+Prototype="int dut_OpenLibssh();"
+
+[dut_OpenCOM1]
+Class="Function"
+Prototype="int dut_OpenCOM1();"
+
+[dut_CloseCOM1]
+Class="Function"
+Prototype="int dut_CloseCOM1();"
+
+[dut_PowerOn]
+Class="Function"
+Prototype="int dut_PowerOn();"
+
+[dut_PowerOff]
+Class="Function"
+Prototype="int dut_PowerOff();"
+
+[dut_error]
+Class="Function"
+Prototype="int dut_error(struct test_flow *test_flow);"
+
+[start_up]
+Class="Function"
+Prototype="int start_up(struct rte_globals *global_sets);"
+
+[clean_up]
+Class="Function"
+Prototype="int clean_up(int mode);"
+
+[flow_control]
+Class="Function"
+Prototype="int flow_control(struct test_flow *test_flow);"
+
+[LogShortResult]
+Class="Function"
+Prototype="void LogShortResult(int mode);"
+
+[disconnect]
+Class="Function"
+Prototype="void disconnect(int mode);"
+
+[io_error]
+Class="Function"
+Prototype="int io_error(struct test_flow *test_flow);"
+
+[GetBarCode]
+Class="Function"
+Prototype="int GetBarCode(char *strBarCode, char *strSerial, int site);"
+

@@ -1,0 +1,305 @@
+[iDummyslot]
+Class="Var"
+
+[iDummycarrier]
+Class="Var"
+
+[iTrafficslot]
+Class="Var"
+
+[iTrafficcarrier]
+Class="Var"
+
+[gl_timePowerOn]
+Class="Var"
+
+[labelname_1]
+Class="Var"
+
+[labelname_production]
+Class="Var"
+
+[labelname_repair]
+Class="Var"
+
+[BarCode_Label]
+Class="Var"
+
+[PanelBreak]
+Class="Var"
+
+[iCheckOkay]
+Class="Var"
+
+[ichoice]
+Class="Var"
+
+[Global_imainpanel]
+Class="Var"
+
+[iReference]
+Class="Var"
+
+[softw_release_left]
+Class="Var"
+
+[softw_release_right]
+Class="Var"
+
+[sw_stand]
+Class="Var"
+
+[toggle]
+Class="Var"
+
+[strSoftwareVersion_left]
+Class="Var"
+
+[strSoftwareVersion_right]
+Class="Var"
+
+[strTftpDaemon]
+Class="Var"
+
+[strHwType]
+Class="Var"
+
+[strHwBranding]
+Class="Var"
+
+[rs232_RFP]
+Class="Var"
+
+[ip_struct]
+Class="Var"
+
+[Conect_counter]
+Class="Var"
+
+[strIP_Address]
+Class="Var"
+
+[dHFOffsetDECT_ANT0]
+Class="Var"
+
+[dHFOffsetDECT_ANT1]
+Class="Var"
+
+[dHFOffsetWLAN_ANT1]
+Class="Var"
+
+[dHFOffsetWLAN_ANT2]
+Class="Var"
+
+[dHFOffsetWLAN_ANT3]
+Class="Var"
+
+
+[DutParameter]
+Class="Var"
+
+
+[gpib_handle]
+Class="Var"
+
+[gMAC_DUT]
+Class="Var"
+
+[gSerialNr_DUT]
+Class="Var"
+
+[gMAC_Scanned]
+Class="Var"
+
+[gSerialNr_Scanned]
+Class="Var"
+
+[iBarCodeRight]
+Class="Var"
+
+[gDebugMiniSys]
+Class="Var"
+
+[gDebugWlanEmbedded]
+Class="Var"
+
+[dut_set_diversity1]
+Class="Function"
+Prototype="int dut_set_diversity1();"
+
+[dut_set_diversity2]
+Class="Function"
+Prototype="int dut_set_diversity2();"
+
+[MiniSysSetOC5]
+Class="Function"
+Prototype="int MiniSysSetOC5();"
+
+[MiniSysReSetOC5]
+Class="Function"
+Prototype="int MiniSysReSetOC5();"
+
+[MiniSysSetOC6]
+Class="Function"
+Prototype="int MiniSysSetOC6();"
+
+[MiniSysReSetOC6]
+Class="Function"
+Prototype="int MiniSysReSetOC6();"
+
+[MiniSysSetOC8]
+Class="Function"
+Prototype="int MiniSysSetOC8();"
+
+[MiniSysReSetOC8]
+Class="Function"
+Prototype="int MiniSysReSetOC8();"
+
+[MiniSysClose]
+Class="Function"
+Prototype="int MiniSysClose();"
+
+[MiniSysOpen]
+Class="Function"
+Prototype="int MiniSysOpen();"
+
+[GetBarCode]
+Class="Function"
+Prototype="int GetBarCode(char *strMAC, char *strSerial);"
+
+[disconnect]
+Class="Function"
+Prototype="void disconnect(int mode);"
+
+[start_up]
+Class="Function"
+Prototype="int start_up(struct rte_globals *global_sets);"
+
+[clean_up]
+Class="Function"
+Prototype="int clean_up(int mode);"
+
+[flow_control]
+Class="Function"
+Prototype="int flow_control(struct test_flow *test_flow);"
+
+[io_error]
+Class="Function"
+Prototype="int io_error(struct test_flow *test_flow);"
+
+[LogShortResult]
+Class="Function"
+Prototype="void LogShortResult(int mode);"
+
+[dut_error]
+Class="Function"
+Prototype="int dut_error(struct test_flow *test_flow);"
+
+[file_get_group]
+Class="Function"
+Prototype="char file_get_group(struct struct_file *file_group, FILE *fa_r, char *group);"
+
+[file_getpara]
+Class="Function"
+Prototype="char file_getpara(struct struct_file *file_group, char *tag, void *parameter, int type);"
+
+[PowerOn]
+Class="Function"
+Prototype="int PowerOn(struct struct_test *act_structptr);"
+
+[SupplyCurrentPSU]
+Class="Function"
+Prototype="int SupplyCurrentPSU(struct struct_test *act_structptr);"
+
+[SSH_PortConnect]
+Class="Function"
+Prototype="int SSH_PortConnect(struct struct_test *act_structptr);"
+
+[Check_MAC_Serial]
+Class="Function"
+Prototype="int Check_MAC_Serial(struct struct_test *act_structptr);"
+
+[LogDUTSerialNumber]
+Class="Function"
+Prototype="int LogDUTSerialNumber(struct struct_test *act_structptr);"
+
+[LogScannedSerialNumber]
+Class="Function"
+Prototype="int LogScannedSerialNumber(struct struct_test *act_structptr);"
+
+[LogMAC]
+Class="Function"
+Prototype="int LogMAC(struct struct_test *act_structptr);"
+
+[CheckLED_red]
+Class="Function"
+Prototype="int CheckLED_red(struct struct_test *act_structptr);"
+
+[CheckLED_green]
+Class="Function"
+Prototype="int CheckLED_green(struct struct_test *act_structptr);"
+
+[CheckLED_blue]
+Class="Function"
+Prototype="int CheckLED_blue(struct struct_test *act_structptr);"
+
+[Check_button]
+Class="Function"
+Prototype="int Check_button(struct struct_test *act_structptr);"
+
+[IP_PortConnect]
+Class="Function"
+Prototype="int IP_PortConnect(struct struct_test *act_structptr);"
+
+[RFP_CMD60_connect]
+Class="Function"
+Prototype="int RFP_CMD60_connect(struct struct_test *act_structptr);"
+
+[PowerRF_J33]
+Class="Function"
+Prototype="int PowerRF_J33(struct struct_test *act_structptr);"
+
+[PowerRF_J32]
+Class="Function"
+Prototype="int PowerRF_J32(struct struct_test *act_structptr);"
+
+[PowerRF_J33New]
+Class="Function"
+Prototype="int PowerRF_J33New(struct struct_test *act_structptr);"
+
+[PowerRF_J32New]
+Class="Function"
+Prototype="int PowerRF_J32New(struct struct_test *act_structptr);"
+
+[WLanTxPower_Ant1]
+Class="Function"
+Prototype="int WLanTxPower_Ant1(struct struct_test *act_structptr);"
+
+[WLanTxPower_Ant2]
+Class="Function"
+Prototype="int WLanTxPower_Ant2(struct struct_test *act_structptr);"
+
+[WLanTxPower_Ant3]
+Class="Function"
+Prototype="int WLanTxPower_Ant3(struct struct_test *act_structptr);"
+
+[CheckSoftwareVersion]
+Class="Function"
+Prototype="int CheckSoftwareVersion(struct struct_test *act_structptr);"
+
+[CheckBootFlashImage]
+Class="Function"
+Prototype="int CheckBootFlashImage(struct struct_test *act_structptr);"
+
+[FactoryDeliveryState]
+Class="Function"
+Prototype="int FactoryDeliveryState(struct struct_test *act_structptr);"
+
+[Disconnect_V2]
+Class="Function"
+Prototype="int Disconnect_V2(struct struct_test *act_structptr);"
+
+[SetCheckCountryTag]
+Class="Function"
+Prototype="int SetCheckCountryTag(struct struct_test *act_structptr);"
+

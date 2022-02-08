@@ -1,0 +1,28 @@
+[rtx2012_addon_ClearError]
+Class="Function"
+Prototype="int rtx2012_addon_ClearError();"
+
+[rtx2012_addon_SetPacketTypePP32Z]
+Class="Function"
+Prototype="int rtx2012_addon_SetPacketTypePP32Z();"
+
+[rtx2012_addon_ReadNormalTransmitPower]
+Class="Function"
+Prototype="int rtx2012_addon_ReadNormalTransmitPower(double *transPower);"
+
+[rtx2012_addon_Connect]
+Class="Function"
+Prototype="int rtx2012_addon_Connect(int type, char *cErrorInfo);"
+
+[rtx2012_addon_ReadFpRfpi]
+Class="Function"
+Prototype="int rtx2012_addon_ReadFpRfpi(char *rfpiValue);"
+
+[rtx2012_addon_activate_SW_Demod]
+Class="Function"
+Prototype="int rtx2012_addon_activate_SW_Demod();"
+
+[rtx2012_addon_deactivate_SW_Demod]
+Class="Function"
+Prototype="int rtx2012_addon_deactivate_SW_Demod(int InstrSession);"
+

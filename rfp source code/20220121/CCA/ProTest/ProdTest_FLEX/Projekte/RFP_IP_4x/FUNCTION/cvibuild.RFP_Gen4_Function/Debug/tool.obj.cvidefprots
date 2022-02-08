@@ -1,0 +1,188 @@
+[write_sequ2logfile]
+Class="Function"
+Prototype="int write_sequ2logfile(struct rte_globals *rte_globals);"
+
+[parse_line]
+Class="Function"
+Prototype="int parse_line(char *line_ptr);"
+
+[file_get_group]
+Class="Function"
+Prototype="char file_get_group(struct struct_file *file_group, FILE *fa_r, char *group);"
+
+[file_getpara]
+Class="Function"
+Prototype="char file_getpara(struct struct_file *file_group, char *tag, void *parameter, int type);"
+
+[read_eeprom_file]
+Class="Function"
+Prototype="int read_eeprom_file(char *pfad, char *buffer);"
+
+[read_eeprom_special]
+Class="Function"
+Prototype="int read_eeprom_special(char *pfad, struct eeprom_special *buffer);"
+
+[generate_xxxi]
+Class="Function"
+Prototype="void generate_xxxi(struct part_ident_parameter *ident_struct);"
+
+[printLabelOnDataBase]
+Class="Function"
+Prototype="int printLabelOnDataBase();"
+
+[getPartNumberFromDataBase]
+Class="Function"
+Prototype="int getPartNumberFromDataBase(char *partNumber);"
+
+[getDeliveryUnitNumbersFromDataBase]
+Class="Function"
+Prototype="int getDeliveryUnitNumbersFromDataBase(char *deliveryUnitNumbers, int len);"
+
+[getShortDeTeWeSerialNumberFromDataBase]
+Class="Function"
+Prototype="int getShortDeTeWeSerialNumberFromDataBase(char *serialNumber);"
+
+[getLongDeTeWeSerialNumberFromDataBase]
+Class="Function"
+Prototype="int getLongDeTeWeSerialNumberFromDataBase(char *serialNumber);"
+
+[getPartInfoFromDataBase]
+Class="Function"
+Prototype="int getPartInfoFromDataBase(char *serialNumber, char *partNumber, char *macAddr);"
+
+[getMacAddrFromDataBase]
+Class="Function"
+Prototype="int getMacAddrFromDataBase(char *strMacAddress);"
+
+[getParkNumberFromDataBase]
+Class="Function"
+Prototype="int getParkNumberFromDataBase(char *strParkNumber);"
+
+[getParkNumberInfoFromDataBase]
+Class="Function"
+Prototype="int getParkNumberInfoFromDataBase(char *strParkNumber);"
+
+[get_part_identity_db]
+Class="Function"
+Prototype="int get_part_identity_db(struct part_ident_parameter *ident_struct);"
+
+[emc_counter]
+Class="Function"
+Prototype="int emc_counter(char *rfpi_ipei_dut, char *emc_list);"
+
+[write_reference_date]
+Class="Function"
+Prototype="void write_reference_date();"
+
+[check_reference]
+Class="Function"
+Prototype="void check_reference();"
+
+[check_double_connect]
+Class="Function"
+Prototype="int check_double_connect(unsigned char *pruefstatus, int mode);"
+
+[cmd60_settings_for_connect]
+Class="Function"
+Prototype="void cmd60_settings_for_connect();"
+
+[hex_str_to_double]
+Class="Function"
+Prototype="double hex_str_to_double(unsigned char *buffer, int length);"
+
+[double_to_hex_str]
+Class="Function"
+Prototype="int double_to_hex_str(double wert, int length, unsigned char *hexstr);"
+
+[WriteQPDS]
+Class="Function"
+Prototype="int WriteQPDS(int iPrufstatus);"
+
+[set_printermode_db]
+Class="Function"
+Prototype="void set_printermode_db(char *cLabelName);"
+
+[get_printermode_db]
+Class="Function"
+Prototype="int get_printermode_db();"
+
+[DateSelect]
+Class="Function"
+Prototype="int DateSelect(int iSelect, char *cReturn);"
+
+[GetCalWeek]
+Class="Function"
+Prototype="int GetCalWeek(int iDay, int iMonth, int iYear, int *iKwYear);"
+
+[SystemCall]
+Class="Function"
+Prototype="int SystemCall(char *cCmd, int hide);"
+
+[DisableTestfunktionIfValid]
+Class="Function"
+Prototype="int DisableTestfunktionIfValid(struct struct_test *act_structptr);"
+
+[get_ProdData]
+Class="Function"
+Prototype="int get_ProdData(unsigned char *ucData);"
+
+[set_ProdData]
+Class="Function"
+Prototype="int set_ProdData(unsigned char *ucData);"
+
+[get_DeviatData]
+Class="Function"
+Prototype="int get_DeviatData(unsigned char *ucData);"
+
+[set_DeviatData]
+Class="Function"
+Prototype="int set_DeviatData(unsigned char *ucData);"
+
+[get_RssiData]
+Class="Function"
+Prototype="int get_RssiData(unsigned char *ucData);"
+
+[set_RssiData]
+Class="Function"
+Prototype="int set_RssiData(unsigned char *ucData);"
+
+[get_BarcodeData]
+Class="Function"
+Prototype="int get_BarcodeData(unsigned char *ucData);"
+
+[set_BarcodeData]
+Class="Function"
+Prototype="int set_BarcodeData(unsigned char *ucData);"
+
+[get_ClockData]
+Class="Function"
+Prototype="int get_ClockData(unsigned char *ucData);"
+
+[set_ClockData]
+Class="Function"
+Prototype="int set_ClockData(unsigned char *ucData);"
+
+[get_BandgapData]
+Class="Function"
+Prototype="int get_BandgapData(unsigned char *ucData);"
+
+[set_BandgapData]
+Class="Function"
+Prototype="int set_BandgapData(unsigned char *ucData);"
+
+[get_EepromDataPath]
+Class="Function"
+Prototype="void get_EepromDataPath(char *cPath);"
+
+[set_EepromDataPath]
+Class="Function"
+Prototype="void set_EepromDataPath(char *cPath);"
+
+[file_get_group_LongLines]
+Class="Function"
+Prototype="char file_get_group_LongLines(struct struct_file_LongLines *file_group, FILE *fa_r, char *group);"
+
+[file_getpara_LongLines]
+Class="Function"
+Prototype="char file_getpara_LongLines(struct struct_file_LongLines *file_group, char *tag, void *parameter, int type);"
+
