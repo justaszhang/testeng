@@ -1,0 +1,42 @@
+-nologo
+-out:c:\DECT_V2_May_25_2021_v2_0_N++_Released\cvibuild.DECT_Tester\Debug\DECT_Tester_debug.exe
+-arch:x86
+-timestamp
+-debug:2
+-loadextmod
+-res:c:\DECT_V2_May_25_2021_v2_0_N++_Released\cvibuild.DECT_Tester\Debug\resources.res
+-entry:_CVIWinMainStartupCodeForDebugging@0
+-base:0x400000
+-linked:c:\DECT_V2_May_25_2021_v2_0_N++_Released\cvibuild.DECT_Tester\Debug\linkersummary.txt
+-dlldeps:c:\DECT_V2_May_25_2021_v2_0_N++_Released\cvibuild.DECT_Tester\Debug\dlldependencies.txt
+-licensing:c:\DECT_V2_May_25_2021_v2_0_N++_Released\cvibuild.DECT_Tester\Debug\linkerlicensing.txt
+-browsedeps:c:\DECT_V2_May_25_2021_v2_0_N++_Released\cvibuild.DECT_Tester\Debug\moduledependencies.txt
+-stackreserve:1048576
+-stackcommit:4096
+-in:c:\DECT_V2_May_25_2021_v2_0_N++_Released\cvibuild.DECT_Tester\Debug\Common Card FCT.obj
+-in:c:\DECT_V2_May_25_2021_v2_0_N++_Released\cvibuild.DECT_Tester\Debug\FCT Functions.obj
+-more:c:\program files (x86)\national instruments\cvi2013\bin\msvc\cvistart.lib
+-more:c:\program files (x86)\national instruments\cvi2013\bin\msvc\cvi.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\advapi32.lib
+-more:c:\ProgramData\National Instruments\CVI2013\bin\msvc\analysis.lib
+-more:c:\DECT_V2_May_25_2021_v2_0_N++_Released\AudzerLib.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cviauto.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cviddc.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvidotnet.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvinetstreams.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvinetv.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvintwrk.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvitdms.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\gdi32.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\gpib.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\toolslib\toolbox\msvc\inifile.obj
+-more:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\ivi.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\kernel32.lib
+-more:c:\DECT_V2_May_25_2021_v2_0_N++_Released\labjackud.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\nivxi.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\omp.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\toolslib\toolbox\msvc\toolbox.obj
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\user32.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\uuid.lib
+-more:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\visa.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\winmm.lib

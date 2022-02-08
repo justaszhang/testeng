@@ -1,0 +1,16 @@
+Common Card FCT.obj
+FCT Functions.obj
+cvi.lib
+gpib.lib
+cvistart.lib
+AudzerLib.lib
+inifile.obj
+labjackud.lib
+toolbox.obj
+advapi32.lib
+cviauto.lib
+gdi32.lib
+kernel32.lib
+user32.lib
+EXE Symbol Module
+Resource Module

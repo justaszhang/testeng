@@ -1,0 +1,18 @@
+Common Card FCT.obj
+FCT Functions.obj
+inifile.obj
+rtx2012base.obj
+cvistart.lib
+cvi.lib
+advapi32.lib
+AudzerLib.lib
+gpib.lib
+labjackud.lib
+R2012dll.lib
+toolbox.obj
+cviauto.lib
+gdi32.lib
+kernel32.lib
+user32.lib
+EXE Symbol Module
+Resource Module

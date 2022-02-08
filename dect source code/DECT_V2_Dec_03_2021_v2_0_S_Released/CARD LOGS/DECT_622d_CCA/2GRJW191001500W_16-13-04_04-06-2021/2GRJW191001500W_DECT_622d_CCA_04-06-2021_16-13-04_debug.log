@@ -1,0 +1,17 @@
+Initial Agilent Pass.
+DECT Set Agilent for leakage current test
+Test Pass
+
+DECT measure Agilent instant current test
+Agilent 663xx Returned Value: 0.840277mA
+Test Pass
+
+DECT measure Agilent leakage current test
+Agilent 663xx Returned Value: 0.306464mA
+Test Pass
+
+DECT P3V Voltage Measure Test
+measure voltage : 2.466014 
+
+Test Fail
+

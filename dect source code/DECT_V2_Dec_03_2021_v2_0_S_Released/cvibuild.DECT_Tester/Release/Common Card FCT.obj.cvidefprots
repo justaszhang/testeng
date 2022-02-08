@@ -1,0 +1,952 @@
+[ErrorHandler]
+Class="Function"
+Prototype="void ErrorHandler(long lngErrorcode, long lngLineNumber, long lngIteration);"
+
+[main]
+Class="Function"
+Prototype="int main(int argc, char **argv);"
+
+[Start]
+Class="Function"
+Prototype="int Start(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PB_Cancel_Quit]
+Class="Function"
+Prototype="int PB_Cancel_Quit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PB_Quit_App]
+Class="Function"
+Prototype="int PB_Quit_App(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Quit]
+Class="Function"
+Prototype="int Quit(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CONF_COM1]
+Class="Function"
+Prototype="int CONF_COM1(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CONF_COM2]
+Class="Function"
+Prototype="int CONF_COM2(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Read_Serial_Number]
+Class="Function"
+Prototype="int Read_Serial_Number(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Read_MAC_Address]
+Class="Function"
+Prototype="int Read_MAC_Address(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Read_Test_Number]
+Class="Function"
+Prototype="int Read_Test_Number(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Stop]
+Class="Function"
+Prototype="int Stop(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PB_Stop_Test]
+Class="Function"
+Prototype="int PB_Stop_Test(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PB_Cancel_Stop]
+Class="Function"
+Prototype="int PB_Cancel_Stop(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Set_Test_Type]
+Class="Function"
+Prototype="int Set_Test_Type(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[DECT_Set_RF_Board_Serial_Number]
+Class="Function"
+Prototype="int DECT_Set_RF_Board_Serial_Number(int panel, int control);"
+
+[DECT_Set_RF_Final_Serial_Number]
+Class="Function"
+Prototype="int DECT_Set_RF_Final_Serial_Number(int panel, int control);"
+
+[Set_Serial_Number]
+Class="Function"
+Prototype="int Set_Serial_Number(int panel, int control);"
+
+[Set_MAC_Address]
+Class="Function"
+Prototype="int Set_MAC_Address(int panel, int control);"
+
+[Set_Test_Number]
+Class="Function"
+Prototype="int Set_Test_Number(int panel, int control);"
+
+[Test_Stage_Start]
+Class="Function"
+Prototype="int Test_Stage_Start(int panel, int control, int test_stage);"
+
+[Open_COM_PORT_1]
+Class="Function"
+Prototype="int Open_COM_PORT_1(int panel);"
+
+[Open_COM_PORT_2]
+Class="Function"
+Prototype="int Open_COM_PORT_2(int panel);"
+
+[Display_OK_MSG]
+Class="Function"
+Prototype="void Display_OK_MSG(char *msg);"
+
+[Prompt_OK]
+Class="Function"
+Prototype="int Prompt_OK(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Prompt_YES]
+Class="Function"
+Prototype="int Prompt_YES(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Prompt_NO]
+Class="Function"
+Prototype="int Prompt_NO(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Display_YES_MSG]
+Class="Function"
+Prototype="void Display_YES_MSG(char *msg);"
+
+[Flush_COM_1]
+Class="Function"
+Prototype="void Flush_COM_1();"
+
+[Setup_DAQ]
+Class="Function"
+Prototype="int Setup_DAQ(int panel);"
+
+[Aquarius_DC_Off]
+Class="Function"
+Prototype="int Aquarius_DC_Off();"
+
+[Aquarius_DC_On]
+Class="Function"
+Prototype="int Aquarius_DC_On();"
+
+[FIO0_Off]
+Class="Function"
+Prototype="int FIO0_Off();"
+
+[FIO0_On]
+Class="Function"
+Prototype="int FIO0_On();"
+
+[EIO0_Off]
+Class="Function"
+Prototype="int EIO0_Off();"
+
+[EIO0_On]
+Class="Function"
+Prototype="int EIO0_On();"
+
+[EIO1_Off]
+Class="Function"
+Prototype="int EIO1_Off();"
+
+[EIO1_On]
+Class="Function"
+Prototype="int EIO1_On();"
+
+[EIO2_Off]
+Class="Function"
+Prototype="int EIO2_Off();"
+
+[EIO2_On]
+Class="Function"
+Prototype="int EIO2_On();"
+
+[EIO3_Off]
+Class="Function"
+Prototype="int EIO3_Off();"
+
+[EIO3_On]
+Class="Function"
+Prototype="int EIO3_On();"
+
+[EIO4_Off]
+Class="Function"
+Prototype="int EIO4_Off();"
+
+[EIO4_On]
+Class="Function"
+Prototype="int EIO4_On();"
+
+[EIO5_Off]
+Class="Function"
+Prototype="int EIO5_Off();"
+
+[EIO5_On]
+Class="Function"
+Prototype="int EIO5_On();"
+
+[EIO6_Off]
+Class="Function"
+Prototype="int EIO6_Off();"
+
+[EIO6_On]
+Class="Function"
+Prototype="int EIO6_On();"
+
+[EIO7_Off]
+Class="Function"
+Prototype="int EIO7_Off();"
+
+[EIO7_On]
+Class="Function"
+Prototype="int EIO7_On();"
+
+[EIALL_Off]
+Class="Function"
+Prototype="int EIALL_Off();"
+
+[Init_CMD60]
+Class="Function"
+Prototype="int Init_CMD60(int panel);"
+
+[Set_CMD60_in_Loopback_Mode_EU_Setting]
+Class="Function"
+Prototype="int Set_CMD60_in_Loopback_Mode_EU_Setting(int panel);"
+
+[Set_RTX_in_Loopback_Mode_EU_Setting]
+Class="Function"
+Prototype="int Set_RTX_in_Loopback_Mode_EU_Setting(int panel);"
+
+[Reset_RTX]
+Class="Function"
+Prototype="int Reset_RTX(int panel);"
+
+[Set_CMD60_in_Loopback_Mode_Radiated_Setting]
+Class="Function"
+Prototype="int Set_CMD60_in_Loopback_Mode_Radiated_Setting(int panel);"
+
+[Set_CMD60_Mask_Setting]
+Class="Function"
+Prototype="int Set_CMD60_Mask_Setting(int panel);"
+
+[Set_RTX_Mask_Setting]
+Class="Function"
+Prototype="int Set_RTX_Mask_Setting(int panel);"
+
+[Open_CMD60]
+Class="Function"
+Prototype="int Open_CMD60(int panel);"
+
+[Open_RTX]
+Class="Function"
+Prototype="int Open_RTX(int panel);"
+
+[Setup_Connect_CMD60]
+Class="Function"
+Prototype="int Setup_Connect_CMD60(int panel);"
+
+[Setup_Connect_RTX]
+Class="Function"
+Prototype="int Setup_Connect_RTX(int panel);"
+
+[Close_CMD60]
+Class="Function"
+Prototype="int Close_CMD60(int panel);"
+
+[Close_RTX]
+Class="Function"
+Prototype="int Close_RTX(int panel);"
+
+[Init_MT8852B]
+Class="Function"
+Prototype="int Init_MT8852B(int panel);"
+
+[Open_MT8852B]
+Class="Function"
+Prototype="int Open_MT8852B(int panel);"
+
+[Check_Sync_MT8852B]
+Class="Function"
+Prototype="int Check_Sync_MT8852B(int panel);"
+
+[Check_Sync_MT8852B_2]
+Class="Function"
+Prototype="int Check_Sync_MT8852B_2(int panel);"
+
+[Set_MT8852B_Loopback_Mode]
+Class="Function"
+Prototype="int Set_MT8852B_Loopback_Mode(int panel);"
+
+[Set_MT8852B_Loopback_Mode_2]
+Class="Function"
+Prototype="int Set_MT8852B_Loopback_Mode_2(int panel);"
+
+[Set_MT8852B_Loopback_Mode_Radiated]
+Class="Function"
+Prototype="int Set_MT8852B_Loopback_Mode_Radiated(int panel);"
+
+[Set_MT8852B_Loopback_Mode_Radiated_2]
+Class="Function"
+Prototype="int Set_MT8852B_Loopback_Mode_Radiated_2(int panel);"
+
+[Run_Scripts_MT8852B]
+Class="Function"
+Prototype="int Run_Scripts_MT8852B(int panel);"
+
+[Measure_Output_Power_MT8852B]
+Class="Function"
+Prototype="int Measure_Output_Power_MT8852B(int panel);"
+
+[Measure_Modulation_Index_MT8852B]
+Class="Function"
+Prototype="int Measure_Modulation_Index_MT8852B(int panel);"
+
+[Measure_Carrier_Frequency_Tolerance_MT8852B]
+Class="Function"
+Prototype="int Measure_Carrier_Frequency_Tolerance_MT8852B(int panel);"
+
+[Measure_Carrier_Frequency_Drift_MT8852B]
+Class="Function"
+Prototype="int Measure_Carrier_Frequency_Drift_MT8852B(int panel);"
+
+[Measure_Sensitive_Single_Slot_Packets_MT8852B]
+Class="Function"
+Prototype="int Measure_Sensitive_Single_Slot_Packets_MT8852B(int panel);"
+
+[Check_BTADDR_MT8852B]
+Class="Function"
+Prototype="int Check_BTADDR_MT8852B(int panel);"
+
+[Check_EUTADDR_MT8852B]
+Class="Function"
+Prototype="int Check_EUTADDR_MT8852B(int panel);"
+
+[Check_BTADDR_MT8852B_2]
+Class="Function"
+Prototype="int Check_BTADDR_MT8852B_2(int panel);"
+
+[Close_MT8852B]
+Class="Function"
+Prototype="int Close_MT8852B(int panel);"
+
+[Init_Counter]
+Class="Function"
+Prototype="int Init_Counter(int panel);"
+
+[Frequency_Measurement]
+Class="Function"
+Prototype="int Frequency_Measurement(int panel);"
+
+[TRIGGER_HP53131A_TO_MEASURE]
+Class="Function"
+Prototype="int TRIGGER_HP53131A_TO_MEASURE();"
+
+[Power_ON_DECT]
+Class="Function"
+Prototype="int Power_ON_DECT();"
+
+[Switch_DECT_USB_COM_ON]
+Class="Function"
+Prototype="int Switch_DECT_USB_COM_ON();"
+
+[Switch_DECT_USB_COM_OFF]
+Class="Function"
+Prototype="int Switch_DECT_USB_COM_OFF();"
+
+[Power_OFF_DECT]
+Class="Function"
+Prototype="int Power_OFF_DECT();"
+
+[Open_COM_Port_Relays]
+Class="Function"
+Prototype="int Open_COM_Port_Relays();"
+
+[Close_COM_Port_Relays]
+Class="Function"
+Prototype="int Close_COM_Port_Relays();"
+
+[print_hex_memory]
+Class="Function"
+Prototype="void print_hex_memory(int panel, void *mem, int size);"
+
+[Serial_Port_Scan]
+Class="Function"
+Prototype="int Serial_Port_Scan(int panel);"
+
+[DECT_Connect_USB_Cable]
+Class="Function"
+Prototype="int DECT_Connect_USB_Cable(int panel);"
+
+[DECT_Disconnect_USB_Cable]
+Class="Function"
+Prototype="int DECT_Disconnect_USB_Cable(int panel);"
+
+[DECT_Enter_Test_Mode_USB]
+Class="Function"
+Prototype="int DECT_Enter_Test_Mode_USB(int panel);"
+
+[DECT_Enter_Bluetooth_Test_Mode_USB]
+Class="Function"
+Prototype="int DECT_Enter_Bluetooth_Test_Mode_USB(int panel);"
+
+[DECT_Get_SW_Version_USB_Test]
+Class="Function"
+Prototype="int DECT_Get_SW_Version_USB_Test(int panel);"
+
+[DECT_Bluetooth_Sync_Clock_USB_Test]
+Class="Function"
+Prototype="int DECT_Bluetooth_Sync_Clock_USB_Test(int panel);"
+
+[DECT_Bluetooth_Get_Analog_Trim_USB_Test]
+Class="Function"
+Prototype="int DECT_Bluetooth_Get_Analog_Trim_USB_Test(int panel);"
+
+[DECT_Bluetooth_Write_Analog_Trim_USB_Test]
+Class="Function"
+Prototype="int DECT_Bluetooth_Write_Analog_Trim_USB_Test(int panel);"
+
+[DECT_Bluetooth_Read_ClockAdjust_USB_Test]
+Class="Function"
+Prototype="int DECT_Bluetooth_Read_ClockAdjust_USB_Test(int panel);"
+
+[DECT_EEPROM_LED_USB_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_LED_USB_Test(int panel);"
+
+[DECT_EEPROM_LED_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_LED_Test(int panel);"
+
+[DECT_EEPROM_SOS_USB_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_SOS_USB_Test(int panel);"
+
+[DECT_EEPROM_SOS_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_SOS_Test(int panel);"
+
+[DECT_EEPROM_HOTKEY_USB_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_HOTKEY_USB_Test(int panel);"
+
+[DECT_EEPROM_HOTKEY_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_HOTKEY_Test(int panel);"
+
+[DECT_EEPROM_VIBRATOR_USB_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_VIBRATOR_USB_Test(int panel);"
+
+[DECT_EEPROM_LOUDNESS_USB_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_LOUDNESS_USB_Test(int panel);"
+
+[DECT_EEPROM_WRITE_DATE_USB_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_WRITE_DATE_USB_Test(int panel);"
+
+[DECT_EEPROM_WRITE_DATE_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_WRITE_DATE_Test(int panel);"
+
+[DECT_EEPROM_WRITE_FINAL_DATE_USB_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_WRITE_FINAL_DATE_USB_Test(int panel);"
+
+[DECT_EEPROM_WRITE_FINAL_DATE_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_WRITE_FINAL_DATE_Test(int panel);"
+
+[DECT_EEPROM_WRITE_PASS_USB_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_WRITE_PASS_USB_Test(int panel);"
+
+[DECT_EEPROM_WRITE_PASS_USB_Final_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_WRITE_PASS_USB_Final_Test(int panel);"
+
+[DECT_EEPROM_WRITE_FAIL_USB_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_WRITE_FAIL_USB_Test(int panel);"
+
+[DECT_Make_Backup_USB_Test]
+Class="Function"
+Prototype="int DECT_Make_Backup_USB_Test(int panel);"
+
+[DECT_Power_Off_USB_Test]
+Class="Function"
+Prototype="int DECT_Power_Off_USB_Test(int panel);"
+
+[DECT_Enter_Test_Mode]
+Class="Function"
+Prototype="int DECT_Enter_Test_Mode(int panel);"
+
+[DECT_Write_HW_Release_Test]
+Class="Function"
+Prototype="int DECT_Write_HW_Release_Test(int panel);"
+
+[DECT_EEPROM_WRITE_PASS_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_WRITE_PASS_Test(int panel);"
+
+[DECT_EEPROM_WRITE_PASS_Final_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_WRITE_PASS_Final_Test(int panel);"
+
+[DECT_EEPROM_WRITE_FAIL_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_WRITE_FAIL_Test(int panel);"
+
+[DECT_Get_SW_Version_Test_612]
+Class="Function"
+Prototype="int DECT_Get_SW_Version_Test_612(int panel);"
+
+[DECT_Get_SW_Version_Test_622]
+Class="Function"
+Prototype="int DECT_Get_SW_Version_Test_622(int panel);"
+
+[DECT_Get_SW_Version_Test_632]
+Class="Function"
+Prototype="int DECT_Get_SW_Version_Test_632(int panel);"
+
+[DECT_Get_HW_Version_Test]
+Class="Function"
+Prototype="int DECT_Get_HW_Version_Test(int panel, int iType);"
+
+[DECT_Park_Search_Criteria_Test]
+Class="Function"
+Prototype="int DECT_Park_Search_Criteria_Test(int panel);"
+
+[DECT_EEPROM_PLI_1_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_PLI_1_Test(int panel);"
+
+[DECT_EEPROM_Park_1_Test]
+Class="Function"
+Prototype="int DECT_EEPROM_Park_1_Test(int panel);"
+
+[DECT_Get_Service_State_Test]
+Class="Function"
+Prototype="int DECT_Get_Service_State_Test(int panel);"
+
+[DECT_Measure_NTP_Power_Test]
+Class="Function"
+Prototype="int DECT_Measure_NTP_Power_Test(int panel);"
+
+[DECT_Measure_RTX_NTP_Power_Test]
+Class="Function"
+Prototype="int DECT_Measure_RTX_NTP_Power_Test(int panel);"
+
+[DECT_Measure_NTP_Power_Radiated_Test]
+Class="Function"
+Prototype="int DECT_Measure_NTP_Power_Radiated_Test(int panel);"
+
+[DECT_Measure_EU_Deviation_Test]
+Class="Function"
+Prototype="int DECT_Measure_EU_Deviation_Test(int panel);"
+
+[DECT_Measure_RTX_EU_Deviation_Test]
+Class="Function"
+Prototype="int DECT_Measure_RTX_EU_Deviation_Test(int panel);"
+
+[DECT_Measure_Frequency_Offset_Test]
+Class="Function"
+Prototype="int DECT_Measure_Frequency_Offset_Test(int panel);"
+
+[DECT_Measure_RTX_Frequency_Offset_Test]
+Class="Function"
+Prototype="int DECT_Measure_RTX_Frequency_Offset_Test(int panel);"
+
+[DECT_Measure_Frequency_Drift_Test]
+Class="Function"
+Prototype="int DECT_Measure_Frequency_Drift_Test(int panel);"
+
+[DECT_Measure_RTX_Frequency_Drift_Test]
+Class="Function"
+Prototype="int DECT_Measure_RTX_Frequency_Drift_Test(int panel);"
+
+[DECT_Measure_RSSI_45dBm_Test]
+Class="Function"
+Prototype="int DECT_Measure_RSSI_45dBm_Test(int panel);"
+
+[DECT_Measure_RTX_RSSI_45dBm_Test]
+Class="Function"
+Prototype="int DECT_Measure_RTX_RSSI_45dBm_Test(int panel);"
+
+[DECT_Measure_RSSI_75dBm_Test]
+Class="Function"
+Prototype="int DECT_Measure_RSSI_75dBm_Test(int panel);"
+
+[DECT_Measure_RTX_RSSI_75dBm_Test]
+Class="Function"
+Prototype="int DECT_Measure_RTX_RSSI_75dBm_Test(int panel);"
+
+[DECT_Program_RSSI_K_Factor_Test]
+Class="Function"
+Prototype="int DECT_Program_RSSI_K_Factor_Test(int panel);"
+
+[DECT_Program_RSSI_Offset_Test]
+Class="Function"
+Prototype="int DECT_Program_RSSI_Offset_Test(int panel);"
+
+[DECT_Measure_Receiver_Sensitivity_Test]
+Class="Function"
+Prototype="int DECT_Measure_Receiver_Sensitivity_Test(int panel);"
+
+[DECT_Measure_RTX_Receiver_Sensitivity_Test]
+Class="Function"
+Prototype="int DECT_Measure_RTX_Receiver_Sensitivity_Test(int panel);"
+
+[DECT_Power_Template_Match_Test]
+Class="Function"
+Prototype="int DECT_Power_Template_Match_Test(int panel);"
+
+[DECT_RTX_Power_Template_Match_Test]
+Class="Function"
+Prototype="int DECT_RTX_Power_Template_Match_Test(int panel);"
+
+[DECT_Reset_EEPROM_Test_Flow_Test]
+Class="Function"
+Prototype="int DECT_Reset_EEPROM_Test_Flow_Test(int panel);"
+
+[DECT_File_System_Test]
+Class="Function"
+Prototype="int DECT_File_System_Test(int panel);"
+
+[DECT_SD_Card_Test]
+Class="Function"
+Prototype="int DECT_SD_Card_Test(int panel);"
+
+[DECT_Make_Backup_Test]
+Class="Function"
+Prototype="int DECT_Make_Backup_Test(int panel);"
+
+[DECT_Power_Off_Test]
+Class="Function"
+Prototype="int DECT_Power_Off_Test(int panel);"
+
+[get_prefix_code]
+Class="Function"
+Prototype="int get_prefix_code(int panel);"
+
+[DECT_Send_String]
+Class="Function"
+Prototype="int DECT_Send_String(int panel, unsigned char *string_to_send, unsigned char *expected_string, char *read_string, int check_length, int verbose, int delay);"
+
+[DECT_Read_String]
+Class="Function"
+Prototype="int DECT_Read_String(int panel, int minlen, char *read_string, int *readlen, int verbose, int timeout);"
+
+[DECT_Send_String_USB]
+Class="Function"
+Prototype="int DECT_Send_String_USB(int panel, unsigned char *string_to_send, unsigned char *expected_string, char *read_string, int check_length, int verbose, int delay);"
+
+[DECT_Send_String_USB_V2]
+Class="Function"
+Prototype="int DECT_Send_String_USB_V2(int panel, unsigned char *string_to_send, unsigned char *expected_string, char *read_string, int check_length, int verbose, int delay);"
+
+[DECT_Read_Error_Counter_Test]
+Class="Function"
+Prototype="int DECT_Read_Error_Counter_Test(int panel);"
+
+[DECT_MAN_DOWN_SENSOR_Test]
+Class="Function"
+Prototype="int DECT_MAN_DOWN_SENSOR_Test(int panel);"
+
+[DECT_Master_Reset_Test]
+Class="Function"
+Prototype="int DECT_Master_Reset_Test(int panel);"
+
+[DECT_Master_Reset_USB_Test]
+Class="Function"
+Prototype="int DECT_Master_Reset_USB_Test(int panel);"
+
+[DECT_Write_IPEI_Test]
+Class="Function"
+Prototype="int DECT_Write_IPEI_Test(int panel);"
+
+[DECT_Write_IPEI_USB_Test]
+Class="Function"
+Prototype="int DECT_Write_IPEI_USB_Test(int panel);"
+
+[DECT_Write_Serial_Number_Test]
+Class="Function"
+Prototype="int DECT_Write_Serial_Number_Test(int panel);"
+
+[DECT_Verify_MAC_Address_Test]
+Class="Function"
+Prototype="int DECT_Verify_MAC_Address_Test(int panel);"
+
+[DECT_Read_Device_MAC_Address_Test]
+Class="Function"
+Prototype="int DECT_Read_Device_MAC_Address_Test(int panel);"
+
+[DECT_Write_MAC_Address_USB_Test]
+Class="Function"
+Prototype="int DECT_Write_MAC_Address_USB_Test(int panel);"
+
+[DECT_Branding_Check_Test]
+Class="Function"
+Prototype="int DECT_Branding_Check_Test(int panel);"
+
+[DECT_Branding_Set_Test]
+Class="Function"
+Prototype="int DECT_Branding_Set_Test(int panel);"
+
+[DECT_P1V8_Voltage_Adjustment_Test]
+Class="Function"
+Prototype="int DECT_P1V8_Voltage_Adjustment_Test(int panel);"
+
+[DECT_P3V_Voltage_Measure_Test]
+Class="Function"
+Prototype="int DECT_P3V_Voltage_Measure_Test(int panel);"
+
+[DECT_Activate_Ref_Clk_Test]
+Class="Function"
+Prototype="int DECT_Activate_Ref_Clk_Test(int panel);"
+
+[DECT_Set_Clk_Test]
+Class="Function"
+Prototype="int DECT_Set_Clk_Test(int panel);"
+
+[WriteToTerminal]
+Class="Function"
+Prototype="int WriteToTerminal(int panel, char *buffer);"
+
+[DECT_Enter_Enhanced_Test_Mode]
+Class="Function"
+Prototype="int DECT_Enter_Enhanced_Test_Mode(int panel);"
+
+[DECT_Audio_Speaker_Test]
+Class="Function"
+Prototype="int DECT_Audio_Speaker_Test(int panel);"
+
+[DECT_Audio_MIC_Test]
+Class="Function"
+Prototype="int DECT_Audio_MIC_Test(int panel);"
+
+[DECT_Audio_EP_Test]
+Class="Function"
+Prototype="int DECT_Audio_EP_Test(int panel);"
+
+[DECT_Audio_Trembler_Test]
+Class="Function"
+Prototype="int DECT_Audio_Trembler_Test(int panel);"
+
+[DECT_Audio_Headset_Test]
+Class="Function"
+Prototype="int DECT_Audio_Headset_Test(int panel, int iRepeat);"
+
+[Get_Mic_sensitivity]
+Class="Function"
+Prototype="double Get_Mic_sensitivity();"
+
+[Thread_Single_tone_capture]
+Class="Function"
+Prototype="int Thread_Single_tone_capture(void *functionData);"
+
+[DECT_Audio_TestReset_Test]
+Class="Function"
+Prototype="int DECT_Audio_TestReset_Test(int panel);"
+
+[DECT_Audio_TestPass_Test]
+Class="Function"
+Prototype="int DECT_Audio_TestPass_Test(int panel);"
+
+[DECT_Trembler_TestReset_Test]
+Class="Function"
+Prototype="int DECT_Trembler_TestReset_Test(int panel);"
+
+[DECT_Trembler_TestPass_Test]
+Class="Function"
+Prototype="int DECT_Trembler_TestPass_Test(int panel);"
+
+[DECT_Audio_Speaker_Test_Ex]
+Class="Function"
+Prototype="int DECT_Audio_Speaker_Test_Ex(int panel, int iRepeat);"
+
+[DECT_Audio_EarpieceTest_Test_Ex]
+Class="Function"
+Prototype="int DECT_Audio_EarpieceTest_Test_Ex(int panel, int iRepeat);"
+
+[DECT_Audio_TremblerTest_Test_Ex]
+Class="Function"
+Prototype="int DECT_Audio_TremblerTest_Test_Ex(int panel, int iRepeat);"
+
+[DECT_USB_Test]
+Class="Function"
+Prototype="int DECT_USB_Test(int panel);"
+
+[DECT_LCD_RED_Test]
+Class="Function"
+Prototype="int DECT_LCD_RED_Test(int panel);"
+
+[DECT_LCD_GREEN_Test]
+Class="Function"
+Prototype="int DECT_LCD_GREEN_Test(int panel);"
+
+[DECT_LCD_BLUE_Test]
+Class="Function"
+Prototype="int DECT_LCD_BLUE_Test(int panel);"
+
+[DECT_LCD_POS_Test]
+Class="Function"
+Prototype="int DECT_LCD_POS_Test(int panel);"
+
+[DECT_LED_RED_Test]
+Class="Function"
+Prototype="int DECT_LED_RED_Test(int panel);"
+
+[DECT_LED_GREEN_Test]
+Class="Function"
+Prototype="int DECT_LED_GREEN_Test(int panel);"
+
+[DECT_LED_ORANGE_Test]
+Class="Function"
+Prototype="int DECT_LED_ORANGE_Test(int panel);"
+
+[DECT_LED_KEYB_Test]
+Class="Function"
+Prototype="int DECT_LED_KEYB_Test(int panel);"
+
+[DECT_SDCARD_Test]
+Class="Function"
+Prototype="int DECT_SDCARD_Test(int panel);"
+
+[DECT_KEY12_Test]
+Class="Function"
+Prototype="int DECT_KEY12_Test(int panel);"
+
+[DECT_KEY22_Test]
+Class="Function"
+Prototype="int DECT_KEY22_Test(int panel);"
+
+[DECT_KEY32_Test]
+Class="Function"
+Prototype="int DECT_KEY32_Test(int panel);"
+
+[DECT_VERS_SW_Test]
+Class="Function"
+Prototype="int DECT_VERS_SW_Test(int panel);"
+
+[DECT_VERS_LOADER_Test]
+Class="Function"
+Prototype="int DECT_VERS_LOADER_Test(int panel);"
+
+[DECT_VERS_HW_Test]
+Class="Function"
+Prototype="int DECT_VERS_HW_Test(int panel);"
+
+[DECT_VERS_BRAND_Test]
+Class="Function"
+Prototype="int DECT_VERS_BRAND_Test(int panel);"
+
+[DECT_VERS_ATS_Test]
+Class="Function"
+Prototype="int DECT_VERS_ATS_Test(int panel);"
+
+[DECT_VERS_IP65_Test]
+Class="Function"
+Prototype="int DECT_VERS_IP65_Test(int panel);"
+
+[DECT_VERS_SNO_Test]
+Class="Function"
+Prototype="int DECT_VERS_SNO_Test(int panel);"
+
+[DECT_VERS_FINAL_Test]
+Class="Function"
+Prototype="int DECT_VERS_FINAL_Test(int panel);"
+
+[DECT_VERS_IPEI_Test]
+Class="Function"
+Prototype="int DECT_VERS_IPEI_Test(int panel);"
+
+[Clear_BT_Tester]
+Class="Function"
+Prototype="int Clear_BT_Tester();"
+
+[Check_Sync_BT_Tester]
+Class="Function"
+Prototype="int Check_Sync_BT_Tester();"
+
+[DECT_Disable_Bluetooth_USB_Test]
+Class="Function"
+Prototype="int DECT_Disable_Bluetooth_USB_Test(int panel);"
+
+[DECT_Write_Serial_Number_Final_Test]
+Class="Function"
+Prototype="int DECT_Write_Serial_Number_Final_Test(int panel);"
+
+[DECT_Vendor_SN_Test]
+Class="Function"
+Prototype="int DECT_Vendor_SN_Test(int panel);"
+
+[DECT_Serial_Number_String_Test]
+Class="Function"
+Prototype="int DECT_Serial_Number_String_Test(int panel);"
+
+[DECT_Check_Serial_Number_String_Test]
+Class="Function"
+Prototype="int DECT_Check_Serial_Number_String_Test(int panel);"
+
+[DECT_Serial_Number_String_Test_2]
+Class="Function"
+Prototype="int DECT_Serial_Number_String_Test_2(int panel);"
+
+[DECT_Check_Final_Fixture_Status_Test]
+Class="Function"
+Prototype="int DECT_Check_Final_Fixture_Status_Test(int panel);"
+
+[Init_Agilent]
+Class="Function"
+Prototype="int Init_Agilent(int panel);"
+
+[Set_Agilent_LeakCurr]
+Class="Function"
+Prototype="int Set_Agilent_LeakCurr(int panel);"
+
+[Measure_Agilent_InsCurr]
+Class="Function"
+Prototype="int Measure_Agilent_InsCurr(int panel);"
+
+[Measure_Agilent_LeakCurr]
+Class="Function"
+Prototype="int Measure_Agilent_LeakCurr(int panel);"
+
+[Set_Agilent_CharCurr]
+Class="Function"
+Prototype="int Set_Agilent_CharCurr(int panel);"
+
+[Measure_Agilent_CharCurr]
+Class="Function"
+Prototype="int Measure_Agilent_CharCurr(int mode, int panel);"
+
+[Set_Agilent_Off]
+Class="Function"
+Prototype="int Set_Agilent_Off(int panel);"
+
+[Set_Agilent_NormalWorkVolt]
+Class="Function"
+Prototype="int Set_Agilent_NormalWorkVolt(int panel);"
+
+[Measure_Agilent_PwrOnCurr]
+Class="Function"
+Prototype="int Measure_Agilent_PwrOnCurr(int panel);"
+
+[DECT_SetChargeCurrentMode_0_USB]
+Class="Function"
+Prototype="int DECT_SetChargeCurrentMode_0_USB(int panel);"
+
+[DECT_SetChargeCurrentMode_1_USB]
+Class="Function"
+Prototype="int DECT_SetChargeCurrentMode_1_USB(int panel);"
+
+[DECT_DisableCharger_USB]
+Class="Function"
+Prototype="int DECT_DisableCharger_USB(int panel);"
+
+[DECT_GetChargerStatus_USB]
+Class="Function"
+Prototype="int DECT_GetChargerStatus_USB(int panel);"
+
+[DECT_GetChargerStatus]
+Class="Function"
+Prototype="int DECT_GetChargerStatus(int panel);"
+

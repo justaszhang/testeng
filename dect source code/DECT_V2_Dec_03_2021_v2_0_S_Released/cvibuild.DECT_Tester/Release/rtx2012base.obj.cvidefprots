@@ -1,0 +1,52 @@
+[rtx2012_Write]
+Class="Function"
+Prototype="int rtx2012_Write(char *command);"
+
+[rtx2012_Query]
+Class="Function"
+Prototype="int rtx2012_Query(char *command, char *output);"
+
+[rtx2012_Init]
+Class="Function"
+Prototype="int rtx2012_Init(char *output);"
+
+[rtx2012_Loopback_Mode_EU_Setting]
+Class="Function"
+Prototype="int rtx2012_Loopback_Mode_EU_Setting();"
+
+[rtx2012_Nonsignal_Connect]
+Class="Function"
+Prototype="int rtx2012_Nonsignal_Connect();"
+
+[rtx2012_Nosignal_Disconnect]
+Class="Function"
+Prototype="int rtx2012_Nosignal_Disconnect();"
+
+[rtx2012_Reset]
+Class="Function"
+Prototype="int rtx2012_Reset();"
+
+[rtx2012_Read_NTP]
+Class="Function"
+Prototype="int rtx2012_Read_NTP(char *power);"
+
+[rtx2012_Read_FrequencyOffset]
+Class="Function"
+Prototype="int rtx2012_Read_FrequencyOffset(char *freqoffset);"
+
+[rtx2012_Read_Deviation]
+Class="Function"
+Prototype="int rtx2012_Read_Deviation(char *BField);"
+
+[rtx2012_Read_FrequencyDriftSlot]
+Class="Function"
+Prototype="int rtx2012_Read_FrequencyDriftSlot(char *freqDrift);"
+
+[rtx2012_Read_ReceiverSensitivity]
+Class="Function"
+Prototype="int rtx2012_Read_ReceiverSensitivity(char *BERFER, double fLev);"
+
+[rtx2012_Read_TemplateMatch]
+Class="Function"
+Prototype="int rtx2012_Read_TemplateMatch(char *matching);"
+

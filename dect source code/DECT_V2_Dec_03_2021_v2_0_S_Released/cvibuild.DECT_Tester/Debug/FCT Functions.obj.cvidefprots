@@ -1,0 +1,100 @@
+[Get_Start_Time]
+Class="Function"
+Prototype="void Get_Start_Time(int panel);"
+
+[print_TRACS_results]
+Class="Function"
+Prototype="int print_TRACS_results(panel);"
+
+[Open_Files_For_Write]
+Class="Function"
+Prototype="int Open_Files_For_Write(int panel);"
+
+[Close_Data_Files]
+Class="Function"
+Prototype="int Close_Data_Files(int panel);"
+
+[Write_Log_File]
+Class="Function"
+Prototype="void Write_Log_File(char *msg, int panel);"
+
+[Write_Audio_Log_File]
+Class="Function"
+Prototype="void Write_Audio_Log_File(char *msg, int panel);"
+
+[Build_Menu]
+Class="Function"
+Prototype="int Build_Menu(int panel);"
+
+[save_panel]
+Class="Function"
+Prototype="void save_panel(int in_panel);"
+
+[DECT_612d_CCA_Test_Sequence]
+Class="Function"
+Prototype="int DECT_612d_CCA_Test_Sequence(int panel, char *test_number);"
+
+[DECT_622d_CCA_Test_Sequence]
+Class="Function"
+Prototype="int DECT_622d_CCA_Test_Sequence(int panel, char *test_number);"
+
+[DECT_632d_CCA_Test_Sequence]
+Class="Function"
+Prototype="int DECT_632d_CCA_Test_Sequence(int panel, char *test_number);"
+
+[DECT_612d_Final_Test_Sequence]
+Class="Function"
+Prototype="int DECT_612d_Final_Test_Sequence(int panel, char *test_number);"
+
+[DECT_622d_Final_Test_Sequence]
+Class="Function"
+Prototype="int DECT_622d_Final_Test_Sequence(int panel, char *test_number);"
+
+[DECT_632d_Final_Test_Sequence]
+Class="Function"
+Prototype="int DECT_632d_Final_Test_Sequence(int panel, char *test_number);"
+
+[DECT_612d_Final_Serial_Number_Sequence]
+Class="Function"
+Prototype="int DECT_612d_Final_Serial_Number_Sequence(int panel, char *test_number);"
+
+[DECT_622d_Final_Serial_Number_Sequence]
+Class="Function"
+Prototype="int DECT_622d_Final_Serial_Number_Sequence(int panel, char *test_number);"
+
+[DECT_632d_Final_Serial_Number_Sequence]
+Class="Function"
+Prototype="int DECT_632d_Final_Serial_Number_Sequence(int panel, char *test_number);"
+
+[DECT_Enhanced_Test_Sequence]
+Class="Function"
+Prototype="int DECT_Enhanced_Test_Sequence(int panel, char *test_number);"
+
+[DECT_Enhanced_User_Test_Sequence]
+Class="Function"
+Prototype="int DECT_Enhanced_User_Test_Sequence(int panel, char *test_number);"
+
+[DECT_Enhanced_Version_Test_Sequence]
+Class="Function"
+Prototype="int DECT_Enhanced_Version_Test_Sequence(int panel, char *test_number);"
+
+[DECT_Enhanced_Test_Sequence_2]
+Class="Function"
+Prototype="int DECT_Enhanced_Test_Sequence_2(int panel, char *test_number);"
+
+[DECT_Enhanced_User_Test_Sequence_2]
+Class="Function"
+Prototype="int DECT_Enhanced_User_Test_Sequence_2(int panel, char *test_number);"
+
+[DECT_Enhanced_Version_Test_Sequence_2]
+Class="Function"
+Prototype="int DECT_Enhanced_Version_Test_Sequence_2(int panel, char *test_number);"
+
+[DECT_Clean_Shutdown_Sequence]
+Class="Function"
+Prototype="int DECT_Clean_Shutdown_Sequence(int panel);"
+
+[DECT_Clean_Shutdown_USB_Sequence]
+Class="Function"
+Prototype="int DECT_Clean_Shutdown_USB_Sequence(int panel);"
+
